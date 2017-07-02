@@ -23,7 +23,22 @@
             @%)
    :value (j/cell= (portfolio.api/db->input-string conn)))))
 
+(defn currency-form
+ [conn id]
+ {:pre [(d/conn? conn)]}
+ (let [currency (j/cell= (portfolio.api/db->currency conn id))]
+  (h/form
+   (h/h3 id)
+   (h/label
+    "Current hodlings:"
+    (h/input)))))
+
 (defn page
  [conn ticker]
- (h/h1 "Configure your portfolio")
- (currently-hodling conn ticker))
+ (h/div
+  (h/h1 "Configure your portfolio")
+  (currently-hodling conn ticker)
+  (let [currency-ids (j/cell= (portfolio.api/db->currency-ids conn))]
+   (j/cell= (prn "-" conn currency-ids))
+   (h/for-tpl [id (j/cell= (seq currency-ids))]
+    (currency-form conn id)))))

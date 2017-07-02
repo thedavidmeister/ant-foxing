@@ -4,7 +4,7 @@
   [javelin.core :as j]
   coinmarketcap.ticker.api))
 
-(defn db->currencies
+(defn db->currency-ids
  [db]
  {:pre [(d/db? db)]}
  (into
@@ -16,6 +16,12 @@
      '[:find ?id
        :where [_ :currency/id ?id]]
      db)))))
+
+(defn db->currency
+ [db id]
+ {:pre [(d/db? db)]}
+ (when id
+  (d/pull db '[*] [:currency/id id])))
 
 (defn add-currencies!
  [conn ids]
@@ -48,10 +54,10 @@
 (defn set-currencies!
  [conn ids]
  {:pre [(d/conn? conn)]}
- (let [conn-currencies (db->currencies @conn)]
+ (let [currency-ids (db->currency-ids @conn)]
   (j/dosync
    (add-currencies! conn ids)
-   (remove-currencies! conn (clojure.set/difference conn-currencies ids)))))
+   (remove-currencies! conn (clojure.set/difference currency-ids ids)))))
 
 (defn set-currencies-from-input-string!
  [conn ticker input-string]
@@ -66,6 +72,5 @@
  "Closing the loop..."
  [db]
  {:pre [(d/db? db)]}
- (let [ids (db->currencies db)]
-  (prn ids)
+ (let [ids (db->currency-ids db)]
   (clojure.string/join " " ids)))

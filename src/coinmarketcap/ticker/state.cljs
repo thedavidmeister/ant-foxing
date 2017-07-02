@@ -6,7 +6,7 @@
   hoplon.storage-atom))
 
 (defonce all
- (j/with-let [c (hoplon.storage-atom/session-storage (j/cell nil) ::all)]
+ (j/with-let [c (hoplon.storage-atom/session-storage (j/cell []) ::all)]
   (coinmarketcap.ticker.api/fetch-all! c)
   (h/with-interval
    coinmarketcap.config/refresh-interval

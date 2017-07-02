@@ -2,18 +2,23 @@
  (:require
   [javelin.core :as j]
   [hoplon.core :as h]
+  coinmarketcap.ticker.api
   cuerdas.core))
 
 (defn table
  [ticker]
- (let [error? (j/cell= (and (not (sequential? ticker))
-                            (get ticker "error")))
-       ticker (j/cell= (if (sequential? ticker) ticker [ticker]))
+ (let [ticker (j/cell= (coinmarketcap.ticker.api/ticker-seq-or-nil ticker))
        ks (j/cell= (keys (first ticker)))]
   (h/div
-   (h/if-tpl error?
+   (h/cond-tpl
+    (j/cell= (= [] ticker))
+    (h/div "No results (probably still loading)")
+
+    (j/cell= (not ticker))
     (h/div
-     "There was an error processing the ticker results.")
+     "No results (probably an error)")
+
+    (j/cell= :else)
     (h/table
      (h/tr
       (h/for-tpl [k ks]

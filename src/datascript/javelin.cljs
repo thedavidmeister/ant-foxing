@@ -1,6 +1,6 @@
 ; Datascript/Javelin interop.
 (ns datascript.javelin
- (:require 
+ (:require
   [datascript.core :as d]
   [javelin.core :as j]))
 
@@ -16,7 +16,7 @@
   ([]
    (conn-cell {}))
   ([schema]
-   {:pre  [(map? schema)]
+   {:pre [(map? schema)]
     :post [(d/conn? %) (j/cell? %) (= {} (-> % meta :listeners deref))]}
    (conn-cell-from-db (d/empty-db schema))))
 

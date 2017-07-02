@@ -39,6 +39,5 @@
   (h/h1 "Configure your portfolio")
   (currently-hodling conn ticker)
   (let [currency-ids (j/cell= (portfolio.api/db->currency-ids conn))]
-   (j/cell= (prn "-" conn currency-ids))
    (h/for-tpl [id (j/cell= (seq currency-ids))]
     (currency-form conn id)))))

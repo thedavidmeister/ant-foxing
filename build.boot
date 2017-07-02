@@ -11,7 +11,10 @@
    [hoplon "7.0.2"]
    [pandeiro/boot-http "0.8.3"]
    [adzerk/boot-reload "0.5.1"]
-   [adzerk/boot-cljs "2.0.0"]])
+   [adzerk/boot-cljs "2.0.0"]
+
+   ; networking
+   [cljs-ajax "0.6.0"]])
 
 (require
  '[hoplon.boot-hoplon :refer [hoplon]]

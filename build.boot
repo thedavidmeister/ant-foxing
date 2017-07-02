@@ -13,6 +13,9 @@
    [adzerk/boot-reload "0.5.1"]
    [adzerk/boot-cljs "2.0.0"]
 
+   ; util
+   [thedavidmeister/wheel "0.2.0-SNAPSHOT"]
+
    ; logging
    [com.taoensso/timbre "4.10.0"]
 

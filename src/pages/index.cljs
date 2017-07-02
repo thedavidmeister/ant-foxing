@@ -1,9 +1,8 @@
 (ns ^{:hoplon/page "index.html"} pages.index
  (:require
-  [hoplon.core :as h]
-  coinmarketcap.ticker.state
-  coinmarketcap.ticker.hoplon))
+  pages.hoplon
+  pages.navigation.hoplon))
 
-(h/html
- (h/body
-  (coinmarketcap.ticker.hoplon/page coinmarketcap.ticker.state/all)))
+(pages.hoplon/outer
+ (pages.navigation.hoplon/nav pages.routes.config/routes)
+ (pages.navigation.hoplon/nav-content pages.routes.state/location))

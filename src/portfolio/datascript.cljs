@@ -11,8 +11,8 @@
 
 (defn new-conn []
  (j/with-let [conn (datascript.javelin/conn-cell schema)]
-  (d/transact! conn [{:config/key :portfolio/ranking-ratio
-                      :config/value portfolio.config/default-ranking-ratio}])))
+  (d/transact! conn [{:config/key :portfolio/tiering-ratio
+                      :config/value portfolio.config/default-tiering-ratio}])))
 
 (defn -conn
  []

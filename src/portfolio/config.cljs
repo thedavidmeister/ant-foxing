@@ -1,3 +1,4 @@
 (ns portfolio.config)
 
-(def default-ranking-ratio (/ 1 2))
+; e.g. http://www.blocklink.info/
+(def default-tiering-ratio 0.3)

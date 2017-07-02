@@ -9,3 +9,12 @@
          (number? r)
          (number? n)]}
   (* a (.pow js/Math r (dec n)))))
+
+(defn at-nth
+ ([r n] (at-nth 1 r n))
+ ([a r n]
+  (*
+   a
+   (-
+    (nth a r n)
+    (nth a r (inc n))))))

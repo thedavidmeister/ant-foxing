@@ -1,6 +1,7 @@
-(ns save.api
+(ns portfolio.save.api
  (:require
-  [datascript.core :as d]))
+  [datascript.core :as d]
+  portfolio.datascript))
 
 (defn save-db
  [db]
@@ -12,3 +13,7 @@
  (let [loaded-db (cljs.reader/read-string str)]
   (assert (d/db? loaded-db))
   (reset! conn loaded-db)))
+
+(defn reset-conn!
+ [conn]
+ (reset! conn @(portfolio.datascript/new-conn)))

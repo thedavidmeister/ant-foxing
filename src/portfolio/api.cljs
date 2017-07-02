@@ -4,6 +4,21 @@
   [javelin.core :as j]
   coinmarketcap.ticker.api))
 
+(defn db->config
+ [db k]
+ (first
+  (d/q
+   '[:find [?v]
+     :where [?e :config/key ?k]
+            [?e :config/value ?v]
+     :in $ ?k]
+   db
+   k)))
+
+(defn set-config!
+ [conn k v]
+ (d/transact! conn [{:config/value v :db/id [:config/key k]}]))
+
 (defn db->currency-ids
  [db]
  {:pre [(d/db? db)]}

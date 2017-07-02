@@ -8,7 +8,7 @@
   coinmarketcap.ticker.hoplon
   portfolio.hoplon
   report.hoplon
-  save.hoplon))
+  portfolio.save.hoplon))
 
 (defn nav
  "A top nav based on the simplest possible routing setup"
@@ -33,4 +33,4 @@
   (report.hoplon/page conn ticker)
 
   :save
-  (save.hoplon/page conn)))
+  (portfolio.save.hoplon/page conn)))

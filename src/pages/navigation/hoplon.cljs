@@ -21,13 +21,13 @@
      (j/cell= (-> k name cuerdas.core/human clojure.string/capitalize)))))))
 
 (defn nav-content
- [location]
+ [location ticker]
  (h/case-tpl (j/cell= (:handler location))
   :market-cap-data
-  (coinmarketcap.ticker.hoplon/page coinmarketcap.ticker.state/all)
+  (coinmarketcap.ticker.hoplon/page ticker)
 
   :portfolio
-  (portfolio.hoplon/page)
+  (portfolio.hoplon/page ticker)
 
   :report
-  (report.hoplon/page)))
+  (report.hoplon/page ticker)))

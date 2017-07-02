@@ -1,5 +1,6 @@
 (ns ^{:hoplon/page "index.html"} pages.index
  (:require
+  hoplon.jquery
   pages.hoplon
   pages.navigation.hoplon
   coinmarketcap.ticker.api

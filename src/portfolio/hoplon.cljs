@@ -3,7 +3,8 @@
   [hoplon.core :as h]
   [javelin.core :as j]
   portfolio.api
-  [datascript.core :as d]))
+  [datascript.core :as d]
+  instructions.hoplon))
 
 (defn currently-hodling
  [conn ticker]
@@ -12,10 +13,15 @@
   (h/h2 "List (space separated) the IDs of the currencies currently hodling")
   (h/p "If you type in a currency ID not found in the ticker data it will be ignored.")
   (h/p "Refer to the raw market cap data to find the ID of your currency.")
+  (h/p
+   (instructions.hoplon/warning
+    "If you delete or malform an ID here then all the data below will be purged for that currency!"))
   (h/input
-   :input #(portfolio.api/set-currencies!
+   :input #(portfolio.api/set-currencies-from-input-string!
             conn
-            (portfolio.api/input-string->currencies @ticker @%)))))
+            @ticker
+            @%)
+   :value (j/cell= (portfolio.api/db->input-string conn)))))
 
 (defn page
  [conn ticker]

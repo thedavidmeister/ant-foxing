@@ -15,12 +15,21 @@
  ([c id params]
   (coinmarketcap.api/do-it! (str "ticker/" id "/") c params)))
 
+(defn ticker?
+ [ticker]
+ (if (sequential? ticker)
+  (ticker? (first ticker))
+  (and
+   (get ticker "name")
+   (get ticker "symbol")
+   (get ticker "id"))))
+
 (defn ticker-seq-or-nil
  "Normalises ticker results into a sequence or nil if the ticker represents an API error"
  [ticker]
- (if (sequential? ticker)
-  ticker
-  (when-not (get ticker "error")
+ (if (ticker? ticker)
+  (if (sequential? ticker)
+   ticker
    [ticker])))
 
 (defn currency->market-cap

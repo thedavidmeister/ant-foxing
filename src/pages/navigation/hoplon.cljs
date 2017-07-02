@@ -21,7 +21,6 @@
 
 (defn nav-content
  [location conn ticker]
- (j/cell= (prn location))
  (h/case-tpl (j/cell= (:handler location))
   :market-cap-data
   (coinmarketcap.ticker.hoplon/page conn ticker)

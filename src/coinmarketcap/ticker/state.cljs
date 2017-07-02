@@ -5,9 +5,14 @@
   [hoplon.core :as h]
   hoplon.storage-atom))
 
-(defonce all
+(defn fetch-all-cell
+ []
  (j/with-let [c (hoplon.storage-atom/session-storage (j/cell []) ::all)]
-  (coinmarketcap.ticker.api/fetch-all! c)
-  (h/with-interval
-   coinmarketcap.config/refresh-interval
-   (coinmarketcap.ticker.api/fetch-all! c))))
+  (let [keep-fetching! (fn [c]
+                        (coinmarketcap.ticker.api/fetch-all! c)
+                        (h/with-timeout
+                         coinmarketcap.config/refresh-interval
+                         (keep-fetching! c)))]
+   (keep-fetching! c))))
+
+(defonce all (fetch-all-cell))

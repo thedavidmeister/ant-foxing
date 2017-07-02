@@ -24,3 +24,9 @@
        (h/for-tpl [k ks]
         (h/td
          (j/cell= (get t k)))))))))))
+
+(defn page
+ [ticker]
+ (h/div
+  "Raw data from coinmarketcap.com"
+  (table ticker)))

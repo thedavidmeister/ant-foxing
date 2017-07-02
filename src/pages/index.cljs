@@ -6,4 +6,4 @@
 
 (h/html
  (h/body
-  (coinmarketcap.ticker.hoplon/table coinmarketcap.ticker.state/all)))
+  (coinmarketcap.ticker.hoplon/page coinmarketcap.ticker.state/all)))

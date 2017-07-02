@@ -7,7 +7,8 @@
   cuerdas.core
   coinmarketcap.ticker.hoplon
   portfolio.hoplon
-  report.hoplon))
+  report.hoplon
+  save.hoplon))
 
 (defn nav
  "A top nav based on the simplest possible routing setup"
@@ -29,4 +30,7 @@
   (portfolio.hoplon/page conn ticker)
 
   :report
-  (report.hoplon/page conn ticker)))
+  (report.hoplon/page conn ticker)
+
+  :save
+  (save.hoplon/page conn)))

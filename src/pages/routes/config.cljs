@@ -6,7 +6,8 @@
  ["/"
   [["market-cap-data" :market-cap-data]
    ["portfolio" :portfolio]
-   ["report" :report]]])
+   ["report" :report]
+   ["save" :save]]])
 
 (def fallback :market-cap-data)
 

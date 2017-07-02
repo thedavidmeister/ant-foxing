@@ -2,28 +2,22 @@
  (:require
   [javelin.core :as j]
   ajax.core
-  coinmarketcap.config))
+  coinmarketcap.config
+  taoensso.timbre))
 
 (defn do-it!
  ([c endpoint] (do-it! c endpoint nil))
  ([c endpoint params]
   {:pre [(j/cell? c) (string? endpoint)]}
+  (taoensso.timbre/info "Hitting coinmarketcap endpoint: " endpoint)
   (let [url (str coinmarketcap.config/base-url endpoint)]
    (ajax.core/GET
     url
     (merge
-     {:handler #(reset! c %)}
+     {:handler #(do
+                 (taoensso.timbre/info "Success fetching response from coinmarketcap endpoint: " endpoint)
+                 (reset! c %))}
      (when params {:params params}))))))
-
-(defn ticker
- ([c] (ticker c nil))
- ([c params]
-  (do-it! c "ticker/" params)))
-
-(defn ticker-currency
- ([c id] (ticker-currency c id nil))
- ([c id params]
-  (do-it! (str "ticker/" id "/") c params)))
 
 (defn global
  ([c] (global nil))

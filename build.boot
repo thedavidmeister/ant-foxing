@@ -13,8 +13,14 @@
    [adzerk/boot-reload "0.5.1"]
    [adzerk/boot-cljs "2.0.0"]
 
+   ; logging
+   [com.taoensso/timbre "4.10.0"]
+
    ; networking
-   [cljs-ajax "0.6.0"]])
+   [cljs-ajax "0.6.0"]
+
+   ; data manipulation
+   [funcool/cuerdas "2.0.3"]])
 
 (require
  '[hoplon.boot-hoplon :refer [hoplon]]

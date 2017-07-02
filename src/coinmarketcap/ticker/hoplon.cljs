@@ -31,7 +31,7 @@
          (j/cell= (get t k)))))))))))
 
 (defn page
- [ticker]
+ [conn ticker]
  (h/div
   (h/h1 "Raw data from coinmarketcap.com sorted by market cap desc.")
   (table (j/cell= (coinmarketcap.ticker.api/sort-by-cap ticker)))))

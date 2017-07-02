@@ -1,6 +1,9 @@
 (ns coinmarketcap.ticker.api
  (:require
-  coinmarketcap.api))
+  coinmarketcap.api
+  [javelin.core :as j]
+  [hoplon.core :as h]
+  hoplon.storage-atom))
 
 (defn fetch-all!
  ([c] (fetch-all! c nil))
@@ -36,3 +39,14 @@
    (sort-by
     currency->market-cap
     ticker))))
+
+(defn -fetch-all-cell
+ []
+ (j/with-let [c (hoplon.storage-atom/session-storage (j/cell []) ::all)]
+  (let [keep-fetching! (fn [c]
+                        (fetch-all! c)
+                        (h/with-timeout
+                         coinmarketcap.config/refresh-interval
+                         (keep-fetching! c)))]
+   (keep-fetching! c))))
+(def fetch-all-cell (memoize -fetch-all-cell))

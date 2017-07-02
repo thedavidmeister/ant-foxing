@@ -22,8 +22,9 @@
    ; networking
    [cljs-ajax "0.6.0"]
 
-   ; data manipulation
-   [funcool/cuerdas "2.0.3"]])
+   ; data
+   [funcool/cuerdas "2.0.3"]
+   [datascript "0.16.1"]])
 
 (require
  '[hoplon.boot-hoplon :refer [hoplon]]

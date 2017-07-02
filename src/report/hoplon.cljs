@@ -3,5 +3,5 @@
   [hoplon.core :as h]))
 
 (defn page
- [ticker]
+ [conn ticker]
  (h/h1 "Report"))

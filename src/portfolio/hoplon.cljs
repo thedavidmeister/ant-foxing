@@ -2,8 +2,13 @@
  (:require
   [hoplon.core :as h]))
 
-
+(defn currently-hodling
+ [conn ticker]
+ (h/form
+  (h/h2 "List (space separated) the ids of the currencies currently hodling")
+  (h/input)))
 
 (defn page
- [ticker]
- (h/h1 "Configure your portfolio"))
+ [conn ticker]
+ (h/h1 "Configure your portfolio")
+ (currently-hodling conn ticker))

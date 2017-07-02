@@ -3,10 +3,9 @@
   [hoplon.core :as h]
   [javelin.core :as j]
   pages.routes.config
-  pages.routes.state
+  pages.routes.api
   cuerdas.core
   coinmarketcap.ticker.hoplon
-  coinmarketcap.ticker.state
   portfolio.hoplon
   report.hoplon))
 
@@ -17,17 +16,18 @@
   (h/nav
    (h/for-tpl [k route-keys]
     (h/a
-     :click #(pages.routes.state/navigate! @k)
+     :click #(pages.routes.api/navigate! @k)
      (j/cell= (-> k name cuerdas.core/human clojure.string/capitalize)))))))
 
 (defn nav-content
- [location ticker]
+ [location conn ticker]
+ (j/cell= (prn location))
  (h/case-tpl (j/cell= (:handler location))
   :market-cap-data
-  (coinmarketcap.ticker.hoplon/page ticker)
+  (coinmarketcap.ticker.hoplon/page conn ticker)
 
   :portfolio
-  (portfolio.hoplon/page ticker)
+  (portfolio.hoplon/page conn ticker)
 
   :report
-  (report.hoplon/page ticker)))
+  (report.hoplon/page conn ticker)))

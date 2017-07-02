@@ -74,3 +74,8 @@
  {:pre [(d/db? db)]}
  (let [ids (db->currency-ids db)]
   (clojure.string/join " " ids)))
+
+(defn upsert-currency!
+ ([conn id kvs] (upsert-currency! conn (merge kvs {:currency/id id})))
+ ([conn kvs]
+  (d/transact! conn [kvs])))

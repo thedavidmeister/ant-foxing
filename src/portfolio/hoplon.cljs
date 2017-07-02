@@ -23,21 +23,52 @@
             @%)
    :value (j/cell= (portfolio.api/db->input-string conn)))))
 
+(h/defelem currency-form-input
+ [{:keys [conn currency k el-fn default-val] :as attributes} children]
+ (let [el-fn (or el-fn h/input)
+       default-val (or default-val "")]
+  (h/label
+   (h/div children)
+   (el-fn
+    (dissoc attributes :conn :id :k)
+    :input #(portfolio.api/upsert-currency! conn (:currency/id @currency) {k @%})
+    :value (j/cell= (get currency k default-val))))))
+
 (defn currency-form
- [conn id]
+ [conn currency]
  {:pre [(d/conn? conn)]}
- (let [currency (j/cell= (portfolio.api/db->currency conn id))]
+ (let [input (fn [attributes children]
+              (currency-form-input
+               (merge
+                {:conn conn
+                 :currency currency}
+                attributes)
+               children))
+       structure [[{:k :currency/hodling
+                    :default-val 0}
+                   "Current hodlings:"]
+                  [{:k :currency/rank
+                    :type "number"
+                    :min 1
+                    :step 1
+                    :default-val 1}
+                   "Rank (lower allocates more funds):"]
+                  [{:k :currency/website}
+                   "Website:"]
+                  [{:k :currency/notes
+                    :el-fn h/textarea}
+                   "Notes:"]]]
   (h/form
-   (h/h3 id)
-   (h/label
-    "Current hodlings:"
-    (h/input)))))
+   (h/h3 (j/cell= (:currency/id currency)))
+   (for [[a c] structure]
+    (input a c)))))
 
 (defn page
  [conn ticker]
  (h/div
   (h/h1 "Configure your portfolio")
   (currently-hodling conn ticker)
-  (let [currency-ids (j/cell= (portfolio.api/db->currency-ids conn))]
-   (h/for-tpl [id (j/cell= (seq currency-ids))]
-    (currency-form conn id)))))
+  (let [currency-ids (j/cell= (portfolio.api/db->currency-ids conn))
+        currencies (j/cell= (map #(portfolio.api/db->currency conn %) (seq currency-ids)))]
+   (h/for-tpl [currency currencies]
+    (currency-form conn currency)))))

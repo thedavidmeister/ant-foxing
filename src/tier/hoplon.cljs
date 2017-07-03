@@ -1,8 +1,8 @@
-(ns portfolio.tier.hoplon
+(ns tier.hoplon
  (:require
   [hoplon.core :as h]
   portfolio.api
-  portfolio.tier.api
+  tier.api
   math.geometric.sequence
   wheel.link.hoplon
   [datascript.core :as d]
@@ -11,7 +11,7 @@
 (defn ratio
  [conn]
  {:pre [(d/conn? conn)]}
- (let [current-ratio (j/cell= (portfolio.tier.api/parse-ratio (portfolio.api/db->config conn :portfolio.tier/ratio)))
+ (let [current-ratio (j/cell= (tier.api/db->ratio conn))
        tiers [1 2 3 4]]
   (h/div
    (h/div

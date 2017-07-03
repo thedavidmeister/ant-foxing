@@ -5,7 +5,7 @@
   portfolio.api
   [datascript.core :as d]
   instructions.hoplon
-  portfolio.tier.hoplon))
+  tier.hoplon))
 
 (defn currently-hodling
  [conn ticker]
@@ -30,14 +30,13 @@
 
 (h/defelem currency-form-input
  [{:keys [conn currency k el-fn default-val] :as attributes} children]
- (let [el-fn (or el-fn h/input)
-       default-val (or default-val "")]
+ (let [el-fn (or el-fn h/input)]
   (h/td
    (h/div children)
    (el-fn
     (dissoc attributes :conn :currency :k :el-fn :default-val)
     :input #(portfolio.api/upsert-currency! conn (:currency/id @currency) {k @%})
-    :value (j/cell= (get currency k default-val))))))
+    :value (j/cell= (get currency k))))))
 
 (defn currency-form-row
  [conn currency structure]
@@ -54,12 +53,11 @@
 
 (defn currencies-form
  [conn currencies]
- (j/cell= (prn currencies))
  (let [sorted-by-tier (j/cell=
                        (sort-by
                         #(-> %
                           :currency/tier
-                          portfolio.tier.api/parse-tier)
+                          tier.api/parse-tier)
                         currencies))
        structure [["Currency"
                    {:k :currency/id
@@ -67,14 +65,12 @@
                     :type "text"}]
                   ["Current hodlings"
                    {:k :currency/hodling
-                    :default-val 0
                     :type "number"}]
                   ["Tier (lower = more funds)"
                    {:k :currency/tier
                     :type "number"
                     :min 1
-                    :step 1
-                    :default-val 1}]
+                    :step 1}]
                   ["Website"
                    {:k :currency/website
                     :type "text"}]
@@ -94,8 +90,6 @@
  [conn ticker]
  (h/div
   (h/h1 "Configure your portfolio")
-  (portfolio.tier.hoplon/ratio conn)
+  (tier.hoplon/ratio conn)
   (currently-hodling conn ticker)
-  (let [currency-ids (j/cell= (portfolio.api/db->currency-ids conn))
-        currencies (j/cell= (map #(portfolio.api/db->currency conn %) (seq currency-ids)))]
-   (currencies-form conn currencies))))
+  (currencies-form conn (j/cell= (currency.api/db->currencies conn)))))

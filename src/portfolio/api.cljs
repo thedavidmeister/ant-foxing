@@ -3,7 +3,8 @@
   [datascript.core :as d]
   [javelin.core :as j]
   coinmarketcap.ticker.api
-  wheel.math.number))
+  wheel.math.number
+  currency.api))
 
 (defn db->config
  [db k]
@@ -19,25 +20,6 @@
 (defn set-config!
  [conn k v]
  (d/transact! conn [{:config/value v :db/id [:config/key k]}]))
-
-(defn db->currency-ids
- [db]
- {:pre [(d/db? db)]}
- (into
-  (sorted-set)
-  (remove
-   nil?
-   (map first
-    (d/q
-     '[:find ?id
-       :where [_ :currency/id ?id]]
-     db)))))
-
-(defn db->currency
- [db id]
- {:pre [(d/db? db)]}
- (when id
-  (d/pull db '[*] [:currency/id id])))
 
 (defn add-currencies!
  [conn ids]
@@ -70,7 +52,7 @@
 (defn set-currencies!
  [conn ids]
  {:pre [(d/conn? conn)]}
- (let [currency-ids (db->currency-ids @conn)]
+ (let [currency-ids (currency.api/db->currency-ids @conn)]
   (j/dosync
    (add-currencies! conn ids)
    (remove-currencies! conn (clojure.set/difference currency-ids ids)))))
@@ -88,7 +70,7 @@
  "Closing the loop..."
  [db]
  {:pre [(d/db? db)]}
- (let [ids (db->currency-ids db)]
+ (let [ids (currency.api/db->currency-ids db)]
   (clojure.string/join " " ids)))
 
 (defn upsert-currency!

@@ -26,16 +26,27 @@
  [conn tier ticker all-currencies tier-currencies]
  (spectre.hoplon/panel
   (h/h2 (j/cell= (str "Tier " tier)))
+
   (h/h3 "Aggregate report")
-  (spectre.hoplon/table
-   (h/tr
-    (h/th "Tier market cap")
-    (h/th "Tier valuation")
-    (h/th "Target %"))
-   (h/tr
-    (h/td (j/cell= (report.api/->total-cap ticker tier-currencies)))
-    (h/td (j/cell= (report.api/->total-valuation ticker tier-currencies)))
-    (h/td (j/cell= (tier.api/tier-target conn tier)))))
+  (let [tier-cap (j/cell= (report.api/->total-cap ticker tier-currencies))
+        tier-valuation (j/cell= (report.api/->total-valuation ticker tier-currencies))
+        tier-target (j/cell= (tier.api/tier-target conn tier))
+        tier-target-valuation (j/cell= (int (* tier-valuation tier-target)))
+        tier-valuation-diff (j/cell= (- tier-target-valuation tier-valuation))]
+   (spectre.hoplon/table
+    (h/tr
+     (h/th "Tier market cap")
+     (h/th "Tier valuation")
+     (h/th "Target %")
+     (h/th "Target valuation")
+     (h/th "Valuation diff"))
+    (h/tr
+     (h/td tier-cap)
+     (h/td tier-valuation)
+     (h/td tier-target)
+     (h/td tier-target-valuation)
+     (h/td tier-valuation-diff))))
+
   (h/h3 "Hodlings info")
   (spectre.hoplon/table
    (h/tr

@@ -12,7 +12,7 @@
  [conn ticker]
  {:pre [(d/conn? conn) (j/cell? ticker)]}
  (h/div
-  (h/div :class "panel"
+  (spectre.hoplon/panel
    (h/h2 "List (space separated) the IDs of the currencies currently hodling")
    (h/p "If you type in a currency ID not found in the ticker data it will be ignored.")
    (h/p "Refer to the raw market cap data to find the ID of your currency.")

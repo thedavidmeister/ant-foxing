@@ -8,7 +8,7 @@
 
 (defn table
  [ticker]
- (let [ticker (j/cell= (coinmarketcap.ticker.api/ticker-seq-or-nil ticker))
+ (let [ticker (j/cell= (coinmarketcap.ticker.data/ticker-seq-or-nil ticker))
        ks (j/cell= (keys (first ticker)))]
   (h/div
    (h/cond-tpl
@@ -35,6 +35,6 @@
  [conn ticker]
  (h/div :class "page-content"
   (h/h1 "Ticker")
-  (h/div :class "panel"
+  (spectre.hoplon/panel
    (h/h2 "Raw data from coinmarketcap.com sorted by market cap desc.")
    (table (j/cell= (coinmarketcap.ticker.api/sort-by-cap ticker))))))

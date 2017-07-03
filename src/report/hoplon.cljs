@@ -24,7 +24,7 @@
 
 (defn tier-report
  [tier ticker all-currencies tier-currencies]
- (h/div
+ (spectre.hoplon/panel
   (h/h2 (j/cell= (str "Tier " tier)))
   (h/h3 "Aggregate report")
   (spectre.hoplon/table
@@ -49,7 +49,7 @@
 
 (defn portfolio-report
  [ticker all-currencies]
- (h/div
+ (spectre.hoplon/panel
   (h/h2 "Portfolio totals")
   (spectre.hoplon/table
    (h/tr
@@ -63,17 +63,18 @@
 
 (defn page
  [conn ticker]
- (h/div
+ (let [tiers (j/cell= (tier.api/db->tiers conn))
+       all-currencies (j/cell= (currency.api/db->currencies conn))
+       error? (j/cell= (not (tier.api/tiers-incremental? tiers)))]
+  (h/div
    :class "page-content"
-  (h/h1 "Report")
-  (let [tiers (j/cell= (tier.api/db->tiers conn))
-        all-currencies (j/cell= (currency.api/db->currencies conn))
-        error? (j/cell= (not (tier.api/tiers-incremental? tiers)))]
-   (h/div
-    (portfolio-report ticker all-currencies)
+   (h/h1 "Report")
 
-    (h/if-tpl error?
-     (instructions.hoplon/warning "The tiers must increment by 1")
-     (h/div
-      (h/for-tpl [[tier tier-currencies] (j/cell= (tier.api/currencies-by-tier all-currencies))]
-       (tier-report tier ticker all-currencies tier-currencies))))))))
+   (portfolio-report ticker all-currencies)
+
+   (h/if-tpl error?
+    (spectre.hoplon/panel
+     (instructions.hoplon/warning "The tiers must increment by 1"))
+    (h/div
+     (h/for-tpl [[tier tier-currencies] (j/cell= (tier.api/currencies-by-tier all-currencies))]
+      (tier-report tier ticker all-currencies tier-currencies)))))))

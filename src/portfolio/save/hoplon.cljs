@@ -2,18 +2,19 @@
  (:require
   [hoplon.core :as h]
   [javelin.core :as j]
-  portfolio.save.api))
+  portfolio.save.api
+  spectre.hoplon))
 
 (defn save
  [conn]
- (h/div :class "panel"
+ (spectre.hoplon/panel
   (h/h2 "Save")
   (h/code
    (j/cell= (portfolio.save.api/save-db conn)))))
 
 (defn load
  [conn]
- (h/div :class "panel"
+ (spectre.hoplon/panel
   (h/h2 "Load")
   (let [db (j/cell "")]
    (h/form
@@ -29,7 +30,7 @@
 
 (defn reset
  [conn]
- (h/div :class "panel"
+ (spectre.hoplon/panel
   (h/h2 "Reset")
   (h/form
    :submit #(portfolio.save.api/reset-conn! conn)

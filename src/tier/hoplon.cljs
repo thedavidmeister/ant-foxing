@@ -15,7 +15,7 @@
  (let [current-ratio (j/cell= (tier.api/db->ratio conn))
        tiers [1 2 3 4]]
   (h/div
-   (h/div :class "panel"
+   (spectre.hoplon/panel
     (h/h2 "Portfolio tiering ratio")
     (h/p "What is the ratio to use for each tiering of the portfolio?")
     (h/p "The ratio will be used in a geometric sequence for each tiering.")

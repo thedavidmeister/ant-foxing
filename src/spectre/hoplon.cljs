@@ -12,3 +12,10 @@
   :class "table"
   attributes
   children))
+
+(h/defelem panel
+ [attributes children]
+ (h/div
+  :class "panel"
+  attributes
+  children))

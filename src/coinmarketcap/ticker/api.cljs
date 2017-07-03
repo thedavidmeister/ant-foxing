@@ -22,12 +22,12 @@
   :post [(number? %)]}
  (let [cap-str (or (get currency "market_cap_usd")
                    "0")]
-  (cljs.reader/read-string cap-str)))
+  (coinmarketcap.ticker.data/parse-price cap-str)))
 
 (defn sort-by-cap
  "Numerically sort a ticker API response by market cap descending."
  [ticker]
- (let [ticker (ticker-seq-or-nil ticker)]
+ (let [ticker (coinmarketcap.ticker.data/ticker-seq-or-nil ticker)]
   (reverse
    (sort-by
     currency->market-cap

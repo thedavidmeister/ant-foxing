@@ -48,5 +48,8 @@
   ; slow to load the page in the browser and with a big FOUC risk.
   (cljs
    :optimizations (if advanced-compilation? :advanced :none)
-   :source-map true)
+   :source-map true
+   :compiler-options {:verbose true
+                      :warnings true
+                      :pseudo-names true})
   (target :dir #{"target_dev"})))

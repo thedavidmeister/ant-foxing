@@ -23,10 +23,10 @@
     (let [value (j/cell= (portfolio.api/db->input-string conn))]
      (spectre.hoplon/form-input
       :placeholder "Enter coin ID here, eg bitcoin"
-      :input #(portfolio.api/set-currencies-from-input-string!
-               conn
-               @ticker
-               @%)
+      :blur #(portfolio.api/set-currencies-from-input-string!
+              conn
+              @ticker
+              @%)
       :value value
       :size (j/cell= (count value))))))))
 
@@ -37,7 +37,7 @@
    (h/div children)
    (el-fn
     (dissoc attributes :conn :currency :k :el-fn :default-val)
-    :input #(portfolio.api/upsert-currency! conn (:currency/id @currency) {k @%})
+    :blur #(portfolio.api/upsert-currency! conn (:currency/id @currency) {k @%})
     :value (j/cell= (get currency k))))))
 
 (defn currency-form-row

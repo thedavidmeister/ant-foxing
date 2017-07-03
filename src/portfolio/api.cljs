@@ -43,7 +43,7 @@
 
 (defn input-string->currency-ids
  [ticker s]
- {:pre [(coinmarketcap.ticker.api/ticker? ticker)
+ {:pre [(coinmarketcap.ticker.data/ticker? ticker)
         (string? s)]}
  (let [candidates (set (map clojure.string/lower-case (clojure.string/split s #"\s+")))
        ticker-ids (set (map #(get % "id") ticker))]
@@ -59,7 +59,7 @@
 (defn set-currencies-from-input-string!
  [conn ticker input-string]
  {:pre [(d/conn? conn)
-        (coinmarketcap.ticker.api/ticker? ticker)
+        (coinmarketcap.ticker.data/ticker? ticker)
         (string? input-string)]}
  (set-currencies!
   conn

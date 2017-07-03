@@ -18,7 +18,7 @@
 
 (defn currency-ticker->market-cap
  [currency-ticker]
- {:pre [(currency-ticker? currency-ticker)]
+ {:pre [(coinmarketcap.ticker.data/currency-ticker? currency-ticker)]
   :post [(number? %)]}
  (let [cap-str (or (get currency-ticker "market_cap_usd")
                    "0")]

@@ -10,5 +10,5 @@
    (spectre.hoplon/styles)
    (h/link :rel "stylesheet" :href "styles.css"))
   (h/body
-   (h/div :class "wrapper"
+   (spectre.hoplon/wrapper
     children))))

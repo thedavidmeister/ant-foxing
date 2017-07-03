@@ -6,6 +6,13 @@
  []
  (h/link :rel "stylesheet" :href "spectre.css"))
 
+(h/defelem wrapper
+ [attributes children]
+ (h/div
+  :class "wrapper"
+  attributes
+  children))
+
 (h/defelem page-content
  [attributes children]
  (h/div

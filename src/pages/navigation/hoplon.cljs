@@ -14,9 +14,11 @@
  "A top nav based on the simplest possible routing setup"
  [routes]
  (let [route-keys (j/cell= (map second (second routes)))]
-  (h/nav
+  (h/nav :class "nav"
+   (h/h1 (h/strong (h/em "Ant Foxing")))
    (h/for-tpl [k route-keys]
     (h/a
+     :class "nav-item"
      :click #(pages.routes.api/navigate! @k)
      (j/cell= (-> k name cuerdas.core/human clojure.string/capitalize)))))))
 

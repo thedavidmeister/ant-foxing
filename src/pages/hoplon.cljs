@@ -6,7 +6,8 @@
  [_ children]
  (h/html
   (h/head
+   (h/link :rel "stylesheet" :href "spectre.css")
    (h/link :rel "stylesheet" :href "styles.css"))
   (h/body
-   (h/div
+   (h/div :class "wrapper"
     children))))

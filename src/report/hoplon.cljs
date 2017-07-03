@@ -7,5 +7,6 @@
 
 (defn page
  [conn ticker]
- (h/h1 "Report"
-  (j/cell= (prn (currency.api/db->currencies conn)))))
+ (h/div :class "page-content"
+  (h/h1 "Report"
+   (j/cell= (prn (currency.api/db->currencies conn))))))

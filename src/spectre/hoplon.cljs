@@ -33,3 +33,17 @@
   :class "panel"
   attributes
   children))
+
+(h/defelem nav
+ [attributes children]
+ (h/nav
+  :class "nav"
+  attributes
+  children))
+
+(h/defelem nav-item
+ [attributes children]
+ (h/a
+  :class "nav-item"
+  attributes
+  children))

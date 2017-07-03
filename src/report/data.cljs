@@ -7,11 +7,12 @@
 (defn ->currency-ticker
  [ticker currency]
  {:pre [(coinmarketcap.ticker.data/ticker? ticker)
-        (currency.data/currency? currency)]
+        (or (currency.data/currency? currency) (nil? currency))]
   :post [(coinmarketcap.ticker.data/currency-ticker? %)]}
- (coinmarketcap.ticker.api/ticker-id-filter
-  ticker
-  (:currency/id currency)))
+ (when currency
+  (coinmarketcap.ticker.api/ticker-id-filter
+   ticker
+   (:currency/id currency))))
 
 (defn percentage
  [a b]

@@ -61,3 +61,10 @@
   :class "form-input"
   attributes
   children))
+
+(h/defelem button
+ [attributes children]
+ (h/button
+  :class "btn"
+  attributes
+  children))

@@ -53,9 +53,8 @@
  [conn ids]
  {:pre [(d/conn? conn)]}
  (let [currency-ids (currency.api/db->currency-ids @conn)]
-  (j/dosync
-   (add-currencies! conn ids)
-   (remove-currencies! conn (clojure.set/difference currency-ids ids)))))
+  (add-currencies! conn ids)
+  (remove-currencies! conn (clojure.set/difference currency-ids ids))))
 
 (defn set-currencies-from-input-string!
  [conn ticker input-string]

@@ -16,11 +16,11 @@
  ([c id params]
   (coinmarketcap.api/do-it! (str "ticker/" id "/") c params)))
 
-(defn currency->market-cap
- [currency]
- {:pre [(map? currency)]
+(defn currency-ticker->market-cap
+ [currency-ticker]
+ {:pre [(currency-ticker? currency-ticker)]
   :post [(number? %)]}
- (let [cap-str (or (get currency "market_cap_usd")
+ (let [cap-str (or (get currency-ticker "market_cap_usd")
                    "0")]
   (coinmarketcap.ticker.data/parse-price cap-str)))
 
@@ -30,7 +30,9 @@
  (let [ticker (coinmarketcap.ticker.data/ticker-seq-or-nil ticker)]
   (reverse
    (sort-by
-    currency->market-cap
+    (fn
+     [currency-ticker]
+     [(currency-ticker->market-cap currency-ticker) (get currency-ticker "id")])
     ticker))))
 
 (defn -fetch-all-cell

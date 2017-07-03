@@ -22,8 +22,7 @@
     (spectre.hoplon/form-input
      :type "text"
      :input #(reset! db @%))
-    (h/button
-     :class "btn"
+    (spectre.hoplon/button
      :type "submit"
      "Load")))))
 
@@ -33,8 +32,7 @@
   (h/h2 "Reset")
   (h/form
    :submit #(portfolio.save.api/reset-conn! conn)
-   (h/button
-    :class "btn"
+   (spectre.hoplon/button
     :type "submit"
     "Reset"))))
 

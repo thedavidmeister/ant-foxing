@@ -3,7 +3,8 @@
   wheel.math.number
   tier.data
   [datascript.core :as d]
-  currency.api))
+  currency.api
+  portfolio.api))
 
 (defn parse-ratio
  "Parse a tiering ratio from user input"
@@ -16,9 +17,10 @@
 
 (defn db->ratio
  [db]
+ {:pre [(d/db? db)]}
  (tier.api/parse-ratio
   (portfolio.api/db->config
-   conn
+   db
    :portfolio.tier/ratio)))
 
 (defn db->tiers

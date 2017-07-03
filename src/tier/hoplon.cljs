@@ -46,5 +46,5 @@
                         3)))))))
     (h/form
      (spectre.hoplon/form-input
-      :input #(portfolio.api/set-config! conn :portfolio.tier/ratio @%)
+      :blur #(portfolio.api/set-config! conn :portfolio.tier/ratio @%)
       :value current-ratio))))))

@@ -13,7 +13,8 @@
   :req [:currency/id :currency/tier :currency/hodling]
   :opt [:currency/website :currency/notes]))
 
-(defn currency? [currency] (cljs.spec.alpha/valid? :currency/currency currency))
+(defn currency? [currency]
+ (cljs.spec.alpha/valid? :currency/currency currency))
 
 (defn parse-hodling
  [i]

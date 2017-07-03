@@ -8,7 +8,8 @@
  [ticker currency]
  {:pre [(coinmarketcap.ticker.data/ticker? ticker)
         (or (currency.data/currency? currency) (nil? currency))]
-  :post [(coinmarketcap.ticker.data/currency-ticker? %)]}
+  :post [(or (coinmarketcap.ticker.data/currency-ticker? %)
+             (nil? %))]}
  (when currency
   (coinmarketcap.ticker.api/ticker-id-filter
    ticker

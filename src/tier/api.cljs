@@ -4,7 +4,8 @@
   tier.data
   [datascript.core :as d]
   currency.api
-  portfolio.api))
+  portfolio.api
+  math.geometric.sequence))
 
 (defn parse-ratio
  "Parse a tiering ratio from user input"
@@ -47,3 +48,13 @@
   (group-by
    :currency/tier
    currencies)))
+
+(defn tier-target
+ "The last tier needs to scoop up all remaining funds, other tiers need to follow geometric rules"
+ [db tier]
+ {:pre [(d/db? db)
+        (number? tier)]
+  :post [(number? %)]}
+ (let [last-tier? (= tier (last (db->tiers db)))]
+  ((if last-tier? math.geometric.sequence/nth math.geometric.sequence/at-nth)
+   (db->ratio db) tier)))

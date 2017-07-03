@@ -23,17 +23,19 @@
    (h/td (j/cell= (report.api/->valuation-percentage ticker tier-currencies currency))))))
 
 (defn tier-report
- [tier ticker all-currencies tier-currencies]
+ [conn tier ticker all-currencies tier-currencies]
  (spectre.hoplon/panel
   (h/h2 (j/cell= (str "Tier " tier)))
   (h/h3 "Aggregate report")
   (spectre.hoplon/table
    (h/tr
     (h/th "Tier market cap")
-    (h/th "Tier valuation"))
+    (h/th "Tier valuation")
+    (h/th "Target %"))
    (h/tr
     (h/td (j/cell= (report.api/->total-cap ticker tier-currencies)))
-    (h/td (j/cell= (report.api/->total-valuation ticker tier-currencies)))))
+    (h/td (j/cell= (report.api/->total-valuation ticker tier-currencies)))
+    (h/td (j/cell= (tier.api/tier-target conn tier)))))
   (h/h3 "Hodlings info")
   (spectre.hoplon/table
    (h/tr
@@ -76,4 +78,4 @@
      (instructions.hoplon/warning "The tiers must increment by 1"))
     (h/div
      (h/for-tpl [[tier tier-currencies] (j/cell= (tier.api/currencies-by-tier all-currencies))]
-      (tier-report tier ticker all-currencies tier-currencies)))))))
+      (tier-report conn tier ticker all-currencies tier-currencies)))))))

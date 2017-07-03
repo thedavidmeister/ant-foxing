@@ -6,7 +6,8 @@
   math.geometric.sequence
   wheel.link.hoplon
   [datascript.core :as d]
-  [javelin.core :as j]))
+  [javelin.core :as j]
+  spectre.hoplon))
 
 (defn ratio
  [conn]
@@ -24,8 +25,7 @@
      (h/p "Indicative values for each tier")
      (h/p (j/cell= (str "Current tiering ratio: " current-ratio)))
      (h/p (j/cell= (str "Percentage of funds used per tier: " (- 100 (* 100 current-ratio)) "%")))
-     (h/table
-      :class "table"
+     (spectre.hoplon/table
       (h/tr
        (h/th)
        (h/for-tpl [tier tiers]

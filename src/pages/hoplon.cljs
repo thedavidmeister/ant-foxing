@@ -1,12 +1,13 @@
 (ns pages.hoplon
  (:require
-  [hoplon.core :as h]))
+  [hoplon.core :as h]
+  spectre.hoplon))
 
 (h/defelem outer
  [_ children]
  (h/html
   (h/head
-   (h/link :rel "stylesheet" :href "spectre.css")
+   (spectre.hoplon/styles)
    (h/link :rel "stylesheet" :href "styles.css"))
   (h/body
    (h/div :class "wrapper"

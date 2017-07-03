@@ -5,7 +5,8 @@
   portfolio.api
   [datascript.core :as d]
   instructions.hoplon
-  tier.hoplon))
+  tier.hoplon
+  spectre.hoplon))
 
 (defn currently-hodling
  [conn ticker]
@@ -86,8 +87,7 @@
                     :el-fn h/textarea}]]]
 
   (h/form
-   (h/table
-    :class "table"
+   (spectre.hoplon/table
     (h/tr
      (for [[n _] structure]
       (h/th n)))

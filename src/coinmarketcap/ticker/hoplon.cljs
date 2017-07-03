@@ -3,7 +3,8 @@
   [javelin.core :as j]
   [hoplon.core :as h]
   coinmarketcap.ticker.api
-  cuerdas.core))
+  cuerdas.core
+  spectre.hoplon))
 
 (defn table
  [ticker]
@@ -19,7 +20,7 @@
      "No results (probably an error)")
 
     (j/cell= :else)
-    (h/table :class "table"
+    (spectre.hoplon/table
      (h/tr
       (h/for-tpl [k ks]
        (h/th (j/cell= (clojure.string/capitalize (cuerdas.core/human k))))))

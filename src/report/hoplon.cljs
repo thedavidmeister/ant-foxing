@@ -7,6 +7,7 @@
   instructions.hoplon
   currency.data
   report.api
+  spectre.hoplon
   coinmarketcap.ticker.api))
 
 (defn currency-report-row
@@ -26,7 +27,7 @@
  (h/div
   (h/h2 (j/cell= (str "Tier " tier)))
   (h/h3 "Aggregate report")
-  (h/table
+  (spectre.hoplon/table
    (h/tr
     (h/th "Tier market cap")
     (h/th "Tier valuation"))
@@ -34,7 +35,7 @@
     (h/td (j/cell= (report.api/->total-cap ticker tier-currencies)))
     (h/td (j/cell= (report.api/->total-valuation ticker tier-currencies)))))
   (h/h3 "Hodlings info")
-  (h/table
+  (spectre.hoplon/table
    (h/tr
     (h/th "Name")
     (h/th "Rank")
@@ -50,7 +51,7 @@
  [ticker all-currencies]
  (h/div
   (h/h2 "Portfolio totals")
-  (h/table
+  (spectre.hoplon/table
    (h/tr
     (h/th "Market cap")
     (h/th "Portfolio valuation"))

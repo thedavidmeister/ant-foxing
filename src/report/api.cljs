@@ -41,23 +41,38 @@
  (reduce
   +
   (map
-   (comp
-    coinmarketcap.ticker.data/parse-price
-    #(get % "market_cap_usd")
-    #(coinmarketcap.ticker.api/ticker-id-filter ticker %)
-    :currency/id)
+   (fn [currency]
+    (->cap
+     (report.data/->currency-ticker ticker currency)
+     currency))
    currencies)))
 
-(defn ->cap-percentage
- [ticker currencies currency]
+(defn percentage-fn
+ [this-fn total-fn]
+ (fn
+  [ticker currencies currency]
+  {:pre [(coinmarketcap.ticker.data/ticker? ticker)
+         (every? currency.data/currency? currencies)
+         (currency.data/currency? currency)]
+   :post [(number? %)]}
+  (let [total (total-fn ticker currencies)
+        this (this-fn (report.data/->currency-ticker ticker currency) currency)]
+   (report.data/percentage this total))))
+
+(def ->cap-percentage (percentage-fn ->cap ->total-cap))
+
+(defn ->total-valuation
+ [ticker currencies]
  {:pre [(coinmarketcap.ticker.data/ticker? ticker)
-        (every? currency.data/currency? currencies)
-        (currency.data/currency? currency)]
+        (every? currency.data/currency? currencies)]
   :post [(number? %)]}
- (let [currency-ticker (report.data/->currency-ticker ticker currency)
-       total-cap (->total-cap ticker currencies)
-       cap (->cap currency-ticker currency)]
-  (js/parseFloat
-   (.toPrecision
-    (* 100 (/ cap total-cap))
-    3))))
+ (reduce
+  +
+  (map
+   (fn [currency]
+    (->valuation
+     (report.data/->currency-ticker ticker currency)
+     currency))
+   currencies)))
+
+(def ->valuation-percentage (percentage-fn ->valuation ->total-valuation))

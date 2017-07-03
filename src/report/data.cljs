@@ -12,3 +12,10 @@
  (coinmarketcap.ticker.api/ticker-id-filter
   ticker
   (:currency/id currency)))
+
+(defn percentage
+ [a b]
+ (js/parseFloat
+  (.toPrecision
+   (* 100 (/ a b))
+   3)))

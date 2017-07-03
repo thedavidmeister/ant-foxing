@@ -18,7 +18,8 @@
    (h/td (j/cell= (report.api/->cap currency-ticker currency)))
    (h/td (j/cell= (report.api/->cap-percentage ticker currencies currency)))
    (h/td (j/cell= (report.api/->hodling currency-ticker currency)))
-   (h/td (j/cell= (report.api/->valuation currency-ticker currency))))))
+   (h/td (j/cell= (report.api/->valuation currency-ticker currency)))
+   (h/td (j/cell= (report.api/->valuation-percentage ticker currencies currency))))))
 
 (defn tier-report
  [conn ticker tier currencies]
@@ -27,9 +28,11 @@
   (h/h3 "Aggregate report")
   (h/table
    (h/tr
-    (h/th "Total cap"))
+    (h/th "Total cap")
+    (h/th "Total valuation"))
    (h/tr
-    (h/td (j/cell= (report.api/->total-cap ticker currencies)))))
+    (h/td (j/cell= (report.api/->total-cap ticker currencies)))
+    (h/td (j/cell= (report.api/->total-valuation ticker currencies)))))
   (h/h3 "Hodlings info")
   (h/table
    (h/tr
@@ -38,7 +41,8 @@
     (h/th "Market cap")
     (h/th "Percentage of market cap")
     (h/th "Current hodlings")
-    (h/th "Current valuation (USD)"))
+    (h/th "Current valuation (USD)")
+    (h/th "Percentage of tier valuation"))
    (h/for-tpl [currency currencies]
     (currency-report-row conn ticker currencies currency)))))
 

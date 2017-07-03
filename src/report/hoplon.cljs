@@ -66,8 +66,7 @@
  (let [tiers (j/cell= (tier.api/db->tiers conn))
        all-currencies (j/cell= (currency.api/db->currencies conn))
        error? (j/cell= (not (tier.api/tiers-incremental? tiers)))]
-  (h/div
-   :class "page-content"
+  (spectre.hoplon/page-content
    (h/h1 "Report")
 
    (portfolio-report ticker all-currencies)

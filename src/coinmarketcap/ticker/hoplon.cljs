@@ -33,7 +33,7 @@
 
 (defn page
  [conn ticker]
- (h/div :class "page-content"
+ (spectre.hoplon/page-content
   (h/h1 "Ticker")
   (spectre.hoplon/panel
    (h/h2 "Raw data from coinmarketcap.com sorted by market cap desc.")

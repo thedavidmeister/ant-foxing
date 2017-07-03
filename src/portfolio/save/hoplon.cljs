@@ -41,7 +41,7 @@
 
 (defn page
  [conn]
- (h/div :class "page-content"
+ (spectre.hoplon/page-content
   (h/h1 "Save, load or reset")
   (save conn)
   (load conn)

@@ -96,7 +96,7 @@
 
 (defn page
  [conn ticker]
- (h/div :class "page-content"
+ (spectre.hoplon/page-content
   (h/h1 "Configure your portfolio")
   (tier.hoplon/ratio conn)
   (currently-hodling conn ticker)

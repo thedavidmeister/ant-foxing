@@ -20,10 +20,11 @@
 
 (defn tier-report
  [conn tier ticker all-currencies tier-currencies]
- (let [tier-cap (j/cell= (report.api/->total-cap ticker tier-currencies))
+ (let [total-valuation (j/cell= (report.api/->total-valuation ticker all-currencies))
+       tier-cap (j/cell= (report.api/->total-cap ticker tier-currencies))
        tier-valuation (j/cell= (report.api/->total-valuation ticker tier-currencies))
-       tier-target (j/cell= (tier.api/tier-target conn tier))
-       tier-target-valuation (j/cell= (int (* tier-valuation tier-target)))
+       tier-target-ratio (j/cell= (tier.api/tier-target conn tier))
+       tier-target-valuation (j/cell= (int (* total-valuation tier-target-ratio)))
        tier-valuation-diff (j/cell= (- tier-target-valuation tier-valuation))]
   (spectre.hoplon/panel
    (h/h2 (j/cell= (str "Tier " tier)))
@@ -39,7 +40,7 @@
     (h/tr
      (h/td tier-cap)
      (h/td tier-valuation)
-     (h/td tier-target)
+     (h/td tier-target-ratio)
      (h/td tier-target-valuation)
      (h/td (diff tier-valuation-diff))))
 
@@ -48,6 +49,7 @@
     (h/tr
      (h/th "Name")
      (h/th "Rank")
+     (h/th "Price USD")
      (h/th "Market cap")
      (h/th "Ratio of tier cap")
      (h/th "Current hodlings")
@@ -60,6 +62,7 @@
      (let [currency-ticker (j/cell= (report.data/->currency-ticker ticker currency))
            currency-name (j/cell= (get currency-ticker "name"))
            rank (j/cell= (get currency-ticker "rank"))
+           price-usd (j/cell= (report.api/->price-usd currency-ticker currency))
            cap (j/cell= (report.api/->cap currency-ticker currency))
            cap-ratio (j/cell= (report.api/->cap-ratio ticker tier-currencies currency))
            hodling (j/cell= (report.api/->hodling currency-ticker currency))
@@ -67,10 +70,11 @@
            valuation-ratio (j/cell= (report.api/->valuation-ratio ticker tier-currencies currency))
            valuation-target (j/cell= (int (* cap-ratio tier-target-valuation)))
            valuation-target-diff (j/cell= (- valuation-target valuation))
-           hodling-target-diff (j/cell= (/ valuation-target-diff (report.api/->price-usd currency-ticker currency)))]
+           hodling-target-diff (j/cell= (report.data/simple-number (/ valuation-target-diff (report.api/->price-usd currency-ticker currency))))]
       (h/tr
        (h/td currency-name)
        (h/td rank)
+       (h/td price-usd)
        (h/td cap)
        (h/td cap-ratio)
        (h/td hodling)

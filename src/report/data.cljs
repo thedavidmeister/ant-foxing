@@ -15,7 +15,7 @@
    ticker
    (:currency/id currency))))
 
-(defn simple-ratio
+(defn simple-number
  [r]
  (js/parseFloat (.toPrecision r 3)))
 
@@ -24,5 +24,5 @@
  (str
   (if (zero? b)
    0
-   (simple-ratio (* 100 r)))
+   (simple-number (* 100 r)))
   "%"))

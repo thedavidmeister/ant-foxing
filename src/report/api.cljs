@@ -64,7 +64,7 @@
    :post [(number? %)]}
   (let [total (total-fn ticker currencies)
         this (this-fn (report.data/->currency-ticker ticker currency) currency)]
-   (report.data/simple-ratio (/ this total)))))
+   (report.data/simple-number (/ this total)))))
 
 (def ->cap-ratio (ratio-fn ->cap ->total-cap))
 

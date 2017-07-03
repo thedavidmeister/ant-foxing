@@ -1,4 +1,4 @@
-(ns coinmarketcap.config)
+(ns coinmarketcap.data)
 
 (def base-url "https://api.coinmarketcap.com/v1/")
 

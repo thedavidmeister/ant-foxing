@@ -3,7 +3,8 @@
   coinmarketcap.api
   [javelin.core :as j]
   [hoplon.core :as h]
-  hoplon.storage-atom))
+  hoplon.storage-atom
+  coinmarketcap.ticker.data))
 
 (defn fetch-all!
  ([c] (fetch-all! c nil))
@@ -14,23 +15,6 @@
  ([c id] (fetch-id! c id nil))
  ([c id params]
   (coinmarketcap.api/do-it! (str "ticker/" id "/") c params)))
-
-(defn ticker?
- [ticker]
- (if (sequential? ticker)
-  (ticker? (first ticker))
-  (and
-   (get ticker "name")
-   (get ticker "symbol")
-   (get ticker "id"))))
-
-(defn ticker-seq-or-nil
- "Normalises ticker results into a sequence or nil if the ticker represents an API error"
- [ticker]
- (if (ticker? ticker)
-  (if (sequential? ticker)
-   ticker
-   [ticker])))
 
 (defn currency->market-cap
  [currency]
@@ -52,10 +36,18 @@
 (defn -fetch-all-cell
  []
  (j/with-let [c (hoplon.storage-atom/session-storage (j/cell []) ::all)]
-  (let [keep-fetching! (fn [c]
+  (let [keep-fetching! (fn keep-fetching! [c]
                         (fetch-all! c)
                         (h/with-timeout
-                         coinmarketcap.config/refresh-interval
+                         coinmarketcap.data/refresh-interval
                          (keep-fetching! c)))]
    (keep-fetching! c))))
 (def fetch-all-cell (memoize -fetch-all-cell))
+
+(defn ticker-id-filter
+ [ticker id]
+ (let [ticker (coinmarketcap.ticker.data/ticker-seq-or-nil ticker)]
+  (first
+   (filter
+    #(= id (get % "id"))
+    ticker))))

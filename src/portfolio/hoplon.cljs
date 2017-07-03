@@ -59,7 +59,7 @@
                        (sort-by
                         #(-> %
                           :currency/tier
-                          tier.api/parse-tier)
+                          tier.data/parse-tier)
                         currencies))
        structure [["Currency"
                    {:k :currency/id

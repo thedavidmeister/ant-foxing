@@ -1,8 +1,9 @@
 (ns tier.api
  (:require
   wheel.math.number
-  tier.config
-  [datascript.core :as d]))
+  tier.data
+  [datascript.core :as d]
+  currency.api))
 
 (defn parse-ratio
  "Parse a tiering ratio from user input"
@@ -10,7 +11,7 @@
  {:post [(number? %)]}
  (let [n (js/parseFloat i)]
   (if (wheel.math.number/nan? n)
-   tier.config/default-ratio
+   tier.data/default-ratio
    n)))
 
 (defn db->ratio
@@ -20,24 +21,27 @@
    conn
    :portfolio.tier/ratio)))
 
-(defn parse-tier
- "Parse a currency tier from user input"
- [i]
- {:post [(number? %)]}
- (let [n (js/parseInt i 10)]
-  (if (wheel.math.number/nan? n)
-   tier.config/default-tier
-   n)))
-
 (defn db->tiers
  [db]
  {:pre [(d/db? db)]}
- (d/q
-  '[:find ?t
-    :where [_ :currency/tier ?t]]
-  db))
+ ; We don't do this with a query because we want default vals to be included.
+ (let [currencies (currency.api/db->currencies db)]
+  (seq
+   (into
+    (sorted-set)
+    (map
+     :currency/tier
+     currencies)))))
 
-(defn normalized-tiers
- [tiers])
+(defn tiers-incremental?
+ [tiers]
+ (let [expected (range 1 (inc (count tiers)))]
+  (= expected tiers)))
 
-(def db->normalized-tiers (comp normalized-tiers db->tiers))
+(defn currencies-by-tier
+ [currencies]
+ (into
+  (sorted-map)
+  (group-by
+   :currency/tier
+   currencies)))

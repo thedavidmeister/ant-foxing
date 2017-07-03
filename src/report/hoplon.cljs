@@ -10,6 +10,14 @@
   spectre.hoplon
   coinmarketcap.ticker.api))
 
+(defn diff
+ [n]
+ (h/strong
+  :css (j/cell= {:color (cond (< 0 n) "green"
+                              (> 0 n) "red"
+                              :else "black")})
+  n))
+
 (defn tier-report
  [conn tier ticker all-currencies tier-currencies]
  (let [tier-cap (j/cell= (report.api/->total-cap ticker tier-currencies))
@@ -25,7 +33,7 @@
     (h/tr
      (h/th "Tier market cap")
      (h/th "Tier valuation")
-     (h/th "Target %")
+     (h/th "Target ratio")
      (h/th "Target valuation")
      (h/th "Valuation diff"))
     (h/tr
@@ -33,7 +41,7 @@
      (h/td tier-valuation)
      (h/td tier-target)
      (h/td tier-target-valuation)
-     (h/td tier-valuation-diff)))
+     (h/td (diff tier-valuation-diff))))
 
    (h/h3 "Hodlings info")
    (spectre.hoplon/table
@@ -41,20 +49,36 @@
      (h/th "Name")
      (h/th "Rank")
      (h/th "Market cap")
-     (h/th "Percentage of market cap")
+     (h/th "Ratio of tier cap")
      (h/th "Current hodlings")
      (h/th "Current valuation (USD)")
-     (h/th "Percentage of tier valuation"))
+     (h/th "Ratio of tier valuation")
+     (h/th "Target valuation")
+     (h/th "Target valuation diff (USD)")
+     (h/th "Target hodling diff"))
     (h/for-tpl [currency tier-currencies]
-     (let [currency-ticker (j/cell= (report.data/->currency-ticker ticker currency))]
+     (let [currency-ticker (j/cell= (report.data/->currency-ticker ticker currency))
+           currency-name (j/cell= (get currency-ticker "name"))
+           rank (j/cell= (get currency-ticker "rank"))
+           cap (j/cell= (report.api/->cap currency-ticker currency))
+           cap-ratio (j/cell= (report.api/->cap-ratio ticker tier-currencies currency))
+           hodling (j/cell= (report.api/->hodling currency-ticker currency))
+           valuation (j/cell= (report.api/->valuation currency-ticker currency))
+           valuation-ratio (j/cell= (report.api/->valuation-ratio ticker tier-currencies currency))
+           valuation-target (j/cell= (int (* cap-ratio tier-target-valuation)))
+           valuation-target-diff (j/cell= (- valuation-target valuation))
+           hodling-target-diff (j/cell= (/ valuation-target-diff (report.api/->price-usd currency-ticker currency)))]
       (h/tr
-       (h/td (j/cell= (get currency-ticker "name")))
-       (h/td (j/cell= (get currency-ticker "rank")))
-       (h/td (j/cell= (report.api/->cap currency-ticker currency)))
-       (h/td (j/cell= (report.api/->cap-percentage ticker tier-currencies currency)))
-       (h/td (j/cell= (report.api/->hodling currency-ticker currency)))
-       (h/td (j/cell= (report.api/->valuation currency-ticker currency)))
-       (h/td (j/cell= (report.api/->valuation-percentage ticker tier-currencies currency))))))))))
+       (h/td currency-name)
+       (h/td rank)
+       (h/td cap)
+       (h/td cap-ratio)
+       (h/td hodling)
+       (h/td valuation)
+       (h/td valuation-ratio)
+       (h/td valuation-target)
+       (h/td (diff valuation-target-diff))
+       (h/td (diff hodling-target-diff)))))))))
 
 (defn portfolio-report
  [ticker all-currencies]

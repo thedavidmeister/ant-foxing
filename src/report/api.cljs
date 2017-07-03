@@ -6,6 +6,14 @@
 
 ; individual currencies
 
+(defn ->price-usd
+ [currency-ticker currency]
+ {:pre [(or (coinmarketcap.ticker.data/currency-ticker? ticker) (nil? ticker))
+        (currency.data/currency? currency)]
+  :post [(number? %)]}
+ (coinmarketcap.ticker.data/parse-price
+  (get currency-ticker "price_usd")))
+
 (defn ->cap
  [currency-ticker currency]
  {:pre [(or (coinmarketcap.ticker.data/currency-ticker? ticker) (nil? ticker))
@@ -28,8 +36,7 @@
   :post [(number? %)]}
  (int
   (* (->hodling currency-ticker currency)
-     (coinmarketcap.ticker.data/parse-price
-      (get currency-ticker "price_usd")))))
+     (->price-usd currency-ticker currency))))
 
 ; aggregate reports
 
@@ -47,7 +54,7 @@
      currency))
    currencies)))
 
-(defn percentage-fn
+(defn ratio-fn
  [this-fn total-fn]
  (fn
   [ticker currencies currency]
@@ -57,9 +64,9 @@
    :post [(number? %)]}
   (let [total (total-fn ticker currencies)
         this (this-fn (report.data/->currency-ticker ticker currency) currency)]
-   (report.data/percentage this total))))
+   (report.data/simple-ratio (/ this total)))))
 
-(def ->cap-percentage (percentage-fn ->cap ->total-cap))
+(def ->cap-ratio (ratio-fn ->cap ->total-cap))
 
 (defn ->total-valuation
  [ticker currencies]
@@ -75,4 +82,4 @@
      currency))
    currencies)))
 
-(def ->valuation-percentage (percentage-fn ->valuation ->total-valuation))
+(def ->valuation-ratio (ratio-fn ->valuation ->total-valuation))

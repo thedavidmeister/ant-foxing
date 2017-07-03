@@ -39,7 +39,7 @@
   (let [keep-fetching! (fn [c]
                         (fetch-all! c)
                         (h/with-timeout
-                         coinmarketcap.config/refresh-interval
+                         coinmarketcap.data/refresh-interval
                          (keep-fetching! c)))]
    (keep-fetching! c))))
 (def fetch-all-cell (memoize -fetch-all-cell))

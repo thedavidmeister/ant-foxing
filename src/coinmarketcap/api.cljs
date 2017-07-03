@@ -2,7 +2,7 @@
  (:require
   [javelin.core :as j]
   ajax.core
-  coinmarketcap.config
+  coinmarketcap.data
   taoensso.timbre))
 
 (defn do-it!
@@ -10,7 +10,7 @@
  ([c endpoint params]
   {:pre [(j/cell? c) (string? endpoint)]}
   (taoensso.timbre/info "Hitting coinmarketcap endpoint: " endpoint)
-  (let [url (str coinmarketcap.config/base-url endpoint)]
+  (let [url (str coinmarketcap.data/base-url endpoint)]
    (ajax.core/GET
     url
     (merge

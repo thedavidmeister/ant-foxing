@@ -10,29 +10,17 @@
   spectre.hoplon
   coinmarketcap.ticker.api))
 
-(defn currency-report-row
- [ticker all-currencies tier-currencies currency]
- (let [currency-ticker (j/cell= (report.data/->currency-ticker ticker currency))]
-  (h/tr
-   (h/td (j/cell= (get currency-ticker "name")))
-   (h/td (j/cell= (get currency-ticker "rank")))
-   (h/td (j/cell= (report.api/->cap currency-ticker currency)))
-   (h/td (j/cell= (report.api/->cap-percentage ticker tier-currencies currency)))
-   (h/td (j/cell= (report.api/->hodling currency-ticker currency)))
-   (h/td (j/cell= (report.api/->valuation currency-ticker currency)))
-   (h/td (j/cell= (report.api/->valuation-percentage ticker tier-currencies currency))))))
-
 (defn tier-report
  [conn tier ticker all-currencies tier-currencies]
- (spectre.hoplon/panel
-  (h/h2 (j/cell= (str "Tier " tier)))
+ (let [tier-cap (j/cell= (report.api/->total-cap ticker tier-currencies))
+       tier-valuation (j/cell= (report.api/->total-valuation ticker tier-currencies))
+       tier-target (j/cell= (tier.api/tier-target conn tier))
+       tier-target-valuation (j/cell= (int (* tier-valuation tier-target)))
+       tier-valuation-diff (j/cell= (- tier-target-valuation tier-valuation))]
+  (spectre.hoplon/panel
+   (h/h2 (j/cell= (str "Tier " tier)))
 
-  (h/h3 "Aggregate report")
-  (let [tier-cap (j/cell= (report.api/->total-cap ticker tier-currencies))
-        tier-valuation (j/cell= (report.api/->total-valuation ticker tier-currencies))
-        tier-target (j/cell= (tier.api/tier-target conn tier))
-        tier-target-valuation (j/cell= (int (* tier-valuation tier-target)))
-        tier-valuation-diff (j/cell= (- tier-target-valuation tier-valuation))]
+   (h/h3 "Aggregate report")
    (spectre.hoplon/table
     (h/tr
      (h/th "Tier market cap")
@@ -45,20 +33,28 @@
      (h/td tier-valuation)
      (h/td tier-target)
      (h/td tier-target-valuation)
-     (h/td tier-valuation-diff))))
+     (h/td tier-valuation-diff)))
 
-  (h/h3 "Hodlings info")
-  (spectre.hoplon/table
-   (h/tr
-    (h/th "Name")
-    (h/th "Rank")
-    (h/th "Market cap")
-    (h/th "Percentage of market cap")
-    (h/th "Current hodlings")
-    (h/th "Current valuation (USD)")
-    (h/th "Percentage of tier valuation"))
-   (h/for-tpl [currency tier-currencies]
-    (currency-report-row ticker all-currencies tier-currencies currency)))))
+   (h/h3 "Hodlings info")
+   (spectre.hoplon/table
+    (h/tr
+     (h/th "Name")
+     (h/th "Rank")
+     (h/th "Market cap")
+     (h/th "Percentage of market cap")
+     (h/th "Current hodlings")
+     (h/th "Current valuation (USD)")
+     (h/th "Percentage of tier valuation"))
+    (h/for-tpl [currency tier-currencies]
+     (let [currency-ticker (j/cell= (report.data/->currency-ticker ticker currency))]
+      (h/tr
+       (h/td (j/cell= (get currency-ticker "name")))
+       (h/td (j/cell= (get currency-ticker "rank")))
+       (h/td (j/cell= (report.api/->cap currency-ticker currency)))
+       (h/td (j/cell= (report.api/->cap-percentage ticker tier-currencies currency)))
+       (h/td (j/cell= (report.api/->hodling currency-ticker currency)))
+       (h/td (j/cell= (report.api/->valuation currency-ticker currency)))
+       (h/td (j/cell= (report.api/->valuation-percentage ticker tier-currencies currency))))))))))
 
 (defn portfolio-report
  [ticker all-currencies]

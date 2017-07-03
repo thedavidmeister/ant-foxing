@@ -11,11 +11,12 @@
 
 (defn currency-report-row
  [conn ticker currencies currency]
- (let [currency-ticker (j/cell= (coinmarketcap.ticker.api/ticker-id-filter ticker (:currency/id currency)))]
+ (let [currency-ticker (j/cell= (report.data/->currency-ticker ticker currency))]
   (h/tr
    (h/td (j/cell= (get currency-ticker "name")))
    (h/td (j/cell= (get currency-ticker "rank")))
    (h/td (j/cell= (report.api/->cap currency-ticker currency)))
+   (h/td (j/cell= (report.api/->cap-percentage ticker currencies currency)))
    (h/td (j/cell= (report.api/->hodling currency-ticker currency)))
    (h/td (j/cell= (report.api/->valuation currency-ticker currency))))))
 
@@ -35,6 +36,7 @@
     (h/th "Name")
     (h/th "Rank")
     (h/th "Market cap")
+    (h/th "Percentage of market cap")
     (h/th "Current hodlings")
     (h/th "Current valuation (USD)"))
    (h/for-tpl [currency currencies]

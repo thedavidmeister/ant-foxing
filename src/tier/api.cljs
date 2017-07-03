@@ -39,9 +39,9 @@
   (= expected tiers)))
 
 (defn currencies-by-tier
- [db]
+ [currencies]
  (into
   (sorted-map)
   (group-by
    :currency/tier
-   (currency.api/db->currencies db))))
+   currencies)))

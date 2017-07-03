@@ -36,7 +36,7 @@
 (defn -fetch-all-cell
  []
  (j/with-let [c (hoplon.storage-atom/session-storage (j/cell []) ::all)]
-  (let [keep-fetching! (fn [c]
+  (let [keep-fetching! (fn keep-fetching! [c]
                         (fetch-all! c)
                         (h/with-timeout
                          coinmarketcap.data/refresh-interval

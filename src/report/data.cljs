@@ -15,7 +15,9 @@
 
 (defn percentage
  [a b]
- (js/parseFloat
-  (.toPrecision
-   (* 100 (/ a b))
-   3)))
+ (if (zero? b)
+  0
+  (js/parseFloat
+   (.toPrecision
+    (* 100 (/ a b))
+    3))))

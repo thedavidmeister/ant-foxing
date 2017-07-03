@@ -5,6 +5,8 @@
   tier.api
   currency.api
   instructions.hoplon
+  currency.data
+  report.api
   coinmarketcap.ticker.api))
 
 (defn currency-report-row
@@ -13,8 +15,9 @@
   (h/tr
    (h/td (j/cell= (get currency-ticker "name")))
    (h/td (j/cell= (get currency-ticker "rank")))
-   (h/td (j/cell= (get currency-ticker "market_cap_usd")))
-   (h/td (j/cell= (:currency/hodling currency))))))
+   (h/td (j/cell= (report.api/->cap currency-ticker currency)))
+   (h/td (j/cell= (report.api/->hodling currency-ticker currency)))
+   (h/td (j/cell= (report.api/->valuation currency-ticker currency))))))
 
 (defn tier-report
  [conn ticker tier currencies]
@@ -25,9 +28,10 @@
     (h/th "Name")
     (h/th "Rank")
     (h/th "Market cap")
-    (h/th "Current hodlings")))
-  (h/for-tpl [currency currencies]
-   (currency-report-row conn ticker currency))))
+    (h/th "Current hodlings")
+    (h/th "Current valuation (USD)"))
+   (h/for-tpl [currency currencies]
+    (currency-report-row conn ticker currency)))))
 
 (defn page
  [conn ticker]

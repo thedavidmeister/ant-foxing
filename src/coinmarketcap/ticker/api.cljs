@@ -4,7 +4,7 @@
   [javelin.core :as j]
   [hoplon.core :as h]
   hoplon.storage-atom
-  coinmarketcap.config))
+  coinmarketcap.ticker.data))
 
 (defn fetch-all!
  ([c] (fetch-all! c nil))
@@ -15,23 +15,6 @@
  ([c id] (fetch-id! c id nil))
  ([c id params]
   (coinmarketcap.api/do-it! (str "ticker/" id "/") c params)))
-
-(defn ticker?
- [ticker]
- (if (sequential? ticker)
-  (ticker? (first ticker))
-  (and
-   (get ticker "name")
-   (get ticker "symbol")
-   (get ticker "id"))))
-
-(defn ticker-seq-or-nil
- "Normalises ticker results into a sequence or nil if the ticker represents an API error"
- [ticker]
- (if (ticker? ticker)
-  (if (sequential? ticker)
-   ticker
-   [ticker])))
 
 (defn currency->market-cap
  [currency]
@@ -63,7 +46,7 @@
 
 (defn ticker-id-filter
  [ticker id]
- (let [ticker (ticker-seq-or-nil ticker)]
+ (let [ticker (coinmarketcap.ticker.data/ticker-seq-or-nil ticker)]
   (first
    (filter
     #(= id (get % "id"))

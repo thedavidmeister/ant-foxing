@@ -32,13 +32,14 @@
 
 (h/defelem currency-form-input
  [{:keys [conn currency k el-fn default-val] :as attributes} children]
- (let [el-fn (or el-fn spectre.hoplon/form-input)]
+ (let [el-fn (or el-fn spectre.hoplon/form-input)
+       value (j/cell= (get currency k))]
   (h/td
    (h/div children)
    (el-fn
     (dissoc attributes :conn :currency :k :el-fn :default-val)
-    :blur #(portfolio.api/upsert-currency! conn (:currency/id @currency) {k @%})
-    :value (j/cell= (get currency k))))))
+    :value [value conn]
+    :input #(portfolio.api/upsert-currency! conn (:currency/id @currency) {k @%})))))
 
 (defn currency-form-row
  [conn currency structure]

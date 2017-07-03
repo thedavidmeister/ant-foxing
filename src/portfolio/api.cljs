@@ -2,7 +2,9 @@
  (:require
   [datascript.core :as d]
   [javelin.core :as j]
-  coinmarketcap.ticker.api))
+  coinmarketcap.ticker.api
+  wheel.math.number
+  portfolio.config))
 
 (defn db->config
  [db k]
@@ -94,3 +96,12 @@
  ([conn id kvs] (upsert-currency! conn (merge kvs {:currency/id id})))
  ([conn kvs]
   (d/transact! conn [kvs])))
+
+(defn parse-tier
+ [s]
+ {:post [(number? %)]}
+ (prn s)
+ (let [t (js/parseInt s 10)]
+  (if (wheel.math.number/nan? t)
+   portfolio.config/default-tier
+   t)))

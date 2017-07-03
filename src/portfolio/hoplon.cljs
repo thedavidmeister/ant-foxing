@@ -96,7 +96,14 @@
 
 (defn currencies-form
  [conn currencies]
- (let [structure [["Currency"
+ (j/cell= (prn currencies))
+ (let [sorted-by-tier (j/cell=
+                       (sort-by
+                        #(-> %
+                          :currency/tier
+                          portfolio.api/parse-tier)
+                        currencies))
+       structure [["Currency"
                    {:k :currency/id
                     :readonly true
                     :type "text"}]
@@ -116,12 +123,13 @@
                   ["Notes"
                    {:k :currency/notes
                     :el-fn h/textarea}]]]
+
   (h/form
    (h/table
     (h/tr
      (for [[n _] structure]
       (h/th n)))
-    (h/for-tpl [currency currencies]
+    (h/for-tpl [currency sorted-by-tier]
      (currency-form-row conn currency structure))))))
 
 (defn page

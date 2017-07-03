@@ -63,6 +63,7 @@
 (defn page
  [conn ticker]
  (h/div
+   :class "page-content"
   (h/h1 "Report")
   (let [tiers (j/cell= (tier.api/db->tiers conn))
         all-currencies (j/cell= (currency.api/db->currencies conn))

@@ -11,22 +11,24 @@
  [conn ticker]
  {:pre [(d/conn? conn) (j/cell? ticker)]}
  (h/div
-  (h/div
+  (h/div :class "panel"
    (h/h2 "List (space separated) the IDs of the currencies currently hodling")
    (h/p "If you type in a currency ID not found in the ticker data it will be ignored.")
    (h/p "Refer to the raw market cap data to find the ID of your currency.")
    (h/p
     (instructions.hoplon/warning
-     "If you delete or malform an ID here then all the data below will be purged for that currency!")))
-  (h/form
-   (let [value (j/cell= (portfolio.api/db->input-string conn))]
-    (h/input
-     :input #(portfolio.api/set-currencies-from-input-string!
-              conn
-              @ticker
-              @%)
-     :value value
-     :size (j/cell= (count value)))))))
+     "If you delete or malform an ID here then all the data below will be purged for that currency!"))
+   (h/form
+    (let [value (j/cell= (portfolio.api/db->input-string conn))]
+     (h/input
+      :placeholder "Enter coin ID here, eg bitcoin"
+      :class "form-input"
+      :input #(portfolio.api/set-currencies-from-input-string!
+               conn
+               @ticker
+               @%)
+      :value value
+      :size (j/cell= (count value))))))))
 
 (h/defelem currency-form-input
  [{:keys [conn currency k el-fn default-val] :as attributes} children]
@@ -62,24 +64,30 @@
        structure [["Currency"
                    {:k :currency/id
                     :readonly true
+                    :class "form-input"
                     :type "text"}]
                   ["Current hodlings"
                    {:k :currency/hodling
+                    :class "form-input"
                     :type "number"}]
                   ["Tier (lower = more funds)"
                    {:k :currency/tier
+                    :class "form-input"
                     :type "number"
                     :min 1
                     :step 1}]
                   ["Website"
                    {:k :currency/website
+                    :class "form-input"
                     :type "text"}]
                   ["Notes"
                    {:k :currency/notes
+                    :class "form-input"
                     :el-fn h/textarea}]]]
 
   (h/form
    (h/table
+    :class "table"
     (h/tr
      (for [[n _] structure]
       (h/th n)))
@@ -88,7 +96,7 @@
 
 (defn page
  [conn ticker]
- (h/div
+ (h/div :class "page-content"
   (h/h1 "Configure your portfolio")
   (tier.hoplon/ratio conn)
   (currently-hodling conn ticker)

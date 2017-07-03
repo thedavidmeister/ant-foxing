@@ -19,7 +19,7 @@
      "No results (probably an error)")
 
     (j/cell= :else)
-    (h/table
+    (h/table :class "table"
      (h/tr
       (h/for-tpl [k ks]
        (h/th (j/cell= (clojure.string/capitalize (cuerdas.core/human k))))))
@@ -32,6 +32,8 @@
 
 (defn page
  [conn ticker]
- (h/div
-  (h/h1 "Raw data from coinmarketcap.com sorted by market cap desc.")
-  (table (j/cell= (coinmarketcap.ticker.api/sort-by-cap ticker)))))
+ (h/div :class "page-content"
+  (h/h1 "Ticker")
+  (h/div :class "panel"
+   (h/h2 "Raw data from coinmarketcap.com sorted by market cap desc.")
+   (table (j/cell= (coinmarketcap.ticker.api/sort-by-cap ticker))))))

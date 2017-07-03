@@ -1,0 +1,37 @@
+.page-content {
+  padding: 2.4rem;
+  overflow-x: scroll;
+  width: 1000px;
+}
+
+body {
+  background: whitesmoke;
+}
+
+a {
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  over
+}
+
+nav {
+  padding: 2.2rem;
+  flex-basis: 5rem;
+  flex-shrink: 0;
+  background: moccasin;
+}
+
+.panel {
+  padding: 20px;
+  margin-bottom: 20px;
+  float: left;
+  width: 100%;
+  background: white;
+}

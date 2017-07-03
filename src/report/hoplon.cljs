@@ -10,7 +10,7 @@
   coinmarketcap.ticker.api))
 
 (defn currency-report-row
- [conn ticker currency]
+ [conn ticker currencies currency]
  (let [currency-ticker (j/cell= (coinmarketcap.ticker.api/ticker-id-filter ticker (:currency/id currency)))]
   (h/tr
    (h/td (j/cell= (get currency-ticker "name")))
@@ -23,6 +23,13 @@
  [conn ticker tier currencies]
  (h/div
   (h/h2 (j/cell= (str "Tier " tier)))
+  (h/h3 "Aggregate report")
+  (h/table
+   (h/tr
+    (h/th "Total cap"))
+   (h/tr
+    (h/td (j/cell= (report.api/->total-cap ticker currencies)))))
+  (h/h3 "Hodlings info")
   (h/table
    (h/tr
     (h/th "Name")
@@ -31,7 +38,7 @@
     (h/th "Current hodlings")
     (h/th "Current valuation (USD)"))
    (h/for-tpl [currency currencies]
-    (currency-report-row conn ticker currency)))))
+    (currency-report-row conn ticker currencies currency)))))
 
 (defn page
  [conn ticker]

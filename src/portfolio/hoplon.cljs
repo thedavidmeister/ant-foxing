@@ -80,13 +80,15 @@
                    {:k :currency/notes
                     :el-fn spectre.hoplon/form-textarea}]]]
 
-  (h/form
-   (spectre.hoplon/table
-    (h/tr
-     (for [[n _] structure]
-      (h/th n)))
-    (h/for-tpl [currency sorted-by-tier]
-     (currency-form-row conn currency structure))))))
+  (spectre.hoplon/panel
+   (h/form
+    (h/when-tpl (j/cell= (seq sorted-by-tier))
+     (spectre.hoplon/table
+      (h/tr
+       (for [[n _] structure]
+        (h/th n)))
+      (h/for-tpl [currency sorted-by-tier]
+       (currency-form-row conn currency structure))))))))
 
 (defn page
  [conn ticker]

@@ -61,52 +61,68 @@
     (instructions.hoplon/warning
      "If you delete or malform an ID here then all the data below will be purged for that currency!")))
   (h/form
-   (h/input
-    :input #(portfolio.api/set-currencies-from-input-string!
-             conn
-             @ticker
-             @%)
-    :value (j/cell= (portfolio.api/db->input-string conn))))))
+   (let [value (j/cell= (portfolio.api/db->input-string conn))]
+    (h/input
+     :input #(portfolio.api/set-currencies-from-input-string!
+              conn
+              @ticker
+              @%)
+     :value value
+     :size (j/cell= (count value)))))))
 
 (h/defelem currency-form-input
  [{:keys [conn currency k el-fn default-val] :as attributes} children]
  (let [el-fn (or el-fn h/input)
        default-val (or default-val "")]
-  (h/label
+  (h/td
    (h/div children)
    (el-fn
-    (dissoc attributes :conn :id :k)
+    (dissoc attributes :conn :currency :k :el-fn :default-val)
     :input #(portfolio.api/upsert-currency! conn (:currency/id @currency) {k @%})
     :value (j/cell= (get currency k default-val))))))
 
-(defn currency-form
- [conn currency]
+(defn currency-form-row
+ [conn currency structure]
  {:pre [(d/conn? conn)]}
- (let [input (fn [attributes children]
+ (let [input (fn [attributes]
               (currency-form-input
                (merge
                 {:conn conn
                  :currency currency}
-                attributes)
-               children))
-       structure [[{:k :currency/hodling
-                    :default-val 0}
-                   "Current hodlings:"]
-                  [{:k :currency/tier
+                attributes)))]
+  (h/tr
+   (for [[_ a] structure]
+    (input a)))))
+
+(defn currencies-form
+ [conn currencies]
+ (let [structure [["Currency"
+                   {:k :currency/id
+                    :readonly true
+                    :type "text"}]
+                  ["Current hodlings"
+                   {:k :currency/hodling
+                    :default-val 0
+                    :type "number"}]
+                  ["Tier (lower = more funds)"
+                   {:k :currency/tier
                     :type "number"
                     :min 1
                     :step 1
-                    :default-val 1}
-                   "Tier (lower number allocates more funds):"]
-                  [{:k :currency/website}
-                   "Website:"]
-                  [{:k :currency/notes
-                    :el-fn h/textarea}
-                   "Notes:"]]]
+                    :default-val 1}]
+                  ["Website"
+                   {:k :currency/website
+                    :type "text"}]
+                  ["Notes"
+                   {:k :currency/notes
+                    :el-fn h/textarea}]]]
   (h/form
-   (h/h3 (j/cell= (:currency/id currency)))
-   (for [[a c] structure]
-    (input a c)))))
+   (h/table
+    (h/tr
+     (for [[n _] structure]
+      (h/th n)))
+    (h/for-tpl [currency currencies]
+     (currency-form-row conn currency structure))))))
 
 (defn page
  [conn ticker]
@@ -116,5 +132,4 @@
   (currently-hodling conn ticker)
   (let [currency-ids (j/cell= (portfolio.api/db->currency-ids conn))
         currencies (j/cell= (map #(portfolio.api/db->currency conn %) (seq currency-ids)))]
-   (h/for-tpl [currency currencies]
-    (currency-form conn currency)))))
+   (currencies-form conn currencies))))

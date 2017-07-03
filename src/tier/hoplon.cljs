@@ -45,7 +45,6 @@
                         (math.geometric.sequence/at-nth current-ratio tier)
                         3)))))))
     (h/form
-     (h/input
-      :class "form-input"
+     (spectre.hoplon/form-input
       :input #(portfolio.api/set-config! conn :portfolio.tier/ratio @%)
       :value current-ratio))))))

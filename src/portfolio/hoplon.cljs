@@ -21,9 +21,8 @@
      "If you delete or malform an ID here then all the data below will be purged for that currency!"))
    (h/form
     (let [value (j/cell= (portfolio.api/db->input-string conn))]
-     (h/input
+     (spectre.hoplon/form-input
       :placeholder "Enter coin ID here, eg bitcoin"
-      :class "form-input"
       :input #(portfolio.api/set-currencies-from-input-string!
                conn
                @ticker
@@ -33,7 +32,7 @@
 
 (h/defelem currency-form-input
  [{:keys [conn currency k el-fn default-val] :as attributes} children]
- (let [el-fn (or el-fn h/input)]
+ (let [el-fn (or el-fn spectre.hoplon/form-input)]
   (h/td
    (h/div children)
    (el-fn
@@ -65,26 +64,21 @@
        structure [["Currency"
                    {:k :currency/id
                     :readonly true
-                    :class "form-input"
                     :type "text"}]
                   ["Current hodlings"
                    {:k :currency/hodling
-                    :class "form-input"
                     :type "number"}]
                   ["Tier (lower = more funds)"
                    {:k :currency/tier
-                    :class "form-input"
                     :type "number"
                     :min 1
                     :step 1}]
                   ["Website"
                    {:k :currency/website
-                    :class "form-input"
                     :type "text"}]
                   ["Notes"
                    {:k :currency/notes
-                    :class "form-input"
-                    :el-fn h/textarea}]]]
+                    :el-fn spectre.hoplon/form-textarea}]]]
 
   (h/form
    (spectre.hoplon/table

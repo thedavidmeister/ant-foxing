@@ -47,3 +47,17 @@
   :class "nav-item"
   attributes
   children))
+
+(h/defelem form-input
+ [attributes children]
+ (h/input
+  :class "form-input"
+  attributes
+  children))
+
+(h/defelem form-textarea
+ [attributes children]
+ (h/textarea
+  :class "form-input"
+  attributes
+  children))

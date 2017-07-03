@@ -19,8 +19,7 @@
   (let [db (j/cell "")]
    (h/form
     :submit #(portfolio.save.api/load-db! conn @db)
-    (h/input
-     :class "form-input"
+    (spectre.hoplon/form-input
      :type "text"
      :input #(reset! db @%))
     (h/button

@@ -3,7 +3,8 @@
   coinmarketcap.api
   [javelin.core :as j]
   [hoplon.core :as h]
-  hoplon.storage-atom))
+  hoplon.storage-atom
+  coinmarketcap.config))
 
 (defn fetch-all!
  ([c] (fetch-all! c nil))
@@ -59,3 +60,11 @@
                          (keep-fetching! c)))]
    (keep-fetching! c))))
 (def fetch-all-cell (memoize -fetch-all-cell))
+
+(defn ticker-id-filter
+ [ticker id]
+ (let [ticker (ticker-seq-or-nil ticker)]
+  (first
+   (filter
+    #(= id (get % "id"))
+    ticker))))

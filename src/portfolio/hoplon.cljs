@@ -39,7 +39,7 @@
    (el-fn
     (dissoc attributes :conn :currency :k :el-fn :default-val)
     :value [value conn]
-    :input #(portfolio.api/upsert-currency! conn (:currency/id @currency) {k @%})))))
+    :blur #(portfolio.api/upsert-currency! conn (:currency/id @currency) {k @%})))))
 
 (defn currency-form-row
  [conn currency structure]

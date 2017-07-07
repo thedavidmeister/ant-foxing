@@ -16,7 +16,9 @@
   :css (j/cell= {:color (cond (< 0 n) "green"
                               (> 0 n) "red"
                               :else "black")})
-  n))
+  (j/cell= (if (< 0 n)
+            (str "+" n)
+            n))))
 
 (defn tier-report
  [conn tier ticker all-currencies tier-currencies]

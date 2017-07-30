@@ -43,13 +43,13 @@ return (hoplon.core.p.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.p.cljs$core$IF
 })();
 var G__31415 = spectre.hoplon.table.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([(function (){var G__31422 = (hoplon.core.th.cljs$core$IFn$_invoke$arity$0 ? hoplon.core.th.cljs$core$IFn$_invoke$arity$0() : hoplon.core.th.call(null));
 var G__31423 = hoplon.core.loop_tpl_STAR_(tiers,((function (G__31422,G__31412,G__31413,G__31414,current_ratio,tiers){
-return (function (item__21556__auto__){
+return (function (item__15485__auto__){
 var vec__31424 = javelin.core.cell_map(cljs.core.identity,(function (){var fexpr__31427 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (G__31422,G__31412,G__31413,G__31414,current_ratio,tiers){
 return (function (tier__$1){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [tier__$1], null);
 });})(G__31422,G__31412,G__31413,G__31414,current_ratio,tiers))
 );
-return (fexpr__31427.cljs$core$IFn$_invoke$arity$1 ? fexpr__31427.cljs$core$IFn$_invoke$arity$1(item__21556__auto__) : fexpr__31427.call(null,item__21556__auto__));
+return (fexpr__31427.cljs$core$IFn$_invoke$arity$1 ? fexpr__31427.cljs$core$IFn$_invoke$arity$1(item__15485__auto__) : fexpr__31427.call(null,item__15485__auto__));
 })());
 var tier__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__31424,(0),null);
 var G__31428 = (function (){var fexpr__31430 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (vec__31424,tier__$1,G__31422,G__31412,G__31413,G__31414,current_ratio,tiers){
@@ -67,13 +67,13 @@ return (hoplon.core.tr.cljs$core$IFn$_invoke$arity$2 ? hoplon.core.tr.cljs$core$
 return (hoplon.core.td.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.td.cljs$core$IFn$_invoke$arity$1(G__31433) : hoplon.core.td.call(null,G__31433));
 })();
 var G__31432 = hoplon.core.loop_tpl_STAR_(tiers,((function (G__31431,G__31412,G__31413,G__31414,current_ratio,tiers){
-return (function (item__21556__auto__){
+return (function (item__15485__auto__){
 var vec__31434 = javelin.core.cell_map(cljs.core.identity,(function (){var fexpr__31437 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (G__31431,G__31412,G__31413,G__31414,current_ratio,tiers){
 return (function (tier__$1){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [tier__$1], null);
 });})(G__31431,G__31412,G__31413,G__31414,current_ratio,tiers))
 );
-return (fexpr__31437.cljs$core$IFn$_invoke$arity$1 ? fexpr__31437.cljs$core$IFn$_invoke$arity$1(item__21556__auto__) : fexpr__31437.call(null,item__21556__auto__));
+return (fexpr__31437.cljs$core$IFn$_invoke$arity$1 ? fexpr__31437.cljs$core$IFn$_invoke$arity$1(item__15485__auto__) : fexpr__31437.call(null,item__15485__auto__));
 })());
 var tier__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__31434,(0),null);
 var G__31438 = (function (){var fexpr__31442 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (vec__31434,tier__$1,G__31431,G__31412,G__31413,G__31414,current_ratio,tiers){
@@ -91,13 +91,13 @@ return (hoplon.core.tr.cljs$core$IFn$_invoke$arity$2 ? hoplon.core.tr.cljs$core$
 return (hoplon.core.td.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.td.cljs$core$IFn$_invoke$arity$1(G__31445) : hoplon.core.td.call(null,G__31445));
 })();
 var G__31444 = hoplon.core.loop_tpl_STAR_(tiers,((function (G__31443,G__31412,G__31413,G__31414,current_ratio,tiers){
-return (function (item__21556__auto__){
+return (function (item__15485__auto__){
 var vec__31446 = javelin.core.cell_map(cljs.core.identity,(function (){var fexpr__31449 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (G__31443,G__31412,G__31413,G__31414,current_ratio,tiers){
 return (function (tier__$1){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [tier__$1], null);
 });})(G__31443,G__31412,G__31413,G__31414,current_ratio,tiers))
 );
-return (fexpr__31449.cljs$core$IFn$_invoke$arity$1 ? fexpr__31449.cljs$core$IFn$_invoke$arity$1(item__21556__auto__) : fexpr__31449.call(null,item__21556__auto__));
+return (fexpr__31449.cljs$core$IFn$_invoke$arity$1 ? fexpr__31449.cljs$core$IFn$_invoke$arity$1(item__15485__auto__) : fexpr__31449.call(null,item__15485__auto__));
 })());
 var tier__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__31446,(0),null);
 var G__31450 = (function (){var fexpr__31454 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (vec__31446,tier__$1,G__31443,G__31412,G__31413,G__31414,current_ratio,tiers){

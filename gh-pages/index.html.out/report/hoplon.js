@@ -110,13 +110,13 @@ var G__30981 = (hoplon.core.th.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.th.cl
 var G__30982 = (hoplon.core.th.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.th.cljs$core$IFn$_invoke$arity$1("Target hodling diff") : hoplon.core.th.call(null,"Target hodling diff"));
 return (hoplon.core.tr.cljs$core$IFn$_invoke$arity$11 ? hoplon.core.tr.cljs$core$IFn$_invoke$arity$11(G__30972,G__30973,G__30974,G__30975,G__30976,G__30977,G__30978,G__30979,G__30980,G__30981,G__30982) : hoplon.core.tr.call(null,G__30972,G__30973,G__30974,G__30975,G__30976,G__30977,G__30978,G__30979,G__30980,G__30981,G__30982));
 })(),hoplon.core.loop_tpl_STAR_(tier_currencies,((function (total_valuation,tier_cap,tier_valuation,tier_target_ratio,tier_target_valuation,tier_valuation_diff){
-return (function (item__21556__auto__){
+return (function (item__15485__auto__){
 var vec__30983 = javelin.core.cell_map(cljs.core.identity,(function (){var fexpr__30986 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (total_valuation,tier_cap,tier_valuation,tier_target_ratio,tier_target_valuation,tier_valuation_diff){
 return (function (currency__$1){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [currency__$1], null);
 });})(total_valuation,tier_cap,tier_valuation,tier_target_ratio,tier_target_valuation,tier_valuation_diff))
 );
-return (fexpr__30986.cljs$core$IFn$_invoke$arity$1 ? fexpr__30986.cljs$core$IFn$_invoke$arity$1(item__21556__auto__) : fexpr__30986.call(null,item__21556__auto__));
+return (fexpr__30986.cljs$core$IFn$_invoke$arity$1 ? fexpr__30986.cljs$core$IFn$_invoke$arity$1(item__15485__auto__) : fexpr__30986.call(null,item__15485__auto__));
 })());
 var currency__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__30983,(0),null);
 var currency_ticker = (function (){var fexpr__30990 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (vec__30983,currency__$1,total_valuation,tier_cap,tier_valuation,tier_target_ratio,tier_target_valuation,tier_valuation_diff){
@@ -267,51 +267,51 @@ return (G__31070.cljs$core$IFn$_invoke$arity$1 ? G__31070.cljs$core$IFn$_invoke$
 );
 return (fexpr__31074.cljs$core$IFn$_invoke$arity$3 ? fexpr__31074.cljs$core$IFn$_invoke$arity$3(tiers,cljs.core.not,tier.api.tiers_incremental_QMARK_) : fexpr__31074.call(null,tiers,cljs.core.not,tier.api.tiers_incremental_QMARK_));
 })();
-return spectre.hoplon.page_content.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([(hoplon.core.h1.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.h1.cljs$core$IFn$_invoke$arity$1("Report") : hoplon.core.h1.call(null,"Report")),report.hoplon.portfolio_report(ticker,all_currencies),(function (){var con__21566__auto__ = (new cljs.core.Delay(((function (tiers,all_currencies,error_QMARK_){
+return spectre.hoplon.page_content.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([(hoplon.core.h1.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.h1.cljs$core$IFn$_invoke$arity$1("Report") : hoplon.core.h1.call(null,"Report")),report.hoplon.portfolio_report(ticker,all_currencies),(function (){var con__15495__auto__ = (new cljs.core.Delay(((function (tiers,all_currencies,error_QMARK_){
 return (function (){
 return spectre.hoplon.panel.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([instructions.hoplon.warning.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2(["The tiers must increment by 1"], 0))], 0));
 });})(tiers,all_currencies,error_QMARK_))
 ,null));
-var alt__21567__auto__ = (new cljs.core.Delay(((function (con__21566__auto__,tiers,all_currencies,error_QMARK_){
+var alt__15496__auto__ = (new cljs.core.Delay(((function (con__15495__auto__,tiers,all_currencies,error_QMARK_){
 return (function (){
-var G__31076 = hoplon.core.loop_tpl_STAR_((function (){var fexpr__31079 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (con__21566__auto__,tiers,all_currencies,error_QMARK_){
+var G__31076 = hoplon.core.loop_tpl_STAR_((function (){var fexpr__31079 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (con__15495__auto__,tiers,all_currencies,error_QMARK_){
 return (function (G__31078,G__31077){
 return (G__31077.cljs$core$IFn$_invoke$arity$1 ? G__31077.cljs$core$IFn$_invoke$arity$1(G__31078) : G__31077.call(null,G__31078));
-});})(con__21566__auto__,tiers,all_currencies,error_QMARK_))
+});})(con__15495__auto__,tiers,all_currencies,error_QMARK_))
 );
 return (fexpr__31079.cljs$core$IFn$_invoke$arity$2 ? fexpr__31079.cljs$core$IFn$_invoke$arity$2(all_currencies,tier.api.currencies_by_tier) : fexpr__31079.call(null,all_currencies,tier.api.currencies_by_tier));
-})(),((function (con__21566__auto__,tiers,all_currencies,error_QMARK_){
-return (function (item__21556__auto__){
-var vec__31086 = javelin.core.cell_map(cljs.core.identity,(function (){var fexpr__31093 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (con__21566__auto__,tiers,all_currencies,error_QMARK_){
+})(),((function (con__15495__auto__,tiers,all_currencies,error_QMARK_){
+return (function (item__15485__auto__){
+var vec__31086 = javelin.core.cell_map(cljs.core.identity,(function (){var fexpr__31093 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (con__15495__auto__,tiers,all_currencies,error_QMARK_){
 return (function (p__31094){
 var vec__31095 = p__31094;
 var tier__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__31095,(0),null);
 var tier_currencies = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__31095,(1),null);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [tier_currencies,tier__$1], null);
-});})(con__21566__auto__,tiers,all_currencies,error_QMARK_))
+});})(con__15495__auto__,tiers,all_currencies,error_QMARK_))
 );
-return (fexpr__31093.cljs$core$IFn$_invoke$arity$1 ? fexpr__31093.cljs$core$IFn$_invoke$arity$1(item__21556__auto__) : fexpr__31093.call(null,item__21556__auto__));
+return (fexpr__31093.cljs$core$IFn$_invoke$arity$1 ? fexpr__31093.cljs$core$IFn$_invoke$arity$1(item__15485__auto__) : fexpr__31093.call(null,item__15485__auto__));
 })());
 var tier_currencies = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__31086,(0),null);
 var tier__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__31086,(1),null);
 return report.hoplon.tier_report(conn,tier__$1,ticker,all_currencies,tier_currencies);
-});})(con__21566__auto__,tiers,all_currencies,error_QMARK_))
+});})(con__15495__auto__,tiers,all_currencies,error_QMARK_))
 );
 return (hoplon.core.div.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.div.cljs$core$IFn$_invoke$arity$1(G__31076) : hoplon.core.div.call(null,G__31076));
-});})(con__21566__auto__,tiers,all_currencies,error_QMARK_))
+});})(con__15495__auto__,tiers,all_currencies,error_QMARK_))
 ,null));
-var tpl__21568__auto__ = ((function (con__21566__auto__,alt__21567__auto__,tiers,all_currencies,error_QMARK_){
-return (function (p__21569__auto__){
-return cljs.core.deref((function (){var or__8762__auto__ = (cljs.core.truth_(p__21569__auto__)?con__21566__auto__:alt__21567__auto__);
+var tpl__15497__auto__ = ((function (con__15495__auto__,alt__15496__auto__,tiers,all_currencies,error_QMARK_){
+return (function (p__15498__auto__){
+return cljs.core.deref((function (){var or__8762__auto__ = (cljs.core.truth_(p__15498__auto__)?con__15495__auto__:alt__15496__auto__);
 if(cljs.core.truth_(or__8762__auto__)){
 return or__8762__auto__;
 } else {
 return cljs.core.atom();
 }
 })());
-});})(con__21566__auto__,alt__21567__auto__,tiers,all_currencies,error_QMARK_))
+});})(con__15495__auto__,alt__15496__auto__,tiers,all_currencies,error_QMARK_))
 ;
-var fexpr__31098 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(tpl__21568__auto__);
+var fexpr__31098 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(tpl__15497__auto__);
 return (fexpr__31098.cljs$core$IFn$_invoke$arity$1 ? fexpr__31098.cljs$core$IFn$_invoke$arity$1(error_QMARK_) : fexpr__31098.call(null,error_QMARK_));
 })()], 0));
 });

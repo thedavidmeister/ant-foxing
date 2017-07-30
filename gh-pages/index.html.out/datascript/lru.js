@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.9.655 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.9.854 {:static-fns true, :optimize-constants true}
 goog.provide('datascript.lru');
 goog.require('cljs.core');
 goog.require('cljs.core.constants');
@@ -62,8 +62,8 @@ datascript.lru.LRU.cljs$lang$type = true;
 
 datascript.lru.LRU.cljs$lang$ctorStr = "datascript.lru/LRU";
 
-datascript.lru.LRU.cljs$lang$ctorPrWriter = (function (this__8756__auto__,writer__8757__auto__,opt__8758__auto__){
-return cljs.core._write(writer__8757__auto__,"datascript.lru/LRU");
+datascript.lru.LRU.cljs$lang$ctorPrWriter = (function (this__9433__auto__,writer__9434__auto__,opt__9435__auto__){
+return cljs.core._write(writer__9434__auto__,"datascript.lru/LRU");
 });
 
 datascript.lru.__GT_LRU = (function datascript$lru$__GT_LRU(key_value,gen_key,key_gen,gen,limit){
@@ -81,8 +81,8 @@ if(cljs.core.truth_(temp__5276__auto__)){
 var g = temp__5276__auto__;
 return datascript.lru.__GT_LRU(key_value,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(gen_key,g),gen,k),cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(key_gen,k,gen),(gen + (1)),limit);
 } else {
-var G__24590 = datascript.lru.__GT_LRU(cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(key_value,k,v),cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(gen_key,gen,k),cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(key_gen,k,gen),(gen + (1)),limit);
-return (datascript.lru.cleanup_lru.cljs$core$IFn$_invoke$arity$1 ? datascript.lru.cleanup_lru.cljs$core$IFn$_invoke$arity$1(G__24590) : datascript.lru.cleanup_lru.call(null,G__24590));
+var G__25526 = datascript.lru.__GT_LRU(cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(key_value,k,v),cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(gen_key,gen,k),cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(key_gen,k,gen),(gen + (1)),limit);
+return (datascript.lru.cleanup_lru.cljs$core$IFn$_invoke$arity$1 ? datascript.lru.cleanup_lru.cljs$core$IFn$_invoke$arity$1(G__25526) : datascript.lru.cleanup_lru.call(null,G__25526));
 }
 });
 datascript.lru.cleanup_lru = (function datascript$lru$cleanup_lru(lru){
@@ -92,9 +92,9 @@ var gen_key = lru.gen_key;
 var key_gen = lru.key_gen;
 var gen = lru.gen;
 var limit = lru.limit;
-var vec__24591 = cljs.core.first(gen_key);
-var g = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__24591,(0),null);
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__24591,(1),null);
+var vec__25527 = cljs.core.first(gen_key);
+var g = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__25527,(0),null);
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__25527,(1),null);
 return datascript.lru.__GT_LRU(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(key_value,k),cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(gen_key,g),cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(key_gen,k),gen,limit);
 } else {
 return lru;

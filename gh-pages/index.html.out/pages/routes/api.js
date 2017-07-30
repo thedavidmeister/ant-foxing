@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.9.655 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.9.854 {:static-fns true, :optimize-constants true}
 goog.provide('pages.routes.api');
 goog.require('cljs.core');
 goog.require('cljs.core.constants');
@@ -12,33 +12,33 @@ pages.routes.api.history = cljs.core.memoize(wheel.route.core.history_cell);
 }
 pages.routes.api._location = (function pages$routes$api$_location(){
 var history_cell = (pages.routes.api.history.cljs$core$IFn$_invoke$arity$0 ? pages.routes.api.history.cljs$core$IFn$_invoke$arity$0() : pages.routes.api.history.call(null));
-var c = (function (){var fexpr__28518 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (history_cell){
-return (function (G__28516,G__28514,G__28517,G__28515){
-return (G__28514.cljs$core$IFn$_invoke$arity$3 ? G__28514.cljs$core$IFn$_invoke$arity$3(G__28515,G__28516,G__28517) : G__28514.call(null,G__28515,G__28516,G__28517));
+var c = (function (){var fexpr__30846 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (history_cell){
+return (function (G__30844,G__30842,G__30845,G__30843){
+return (G__30842.cljs$core$IFn$_invoke$arity$3 ? G__30842.cljs$core$IFn$_invoke$arity$3(G__30843,G__30844,G__30845) : G__30842.call(null,G__30843,G__30844,G__30845));
 });})(history_cell))
 );
-return (fexpr__28518.cljs$core$IFn$_invoke$arity$4 ? fexpr__28518.cljs$core$IFn$_invoke$arity$4(pages.routes.config.routes,wheel.route.core.path__GT_bidi,pages.routes.config.fallback,history_cell) : fexpr__28518.call(null,pages.routes.config.routes,wheel.route.core.path__GT_bidi,pages.routes.config.fallback,history_cell));
+return (fexpr__30846.cljs$core$IFn$_invoke$arity$4 ? fexpr__30846.cljs$core$IFn$_invoke$arity$4(pages.routes.config.routes,wheel.route.core.path__GT_bidi,pages.routes.config.fallback,history_cell) : fexpr__30846.call(null,pages.routes.config.routes,wheel.route.core.path__GT_bidi,pages.routes.config.fallback,history_cell));
 })();
-var fexpr__28532_28543 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (c,history_cell){
-return (function (G__28519,G__28520,G__28521){
-var G__28533 = G__28520;
-var G__28534 = cljs.core.cst$kw$info;
-var G__28535 = "pages.routes.api";
-var G__28536 = null;
-var G__28537 = 18;
-var G__28538 = cljs.core.cst$kw$p;
-var G__28539 = cljs.core.cst$kw$auto;
-var G__28540 = (new cljs.core.Delay(((function (G__28533,G__28534,G__28535,G__28536,G__28537,G__28538,G__28539,c,history_cell){
+var fexpr__30860_30871 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (c,history_cell){
+return (function (G__30847,G__30848,G__30849){
+var G__30861 = G__30848;
+var G__30862 = cljs.core.cst$kw$info;
+var G__30863 = "pages.routes.api";
+var G__30864 = null;
+var G__30865 = 18;
+var G__30866 = cljs.core.cst$kw$p;
+var G__30867 = cljs.core.cst$kw$auto;
+var G__30868 = (new cljs.core.Delay(((function (G__30861,G__30862,G__30863,G__30864,G__30865,G__30866,G__30867,c,history_cell){
 return (function (){
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Location changed to: ",G__28521], null);
-});})(G__28533,G__28534,G__28535,G__28536,G__28537,G__28538,G__28539,c,history_cell))
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Location changed to: ",G__30849], null);
+});})(G__30861,G__30862,G__30863,G__30864,G__30865,G__30866,G__30867,c,history_cell))
 ,null));
-var G__28541 = null;
-var G__28542 = -429014650;
-return (G__28519.cljs$core$IFn$_invoke$arity$10 ? G__28519.cljs$core$IFn$_invoke$arity$10(G__28533,G__28534,G__28535,G__28536,G__28537,G__28538,G__28539,G__28540,G__28541,G__28542) : G__28519.call(null,G__28533,G__28534,G__28535,G__28536,G__28537,G__28538,G__28539,G__28540,G__28541,G__28542));
+var G__30869 = null;
+var G__30870 = 1667286507;
+return (G__30847.cljs$core$IFn$_invoke$arity$10 ? G__30847.cljs$core$IFn$_invoke$arity$10(G__30861,G__30862,G__30863,G__30864,G__30865,G__30866,G__30867,G__30868,G__30869,G__30870) : G__30847.call(null,G__30861,G__30862,G__30863,G__30864,G__30865,G__30866,G__30867,G__30868,G__30869,G__30870));
 });})(c,history_cell))
 );
-(fexpr__28532_28543.cljs$core$IFn$_invoke$arity$3 ? fexpr__28532_28543.cljs$core$IFn$_invoke$arity$3(taoensso.timbre._log_BANG_,taoensso.timbre._STAR_config_STAR_,c) : fexpr__28532_28543.call(null,taoensso.timbre._log_BANG_,taoensso.timbre._STAR_config_STAR_,c));
+(fexpr__30860_30871.cljs$core$IFn$_invoke$arity$3 ? fexpr__30860_30871.cljs$core$IFn$_invoke$arity$3(taoensso.timbre._log_BANG_,taoensso.timbre._STAR_config_STAR_,c) : fexpr__30860_30871.call(null,taoensso.timbre._log_BANG_,taoensso.timbre._STAR_config_STAR_,c));
 
 return c;
 });

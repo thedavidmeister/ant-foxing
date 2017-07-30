@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.9.655 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.9.854 {:static-fns true, :optimize-constants true}
 goog.provide('report.api');
 goog.require('cljs.core');
 goog.require('cljs.core.constants');
@@ -6,9 +6,9 @@ goog.require('currency.data');
 goog.require('coinmarketcap.ticker.data');
 goog.require('report.data');
 report.api.__GT_price_usd = (function report$api$__GT_price_usd(currency_ticker,currency__$1){
-if(cljs.core.truth_((function (){var or__8099__auto__ = coinmarketcap.ticker.data.currency_ticker_QMARK_(report.api.ticker);
-if(cljs.core.truth_(or__8099__auto__)){
-return or__8099__auto__;
+if(cljs.core.truth_((function (){var or__8762__auto__ = coinmarketcap.ticker.data.currency_ticker_QMARK_(report.api.ticker);
+if(cljs.core.truth_(or__8762__auto__)){
+return or__8762__auto__;
 } else {
 return (report.api.ticker == null);
 }
@@ -31,9 +31,9 @@ throw (new Error("Assert failed: (number? %)"));
 return _PERCENT_;
 });
 report.api.__GT_cap = (function report$api$__GT_cap(currency_ticker,currency__$1){
-if(cljs.core.truth_((function (){var or__8099__auto__ = coinmarketcap.ticker.data.currency_ticker_QMARK_(report.api.ticker);
-if(cljs.core.truth_(or__8099__auto__)){
-return or__8099__auto__;
+if(cljs.core.truth_((function (){var or__8762__auto__ = coinmarketcap.ticker.data.currency_ticker_QMARK_(report.api.ticker);
+if(cljs.core.truth_(or__8762__auto__)){
+return or__8762__auto__;
 } else {
 return (report.api.ticker == null);
 }
@@ -56,9 +56,9 @@ throw (new Error("Assert failed: (number? %)"));
 return _PERCENT_;
 });
 report.api.__GT_hodling = (function report$api$__GT_hodling(currency_ticker,currency__$1){
-if(cljs.core.truth_((function (){var or__8099__auto__ = coinmarketcap.ticker.data.currency_ticker_QMARK_(report.api.ticker);
-if(cljs.core.truth_(or__8099__auto__)){
-return or__8099__auto__;
+if(cljs.core.truth_((function (){var or__8762__auto__ = coinmarketcap.ticker.data.currency_ticker_QMARK_(report.api.ticker);
+if(cljs.core.truth_(or__8762__auto__)){
+return or__8762__auto__;
 } else {
 return (report.api.ticker == null);
 }
@@ -81,9 +81,9 @@ throw (new Error("Assert failed: (number? %)"));
 return _PERCENT_;
 });
 report.api.__GT_valuation = (function report$api$__GT_valuation(currency_ticker,currency__$1){
-if(cljs.core.truth_((function (){var or__8099__auto__ = coinmarketcap.ticker.data.currency_ticker_QMARK_(report.api.ticker);
-if(cljs.core.truth_(or__8099__auto__)){
-return or__8099__auto__;
+if(cljs.core.truth_((function (){var or__8762__auto__ = coinmarketcap.ticker.data.currency_ticker_QMARK_(report.api.ticker);
+if(cljs.core.truth_(or__8762__auto__)){
+return or__8762__auto__;
 } else {
 return (report.api.ticker == null);
 }
@@ -144,9 +144,9 @@ throw (new Error("Assert failed: (currency.data/currency? currency)"));
 }
 
 var _PERCENT_ = (function (){var total = (total_fn.cljs$core$IFn$_invoke$arity$2 ? total_fn.cljs$core$IFn$_invoke$arity$2(ticker,currencies) : total_fn.call(null,ticker,currencies));
-var this$ = (function (){var G__29840 = report.data.__GT_currency_ticker(ticker,currency__$1);
-var G__29841 = currency__$1;
-return (this_fn.cljs$core$IFn$_invoke$arity$2 ? this_fn.cljs$core$IFn$_invoke$arity$2(G__29840,G__29841) : this_fn.call(null,G__29840,G__29841));
+var this$ = (function (){var G__30914 = report.data.__GT_currency_ticker(ticker,currency__$1);
+var G__30915 = currency__$1;
+return (this_fn.cljs$core$IFn$_invoke$arity$2 ? this_fn.cljs$core$IFn$_invoke$arity$2(G__30914,G__30915) : this_fn.call(null,G__30914,G__30915));
 })();
 return report.data.simple_number((this$ / total));
 })();

@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.9.655 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.9.854 {:static-fns true, :optimize-constants true}
 goog.provide('cuerdas.regexp');
 goog.require('cljs.core');
 goog.require('cljs.core.constants');
@@ -21,9 +21,9 @@ if(cljs.core.truth_(cuerdas.regexp.regexp_QMARK_(re))){
 throw (new Error("Assert failed: (regexp? re)"));
 }
 
-var G__28190 = re.source;
-var G__28191 = re.flags;
-return (cuerdas.regexp.xregexp.cljs$core$IFn$_invoke$arity$2 ? cuerdas.regexp.xregexp.cljs$core$IFn$_invoke$arity$2(G__28190,G__28191) : cuerdas.regexp.xregexp.call(null,G__28190,G__28191));
+var G__30518 = re.source;
+var G__30519 = re.flags;
+return (cuerdas.regexp.xregexp.cljs$core$IFn$_invoke$arity$2 ? cuerdas.regexp.xregexp.cljs$core$IFn$_invoke$arity$2(G__30518,G__30519) : cuerdas.regexp.xregexp.call(null,G__30518,G__30519));
 });
 /**
  * Escapes characters in the string that are not safe

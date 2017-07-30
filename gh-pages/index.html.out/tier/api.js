@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.9.655 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.9.854 {:static-fns true, :optimize-constants true}
 goog.provide('tier.api');
 goog.require('cljs.core');
 goog.require('cljs.core.constants');
@@ -65,10 +65,10 @@ throw (new Error("Assert failed: (number? tier)"));
 }
 
 var _PERCENT_ = (function (){var last_tier_QMARK_ = cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(tier__$1,cljs.core.last(tier.api.db__GT_tiers(db)));
-var G__29833 = tier.api.db__GT_ratio(db);
-var G__29834 = tier__$1;
-var fexpr__29832 = ((last_tier_QMARK_)?math.geometric.sequence.nth:math.geometric.sequence.at_nth);
-return (fexpr__29832.cljs$core$IFn$_invoke$arity$2 ? fexpr__29832.cljs$core$IFn$_invoke$arity$2(G__29833,G__29834) : fexpr__29832.call(null,G__29833,G__29834));
+var G__30907 = tier.api.db__GT_ratio(db);
+var G__30908 = tier__$1;
+var fexpr__30906 = ((last_tier_QMARK_)?math.geometric.sequence.nth:math.geometric.sequence.at_nth);
+return (fexpr__30906.cljs$core$IFn$_invoke$arity$2 ? fexpr__30906.cljs$core$IFn$_invoke$arity$2(G__30907,G__30908) : fexpr__30906.call(null,G__30907,G__30908));
 })();
 if(typeof _PERCENT_ === 'number'){
 } else {

@@ -7,7 +7,7 @@
  :dependencies
  '[; scaffolding...
    [org.clojure/clojure "1.9.0-alpha17"]
-   [org.clojure/clojurescript "1.9.655"]
+   [org.clojure/clojurescript "1.9.854"]
    [hoplon "7.0.2"]
    [pandeiro/boot-http "0.8.3"]
    [adzerk/boot-reload "0.5.1"]

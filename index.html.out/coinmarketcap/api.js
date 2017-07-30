@@ -40,7 +40,7 @@ throw (new Error("Assert failed: (string? endpoint)"));
 
 taoensso.timbre._log_BANG_.cljs$core$IFn$_invoke$arity$10(taoensso.timbre._STAR_config_STAR_,cljs.core.cst$kw$info,"coinmarketcap.api",null,12,cljs.core.cst$kw$p,cljs.core.cst$kw$auto,(new cljs.core.Delay((function (){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Hitting coinmarketcap endpoint: ",endpoint], null);
-}),null)),null,680735917);
+}),null)),null,321076789);
 
 var url = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(coinmarketcap.data.base_url),cljs.core.str.cljs$core$IFn$_invoke$arity$1(endpoint)].join('');
 return ajax.core.GET.cljs$core$IFn$_invoke$arity$variadic(url,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$handler,((function (url){
@@ -49,7 +49,7 @@ taoensso.timbre._log_BANG_.cljs$core$IFn$_invoke$arity$10(taoensso.timbre._STAR_
 return (function (){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Success fetching response from coinmarketcap endpoint: ",endpoint], null);
 });})(url))
-,null)),null,1145376082);
+,null)),null,932931527);
 
 return cljs.core.reset_BANG_(c,p1__21425_SHARP_);
 });})(url))

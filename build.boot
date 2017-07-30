@@ -53,3 +53,11 @@
                       :warnings true
                       :pseudo-names true})
   (target :dir #{"target_dev"})))
+
+(deftask gh-pages
+ "Build for production deployment."
+ []
+ (comp
+  (hoplon)
+  (cljs :optimizations :advanced)
+  (target :dir #{"gh-pages"})))

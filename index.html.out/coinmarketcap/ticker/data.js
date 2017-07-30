@@ -21,8 +21,8 @@ return and__8750__auto__;
 });
 coinmarketcap.ticker.data.ticker_QMARK_ = (function coinmarketcap$ticker$data$ticker_QMARK_(ticker){
 if(cljs.core.sequential_QMARK_(ticker)){
-var G__30874 = cljs.core.first(ticker);
-return (coinmarketcap.ticker.data.ticker_QMARK_.cljs$core$IFn$_invoke$arity$1 ? coinmarketcap.ticker.data.ticker_QMARK_.cljs$core$IFn$_invoke$arity$1(G__30874) : coinmarketcap.ticker.data.ticker_QMARK_.call(null,G__30874));
+var G__21479 = cljs.core.first(ticker);
+return (coinmarketcap.ticker.data.ticker_QMARK_.cljs$core$IFn$_invoke$arity$1 ? coinmarketcap.ticker.data.ticker_QMARK_.cljs$core$IFn$_invoke$arity$1(G__21479) : coinmarketcap.ticker.data.ticker_QMARK_.call(null,G__21479));
 } else {
 return coinmarketcap.ticker.data.currency_ticker_QMARK_(ticker);
 }

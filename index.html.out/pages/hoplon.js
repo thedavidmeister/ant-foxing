@@ -8,8 +8,8 @@ goog.require('spectre.hoplon');
  * @param {...*} var_args
  */
 pages.hoplon.outer = (function() { 
-var pages$hoplon$outer__delegate = function (args__21512__auto__){
-var vec__31575 = hoplon.core.parse_args(args__21512__auto__);
+var pages$hoplon$outer__delegate = function (args__21560__auto__){
+var vec__31575 = hoplon.core.parse_args(args__21560__auto__);
 var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__31575,(0),null);
 var children = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__31575,(1),null);
 return hoplon.core.html.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([(function (){var G__31578 = spectre.hoplon.styles();
@@ -25,17 +25,17 @@ return (hoplon.core.body.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.body.cljs$c
 })()], 0));
 };
 var pages$hoplon$outer = function (var_args){
-var args__21512__auto__ = null;
+var args__21560__auto__ = null;
 if (arguments.length > 0) {
 var G__31585__i = 0, G__31585__a = new Array(arguments.length -  0);
 while (G__31585__i < G__31585__a.length) {G__31585__a[G__31585__i] = arguments[G__31585__i + 0]; ++G__31585__i;}
-  args__21512__auto__ = new cljs.core.IndexedSeq(G__31585__a,0,null);
+  args__21560__auto__ = new cljs.core.IndexedSeq(G__31585__a,0,null);
 } 
-return pages$hoplon$outer__delegate.call(this,args__21512__auto__);};
+return pages$hoplon$outer__delegate.call(this,args__21560__auto__);};
 pages$hoplon$outer.cljs$lang$maxFixedArity = 0;
 pages$hoplon$outer.cljs$lang$applyTo = (function (arglist__31586){
-var args__21512__auto__ = cljs.core.seq(arglist__31586);
-return pages$hoplon$outer__delegate(args__21512__auto__);
+var args__21560__auto__ = cljs.core.seq(arglist__31586);
+return pages$hoplon$outer__delegate(args__21560__auto__);
 });
 pages$hoplon$outer.cljs$core$IFn$_invoke$arity$variadic = pages$hoplon$outer__delegate;
 return pages$hoplon$outer;

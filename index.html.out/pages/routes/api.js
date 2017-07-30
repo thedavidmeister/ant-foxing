@@ -12,33 +12,33 @@ pages.routes.api.history = cljs.core.memoize(wheel.route.core.history_cell);
 }
 pages.routes.api._location = (function pages$routes$api$_location(){
 var history_cell = (pages.routes.api.history.cljs$core$IFn$_invoke$arity$0 ? pages.routes.api.history.cljs$core$IFn$_invoke$arity$0() : pages.routes.api.history.call(null));
-var c = (function (){var fexpr__30846 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (history_cell){
-return (function (G__30844,G__30842,G__30845,G__30843){
-return (G__30842.cljs$core$IFn$_invoke$arity$3 ? G__30842.cljs$core$IFn$_invoke$arity$3(G__30843,G__30844,G__30845) : G__30842.call(null,G__30843,G__30844,G__30845));
+var c = (function (){var fexpr__30861 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (history_cell){
+return (function (G__30859,G__30857,G__30860,G__30858){
+return (G__30857.cljs$core$IFn$_invoke$arity$3 ? G__30857.cljs$core$IFn$_invoke$arity$3(G__30858,G__30859,G__30860) : G__30857.call(null,G__30858,G__30859,G__30860));
 });})(history_cell))
 );
-return (fexpr__30846.cljs$core$IFn$_invoke$arity$4 ? fexpr__30846.cljs$core$IFn$_invoke$arity$4(pages.routes.config.routes,wheel.route.core.path__GT_bidi,pages.routes.config.fallback,history_cell) : fexpr__30846.call(null,pages.routes.config.routes,wheel.route.core.path__GT_bidi,pages.routes.config.fallback,history_cell));
+return (fexpr__30861.cljs$core$IFn$_invoke$arity$4 ? fexpr__30861.cljs$core$IFn$_invoke$arity$4(pages.routes.config.routes,wheel.route.core.path__GT_bidi,pages.routes.config.fallback,history_cell) : fexpr__30861.call(null,pages.routes.config.routes,wheel.route.core.path__GT_bidi,pages.routes.config.fallback,history_cell));
 })();
-var fexpr__30860_30871 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (c,history_cell){
-return (function (G__30847,G__30848,G__30849){
-var G__30861 = G__30848;
-var G__30862 = cljs.core.cst$kw$info;
-var G__30863 = "pages.routes.api";
-var G__30864 = null;
-var G__30865 = 18;
-var G__30866 = cljs.core.cst$kw$p;
-var G__30867 = cljs.core.cst$kw$auto;
-var G__30868 = (new cljs.core.Delay(((function (G__30861,G__30862,G__30863,G__30864,G__30865,G__30866,G__30867,c,history_cell){
+var fexpr__30875_30886 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (c,history_cell){
+return (function (G__30862,G__30863,G__30864){
+var G__30876 = G__30863;
+var G__30877 = cljs.core.cst$kw$info;
+var G__30878 = "pages.routes.api";
+var G__30879 = null;
+var G__30880 = 18;
+var G__30881 = cljs.core.cst$kw$p;
+var G__30882 = cljs.core.cst$kw$auto;
+var G__30883 = (new cljs.core.Delay(((function (G__30876,G__30877,G__30878,G__30879,G__30880,G__30881,G__30882,c,history_cell){
 return (function (){
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Location changed to: ",G__30849], null);
-});})(G__30861,G__30862,G__30863,G__30864,G__30865,G__30866,G__30867,c,history_cell))
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Location changed to: ",G__30864], null);
+});})(G__30876,G__30877,G__30878,G__30879,G__30880,G__30881,G__30882,c,history_cell))
 ,null));
-var G__30869 = null;
-var G__30870 = -1382512298;
-return (G__30847.cljs$core$IFn$_invoke$arity$10 ? G__30847.cljs$core$IFn$_invoke$arity$10(G__30861,G__30862,G__30863,G__30864,G__30865,G__30866,G__30867,G__30868,G__30869,G__30870) : G__30847.call(null,G__30861,G__30862,G__30863,G__30864,G__30865,G__30866,G__30867,G__30868,G__30869,G__30870));
+var G__30884 = null;
+var G__30885 = 1977869765;
+return (G__30862.cljs$core$IFn$_invoke$arity$10 ? G__30862.cljs$core$IFn$_invoke$arity$10(G__30876,G__30877,G__30878,G__30879,G__30880,G__30881,G__30882,G__30883,G__30884,G__30885) : G__30862.call(null,G__30876,G__30877,G__30878,G__30879,G__30880,G__30881,G__30882,G__30883,G__30884,G__30885));
 });})(c,history_cell))
 );
-(fexpr__30860_30871.cljs$core$IFn$_invoke$arity$3 ? fexpr__30860_30871.cljs$core$IFn$_invoke$arity$3(taoensso.timbre._log_BANG_,taoensso.timbre._STAR_config_STAR_,c) : fexpr__30860_30871.call(null,taoensso.timbre._log_BANG_,taoensso.timbre._STAR_config_STAR_,c));
+(fexpr__30875_30886.cljs$core$IFn$_invoke$arity$3 ? fexpr__30875_30886.cljs$core$IFn$_invoke$arity$3(taoensso.timbre._log_BANG_,taoensso.timbre._STAR_config_STAR_,c) : fexpr__30875_30886.call(null,taoensso.timbre._log_BANG_,taoensso.timbre._STAR_config_STAR_,c));
 
 return c;
 });

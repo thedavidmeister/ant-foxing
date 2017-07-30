@@ -1,10 +1,10 @@
-// Compiled by ClojureScript 1.9.655 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.9.854 {:static-fns true, :optimize-constants true}
 goog.provide('math.geometric.sequence');
 goog.require('cljs.core');
 goog.require('cljs.core.constants');
 math.geometric.sequence.nth = (function math$geometric$sequence$nth(var_args){
-var G__29825 = arguments.length;
-switch (G__29825) {
+var G__30899 = arguments.length;
+switch (G__30899) {
 case 2:
 return math.geometric.sequence.nth.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -45,8 +45,8 @@ return (a * Math.pow(r,(n - (1))));
 math.geometric.sequence.nth.cljs$lang$maxFixedArity = 3;
 
 math.geometric.sequence.at_nth = (function math$geometric$sequence$at_nth(var_args){
-var G__29828 = arguments.length;
-switch (G__29828) {
+var G__30902 = arguments.length;
+switch (G__30902) {
 case 2:
 return math.geometric.sequence.at_nth.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 

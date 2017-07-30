@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.9.655 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.9.854 {:static-fns true, :optimize-constants true}
 goog.provide('wheel.route.core');
 goog.require('cljs.core');
 goog.require('cljs.core.constants');
@@ -13,8 +13,8 @@ goog.require('bidi.schema');
 goog.require('cljs.test');
 wheel.route.core.routes_QMARK_ = (function wheel$route$core$routes_QMARK_(routes){
 if(cljs.core.truth_(javelin.core.cell_QMARK_(routes))){
-var G__28420 = cljs.core.deref(routes);
-return (wheel.route.core.routes_QMARK_.cljs$core$IFn$_invoke$arity$1 ? wheel.route.core.routes_QMARK_.cljs$core$IFn$_invoke$arity$1(G__28420) : wheel.route.core.routes_QMARK_.call(null,G__28420));
+var G__30748 = cljs.core.deref(routes);
+return (wheel.route.core.routes_QMARK_.cljs$core$IFn$_invoke$arity$1 ? wheel.route.core.routes_QMARK_.cljs$core$IFn$_invoke$arity$1(G__30748) : wheel.route.core.routes_QMARK_.call(null,G__30748));
 } else {
 return cljs.core.not(schema.core.check(bidi.schema.RoutePair,routes));
 }
@@ -25,29 +25,29 @@ return cljs.core.not(schema.core.check(bidi.schema.RoutePair,routes));
 wheel.route.core.history_cell = (function wheel$route$core$history_cell(){
 var c = javelin.core.cell.cljs$core$IFn$_invoke$arity$1(null);
 var history = (new goog.History());
-var _ = (function (){var c__13451__auto__ = (function (){var fexpr__28423 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (c,history){
-return (function (G__28422){
-return G__28422;
+var _ = (function (){var c__15281__auto__ = (function (){var fexpr__30751 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (c,history){
+return (function (G__30750){
+return G__30750;
 });})(c,history))
 );
-return (fexpr__28423.cljs$core$IFn$_invoke$arity$1 ? fexpr__28423.cljs$core$IFn$_invoke$arity$1(c) : fexpr__28423.call(null,c));
+return (fexpr__30751.cljs$core$IFn$_invoke$arity$1 ? fexpr__30751.cljs$core$IFn$_invoke$arity$1(c) : fexpr__30751.call(null,c));
 })();
-c__13451__auto__.update = ((function (c__13451__auto__,c,history){
-return (function (p1__28421_SHARP_){
-return history.setToken(p1__28421_SHARP_);
-});})(c__13451__auto__,c,history))
+c__15281__auto__.update = ((function (c__15281__auto__,c,history){
+return (function (p1__30749_SHARP_){
+return history.setToken(p1__30749_SHARP_);
+});})(c__15281__auto__,c,history))
 ;
 
-return c__13451__auto__;
+return c__15281__auto__;
 })();
-var G__28424_28427 = history;
-var G__28425_28428 = goog.History.EventType.NAVIGATE;
-var G__28426_28429 = ((function (G__28424_28427,G__28425_28428,_,c,history){
+var G__30752_30755 = history;
+var G__30753_30756 = goog.History.EventType.NAVIGATE;
+var G__30754_30757 = ((function (G__30752_30755,G__30753_30756,_,c,history){
 return (function (e){
 return cljs.core.reset_BANG_(c,e.token);
-});})(G__28424_28427,G__28425_28428,_,c,history))
+});})(G__30752_30755,G__30753_30756,_,c,history))
 ;
-goog.events.listen(G__28424_28427,G__28425_28428,G__28426_28429);
+goog.events.listen(G__30752_30755,G__30753_30756,G__30754_30757);
 
 history.setEnabled(true);
 
@@ -63,8 +63,8 @@ return cuerdas.core.ltrim.cljs$core$IFn$_invoke$arity$2(window.location.hash,"#"
  * Given a path, routes and fallback handler, returns a bidi location
  */
 wheel.route.core.path__GT_bidi = (function wheel$route$core$path__GT_bidi(var_args){
-var G__28431 = arguments.length;
-switch (G__28431) {
+var G__30759 = arguments.length;
+switch (G__30759) {
 case 2:
 return wheel.route.core.path__GT_bidi.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -91,9 +91,9 @@ return bidi.bidi.match_route(routes__$1,path__$1);
 });
 
 wheel.route.core.path__GT_bidi.cljs$core$IFn$_invoke$arity$3 = (function (path,routes,fallback){
-var or__8099__auto__ = wheel.route.core.path__GT_bidi.cljs$core$IFn$_invoke$arity$2(path,routes);
-if(cljs.core.truth_(or__8099__auto__)){
-return or__8099__auto__;
+var or__8762__auto__ = wheel.route.core.path__GT_bidi.cljs$core$IFn$_invoke$arity$2(path,routes);
+if(cljs.core.truth_(or__8762__auto__)){
+return or__8762__auto__;
 } else {
 return new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$handler,fallback], null);
 }
@@ -105,8 +105,8 @@ wheel.route.core.path__GT_bidi.cljs$lang$maxFixedArity = 3;
  * Given a bidi handler, and optionally bidi params, returns a path
  */
 wheel.route.core.bidi__GT_path = (function wheel$route$core$bidi__GT_path(var_args){
-var G__28434 = arguments.length;
-switch (G__28434) {
+var G__30762 = arguments.length;
+switch (G__30762) {
 case 2:
 return wheel.route.core.bidi__GT_path.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -145,8 +145,8 @@ wheel.route.core.bidi__GT_path.cljs$lang$maxFixedArity = 3;
  * Set the history cell to the given handler and params
  */
 wheel.route.core.navigate_BANG_ = (function wheel$route$core$navigate_BANG_(var_args){
-var G__28437 = arguments.length;
-switch (G__28437) {
+var G__30765 = arguments.length;
+switch (G__30765) {
 case 3:
 return wheel.route.core.navigate_BANG_.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -189,7 +189,7 @@ wheel.route.core._QMARK__QMARK_history_cell__set_hash = (function wheel$route$co
 return cljs.test.test_var(wheel.route.core._QMARK__QMARK_history_cell__set_hash.cljs$lang$var);
 });
 wheel.route.core._QMARK__QMARK_history_cell__set_hash.cljs$lang$test = (function (){
-if(typeof wheel.route.core.t_wheel$route$core28439 !== 'undefined'){
+if(typeof wheel.route.core.t_wheel$route$core30767 !== 'undefined'){
 } else {
 
 /**
@@ -199,157 +199,157 @@ if(typeof wheel.route.core.t_wheel$route$core28439 !== 'undefined'){
  * @implements {cljs.test.IAsyncTest}
  * @implements {cljs.core.IWithMeta}
 */
-wheel.route.core.t_wheel$route$core28439 = (function (meta28440){
-this.meta28440 = meta28440;
+wheel.route.core.t_wheel$route$core30767 = (function (meta30768){
+this.meta30768 = meta30768;
 this.cljs$lang$protocol_mask$partition0$ = 393217;
 this.cljs$lang$protocol_mask$partition1$ = 0;
 });
-wheel.route.core.t_wheel$route$core28439.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (_28441,meta28440__$1){
+wheel.route.core.t_wheel$route$core30767.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (_30769,meta30768__$1){
 var self__ = this;
-var _28441__$1 = this;
-return (new wheel.route.core.t_wheel$route$core28439(meta28440__$1));
+var _30769__$1 = this;
+return (new wheel.route.core.t_wheel$route$core30767(meta30768__$1));
 });
 
-wheel.route.core.t_wheel$route$core28439.prototype.cljs$core$IMeta$_meta$arity$1 = (function (_28441){
+wheel.route.core.t_wheel$route$core30767.prototype.cljs$core$IMeta$_meta$arity$1 = (function (_30769){
 var self__ = this;
-var _28441__$1 = this;
-return self__.meta28440;
+var _30769__$1 = this;
+return self__.meta30768;
 });
 
-wheel.route.core.t_wheel$route$core28439.prototype.cljs$test$IAsyncTest$ = cljs.core.PROTOCOL_SENTINEL;
+wheel.route.core.t_wheel$route$core30767.prototype.cljs$test$IAsyncTest$ = cljs.core.PROTOCOL_SENTINEL;
 
-wheel.route.core.t_wheel$route$core28439.prototype.call = (function (self__,done){
+wheel.route.core.t_wheel$route$core30767.prototype.call = (function (self__,done){
 var self__ = this;
 var self____$1 = this;
-var ___15974__auto__ = self____$1;
+var ___17471__auto__ = self____$1;
 var c = wheel.route.core.history_cell();
 var p = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.random_uuid())].join('');
 window.location.hash = p;
 
-var fexpr__28451 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (c,p,___15974__auto__,self____$1){
-return (function (G__28443,G__28444,G__28447,G__28445,G__28446){
-if(cljs.core.truth_((function (){var G__28452 = G__28444;
-var G__28453 = G__28445;
-var G__28454 = (G__28446.cljs$core$IFn$_invoke$arity$0 ? G__28446.cljs$core$IFn$_invoke$arity$0() : G__28446.call(null));
-return (G__28443.cljs$core$IFn$_invoke$arity$3 ? G__28443.cljs$core$IFn$_invoke$arity$3(G__28452,G__28453,G__28454) : G__28443.call(null,G__28452,G__28453,G__28454));
+var fexpr__30779 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (c,p,___17471__auto__,self____$1){
+return (function (G__30771,G__30772,G__30775,G__30773,G__30774){
+if(cljs.core.truth_((function (){var G__30780 = G__30772;
+var G__30781 = G__30773;
+var G__30782 = (G__30774.cljs$core$IFn$_invoke$arity$0 ? G__30774.cljs$core$IFn$_invoke$arity$0() : G__30774.call(null));
+return (G__30771.cljs$core$IFn$_invoke$arity$3 ? G__30771.cljs$core$IFn$_invoke$arity$3(G__30780,G__30781,G__30782) : G__30771.call(null,G__30780,G__30781,G__30782));
 })())){
-return (G__28447.cljs$core$IFn$_invoke$arity$0 ? G__28447.cljs$core$IFn$_invoke$arity$0() : G__28447.call(null));
+return (G__30775.cljs$core$IFn$_invoke$arity$0 ? G__30775.cljs$core$IFn$_invoke$arity$0() : G__30775.call(null));
 } else {
 return null;
 }
-});})(c,p,___15974__auto__,self____$1))
+});})(c,p,___17471__auto__,self____$1))
 );
-return (fexpr__28451.cljs$core$IFn$_invoke$arity$5 ? fexpr__28451.cljs$core$IFn$_invoke$arity$5(cljs.core._EQ_,p,done,c,wheel.route.core.current_hash) : fexpr__28451.call(null,cljs.core._EQ_,p,done,c,wheel.route.core.current_hash));
+return (fexpr__30779.cljs$core$IFn$_invoke$arity$5 ? fexpr__30779.cljs$core$IFn$_invoke$arity$5(cljs.core._EQ_,p,done,c,wheel.route.core.current_hash) : fexpr__30779.call(null,cljs.core._EQ_,p,done,c,wheel.route.core.current_hash));
 });
 
-wheel.route.core.t_wheel$route$core28439.prototype.apply = (function (self__,args28442){
+wheel.route.core.t_wheel$route$core30767.prototype.apply = (function (self__,args30770){
 var self__ = this;
 var self____$1 = this;
-return self____$1.call.apply(self____$1,[self____$1].concat(cljs.core.aclone(args28442)));
+return self____$1.call.apply(self____$1,[self____$1].concat(cljs.core.aclone(args30770)));
 });
 
-wheel.route.core.t_wheel$route$core28439.prototype.cljs$core$IFn$_invoke$arity$1 = (function (done){
+wheel.route.core.t_wheel$route$core30767.prototype.cljs$core$IFn$_invoke$arity$1 = (function (done){
 var self__ = this;
-var ___15974__auto__ = this;
+var ___17471__auto__ = this;
 var c = wheel.route.core.history_cell();
 var p = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.random_uuid())].join('');
 window.location.hash = p;
 
-var fexpr__28463 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (c,p,___15974__auto__){
-return (function (G__28455,G__28456,G__28459,G__28457,G__28458){
-if(cljs.core.truth_((function (){var G__28464 = G__28456;
-var G__28465 = G__28457;
-var G__28466 = (G__28458.cljs$core$IFn$_invoke$arity$0 ? G__28458.cljs$core$IFn$_invoke$arity$0() : G__28458.call(null));
-return (G__28455.cljs$core$IFn$_invoke$arity$3 ? G__28455.cljs$core$IFn$_invoke$arity$3(G__28464,G__28465,G__28466) : G__28455.call(null,G__28464,G__28465,G__28466));
+var fexpr__30791 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (c,p,___17471__auto__){
+return (function (G__30783,G__30784,G__30787,G__30785,G__30786){
+if(cljs.core.truth_((function (){var G__30792 = G__30784;
+var G__30793 = G__30785;
+var G__30794 = (G__30786.cljs$core$IFn$_invoke$arity$0 ? G__30786.cljs$core$IFn$_invoke$arity$0() : G__30786.call(null));
+return (G__30783.cljs$core$IFn$_invoke$arity$3 ? G__30783.cljs$core$IFn$_invoke$arity$3(G__30792,G__30793,G__30794) : G__30783.call(null,G__30792,G__30793,G__30794));
 })())){
-return (G__28459.cljs$core$IFn$_invoke$arity$0 ? G__28459.cljs$core$IFn$_invoke$arity$0() : G__28459.call(null));
+return (G__30787.cljs$core$IFn$_invoke$arity$0 ? G__30787.cljs$core$IFn$_invoke$arity$0() : G__30787.call(null));
 } else {
 return null;
 }
-});})(c,p,___15974__auto__))
+});})(c,p,___17471__auto__))
 );
-return (fexpr__28463.cljs$core$IFn$_invoke$arity$5 ? fexpr__28463.cljs$core$IFn$_invoke$arity$5(cljs.core._EQ_,p,done,c,wheel.route.core.current_hash) : fexpr__28463.call(null,cljs.core._EQ_,p,done,c,wheel.route.core.current_hash));
+return (fexpr__30791.cljs$core$IFn$_invoke$arity$5 ? fexpr__30791.cljs$core$IFn$_invoke$arity$5(cljs.core._EQ_,p,done,c,wheel.route.core.current_hash) : fexpr__30791.call(null,cljs.core._EQ_,p,done,c,wheel.route.core.current_hash));
 });
 
-wheel.route.core.t_wheel$route$core28439.getBasis = (function (){
-return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$sym$meta28440], null);
+wheel.route.core.t_wheel$route$core30767.getBasis = (function (){
+return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$sym$meta30768], null);
 });
 
-wheel.route.core.t_wheel$route$core28439.cljs$lang$type = true;
+wheel.route.core.t_wheel$route$core30767.cljs$lang$type = true;
 
-wheel.route.core.t_wheel$route$core28439.cljs$lang$ctorStr = "wheel.route.core/t_wheel$route$core28439";
+wheel.route.core.t_wheel$route$core30767.cljs$lang$ctorStr = "wheel.route.core/t_wheel$route$core30767";
 
-wheel.route.core.t_wheel$route$core28439.cljs$lang$ctorPrWriter = (function (this__8756__auto__,writer__8757__auto__,opt__8758__auto__){
-return cljs.core._write(writer__8757__auto__,"wheel.route.core/t_wheel$route$core28439");
+wheel.route.core.t_wheel$route$core30767.cljs$lang$ctorPrWriter = (function (this__9433__auto__,writer__9434__auto__,opt__9435__auto__){
+return cljs.core._write(writer__9434__auto__,"wheel.route.core/t_wheel$route$core30767");
 });
 
-wheel.route.core.__GT_t_wheel$route$core28439 = (function wheel$route$core$__GT_t_wheel$route$core28439(meta28440){
-return (new wheel.route.core.t_wheel$route$core28439(meta28440));
+wheel.route.core.__GT_t_wheel$route$core30767 = (function wheel$route$core$__GT_t_wheel$route$core30767(meta30768){
+return (new wheel.route.core.t_wheel$route$core30767(meta30768));
 });
 
 }
 
-return (new wheel.route.core.t_wheel$route$core28439(null));
+return (new wheel.route.core.t_wheel$route$core30767(null));
 });
 
-wheel.route.core._QMARK__QMARK_history_cell__set_hash.cljs$lang$var = new cljs.core.Var(function(){return wheel.route.core._QMARK__QMARK_history_cell__set_hash;},cljs.core.cst$sym$wheel$route$core_SLASH__QMARK__QMARK_history_DASH_cell_DASH__DASH_set_DASH_hash,cljs.core.PersistentHashMap.fromArrays([cljs.core.cst$kw$ns,cljs.core.cst$kw$name,cljs.core.cst$kw$file,cljs.core.cst$kw$end_DASH_column,cljs.core.cst$kw$column,cljs.core.cst$kw$line,cljs.core.cst$kw$end_DASH_line,cljs.core.cst$kw$arglists,cljs.core.cst$kw$doc,cljs.core.cst$kw$test],[cljs.core.cst$sym$wheel$route$core,cljs.core.cst$sym$_QMARK__QMARK_history_DASH_cell_DASH__DASH_set_DASH_hash,"/Users/davidmeister/.boot/cache/tmp/Users/davidmeister/ant-foxing/14he/p0eeom/index.html.out/wheel/route/core.cljs",34,1,78,78,cljs.core.List.EMPTY,null,(cljs.core.truth_(wheel.route.core._QMARK__QMARK_history_cell__set_hash)?wheel.route.core._QMARK__QMARK_history_cell__set_hash.cljs$lang$test:null)]));
+wheel.route.core._QMARK__QMARK_history_cell__set_hash.cljs$lang$var = new cljs.core.Var(function(){return wheel.route.core._QMARK__QMARK_history_cell__set_hash;},cljs.core.cst$sym$wheel$route$core_SLASH__QMARK__QMARK_history_DASH_cell_DASH__DASH_set_DASH_hash,cljs.core.PersistentHashMap.fromArrays([cljs.core.cst$kw$ns,cljs.core.cst$kw$name,cljs.core.cst$kw$file,cljs.core.cst$kw$end_DASH_column,cljs.core.cst$kw$column,cljs.core.cst$kw$line,cljs.core.cst$kw$end_DASH_line,cljs.core.cst$kw$arglists,cljs.core.cst$kw$doc,cljs.core.cst$kw$test],[cljs.core.cst$sym$wheel$route$core,cljs.core.cst$sym$_QMARK__QMARK_history_DASH_cell_DASH__DASH_set_DASH_hash,"/home/ubuntu/.boot/cache/tmp/home/ubuntu/ant-foxing/evd/-9aykq3/index.html.out/wheel/route/core.cljs",34,1,78,78,cljs.core.List.EMPTY,null,(cljs.core.truth_(wheel.route.core._QMARK__QMARK_history_cell__set_hash)?wheel.route.core._QMARK__QMARK_history_cell__set_hash.cljs$lang$test:null)]));
 wheel.route.core._QMARK__QMARK_history_cell = (function wheel$route$core$_QMARK__QMARK_history_cell(){
 return cljs.test.test_var(wheel.route.core._QMARK__QMARK_history_cell.cljs$lang$var);
 });
 wheel.route.core._QMARK__QMARK_history_cell.cljs$lang$test = (function (){
 var c = wheel.route.core.history_cell();
-try{var values__15906__auto___28470 = (function (){var x__9034__auto__ = (cljs.core.deref(c) == null);
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto__);
+try{var values__17396__auto___30798 = (function (){var x__9711__auto__ = (cljs.core.deref(c) == null);
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto__);
 })();
-var result__15907__auto___28471 = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.not,values__15906__auto___28470);
-if(cljs.core.truth_(result__15907__auto___28471)){
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$not,cljs.core.list(cljs.core.cst$sym$nil_QMARK_,cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$c))),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core.not,values__15906__auto___28470),cljs.core.cst$kw$message,null], null));
+var result__17397__auto___30799 = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.not,values__17396__auto___30798);
+if(cljs.core.truth_(result__17397__auto___30799)){
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$not,cljs.core.list(cljs.core.cst$sym$nil_QMARK_,cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$c))),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core.not,values__17396__auto___30798),cljs.core.cst$kw$message,null], null));
 } else {
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$not,cljs.core.list(cljs.core.cst$sym$nil_QMARK_,cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$c))),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9034__auto__ = cljs.core.cons(cljs.core.cst$sym$not,values__15906__auto___28470);
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto__);
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$not,cljs.core.list(cljs.core.cst$sym$nil_QMARK_,cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$c))),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9711__auto__ = cljs.core.cons(cljs.core.cst$sym$not,values__17396__auto___30798);
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto__);
 })(),cljs.core.cst$sym$not),cljs.core.cst$kw$message,null], null));
 }
 
-}catch (e28467){var t__15944__auto___28472 = e28467;
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$not,cljs.core.list(cljs.core.cst$sym$nil_QMARK_,cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$c))),cljs.core.cst$kw$actual,t__15944__auto___28472,cljs.core.cst$kw$message,null], null));
+}catch (e30795){var t__17441__auto___30800 = e30795;
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$not,cljs.core.list(cljs.core.cst$sym$nil_QMARK_,cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$c))),cljs.core.cst$kw$actual,t__17441__auto___30800,cljs.core.cst$kw$message,null], null));
 }
-try{var values__15906__auto___28473 = (function (){var x__9034__auto__ = cljs.core.deref(c);
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto__);
+try{var values__17396__auto___30801 = (function (){var x__9711__auto__ = cljs.core.deref(c);
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto__);
 })();
-var result__15907__auto___28474 = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.string_QMARK_,values__15906__auto___28473);
-if(cljs.core.truth_(result__15907__auto___28474)){
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$string_QMARK_,cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$c)),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core.string_QMARK_,values__15906__auto___28473),cljs.core.cst$kw$message,null], null));
+var result__17397__auto___30802 = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.string_QMARK_,values__17396__auto___30801);
+if(cljs.core.truth_(result__17397__auto___30802)){
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$string_QMARK_,cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$c)),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core.string_QMARK_,values__17396__auto___30801),cljs.core.cst$kw$message,null], null));
 } else {
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$string_QMARK_,cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$c)),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9034__auto__ = cljs.core.cons(cljs.core.cst$sym$string_QMARK_,values__15906__auto___28473);
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto__);
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$string_QMARK_,cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$c)),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9711__auto__ = cljs.core.cons(cljs.core.cst$sym$string_QMARK_,values__17396__auto___30801);
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto__);
 })(),cljs.core.cst$sym$not),cljs.core.cst$kw$message,null], null));
 }
 
-}catch (e28468){var t__15944__auto___28475 = e28468;
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$string_QMARK_,cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$c)),cljs.core.cst$kw$actual,t__15944__auto___28475,cljs.core.cst$kw$message,null], null));
+}catch (e30796){var t__17441__auto___30803 = e30796;
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$string_QMARK_,cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$c)),cljs.core.cst$kw$actual,t__17441__auto___30803,cljs.core.cst$kw$message,null], null));
 }
 cljs.core.reset_BANG_(c,"bar");
 
-try{var values__15906__auto__ = cljs.core._conj((function (){var x__9034__auto__ = cljs.core.deref(c);
-return cljs.core._conj((function (){var x__9034__auto____$1 = wheel.route.core.current_hash();
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto____$1);
-})(),x__9034__auto__);
+try{var values__17396__auto__ = cljs.core._conj((function (){var x__9711__auto__ = cljs.core.deref(c);
+return cljs.core._conj((function (){var x__9711__auto____$1 = wheel.route.core.current_hash();
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto____$1);
+})(),x__9711__auto__);
 })(),"bar");
-var result__15907__auto__ = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,values__15906__auto__);
-if(cljs.core.truth_(result__15907__auto__)){
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,"bar",cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$c),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core._EQ_,values__15906__auto__),cljs.core.cst$kw$message,null], null));
+var result__17397__auto__ = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,values__17396__auto__);
+if(cljs.core.truth_(result__17397__auto__)){
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,"bar",cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$c),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core._EQ_,values__17396__auto__),cljs.core.cst$kw$message,null], null));
 } else {
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,"bar",cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$c),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9034__auto__ = cljs.core.cons(cljs.core.cst$sym$_EQ_,values__15906__auto__);
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto__);
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,"bar",cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$c),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9711__auto__ = cljs.core.cons(cljs.core.cst$sym$_EQ_,values__17396__auto__);
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto__);
 })(),cljs.core.cst$sym$not),cljs.core.cst$kw$message,null], null));
 }
 
-return result__15907__auto__;
-}catch (e28469){var t__15944__auto__ = e28469;
-return cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,"bar",cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$c),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,t__15944__auto__,cljs.core.cst$kw$message,null], null));
+return result__17397__auto__;
+}catch (e30797){var t__17441__auto__ = e30797;
+return cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,"bar",cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$c),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,t__17441__auto__,cljs.core.cst$kw$message,null], null));
 }});
 
-wheel.route.core._QMARK__QMARK_history_cell.cljs$lang$var = new cljs.core.Var(function(){return wheel.route.core._QMARK__QMARK_history_cell;},cljs.core.cst$sym$wheel$route$core_SLASH__QMARK__QMARK_history_DASH_cell,cljs.core.PersistentHashMap.fromArrays([cljs.core.cst$kw$ns,cljs.core.cst$kw$name,cljs.core.cst$kw$file,cljs.core.cst$kw$end_DASH_column,cljs.core.cst$kw$column,cljs.core.cst$kw$line,cljs.core.cst$kw$end_DASH_line,cljs.core.cst$kw$arglists,cljs.core.cst$kw$doc,cljs.core.cst$kw$test],[cljs.core.cst$sym$wheel$route$core,cljs.core.cst$sym$_QMARK__QMARK_history_DASH_cell,"/Users/davidmeister/.boot/cache/tmp/Users/davidmeister/ant-foxing/14he/p0eeom/index.html.out/wheel/route/core.cljs",24,1,89,89,cljs.core.List.EMPTY,null,(cljs.core.truth_(wheel.route.core._QMARK__QMARK_history_cell)?wheel.route.core._QMARK__QMARK_history_cell.cljs$lang$test:null)]));
+wheel.route.core._QMARK__QMARK_history_cell.cljs$lang$var = new cljs.core.Var(function(){return wheel.route.core._QMARK__QMARK_history_cell;},cljs.core.cst$sym$wheel$route$core_SLASH__QMARK__QMARK_history_DASH_cell,cljs.core.PersistentHashMap.fromArrays([cljs.core.cst$kw$ns,cljs.core.cst$kw$name,cljs.core.cst$kw$file,cljs.core.cst$kw$end_DASH_column,cljs.core.cst$kw$column,cljs.core.cst$kw$line,cljs.core.cst$kw$end_DASH_line,cljs.core.cst$kw$arglists,cljs.core.cst$kw$doc,cljs.core.cst$kw$test],[cljs.core.cst$sym$wheel$route$core,cljs.core.cst$sym$_QMARK__QMARK_history_DASH_cell,"/home/ubuntu/.boot/cache/tmp/home/ubuntu/ant-foxing/evd/-9aykq3/index.html.out/wheel/route/core.cljs",24,1,89,89,cljs.core.List.EMPTY,null,(cljs.core.truth_(wheel.route.core._QMARK__QMARK_history_cell)?wheel.route.core._QMARK__QMARK_history_cell.cljs$lang$test:null)]));
 wheel.route.core._QMARK__QMARK_path__GT_bidi = (function wheel$route$core$_QMARK__QMARK_path__GT_bidi(){
 return cljs.test.test_var(wheel.route.core._QMARK__QMARK_path__GT_bidi.cljs$lang$var);
 });
@@ -358,106 +358,106 @@ var path = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.random_uuid())
 var handler = cljs.core.cst$kw$foo;
 var routes = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [path,handler], null);
 var fallback = cljs.core.cst$kw$bar;
-try{var values__15906__auto___28478 = (function (){var x__9034__auto__ = new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$handler,handler], null);
-return cljs.core._conj((function (){var x__9034__auto____$1 = wheel.route.core.path__GT_bidi.cljs$core$IFn$_invoke$arity$3(path,routes,fallback);
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto____$1);
-})(),x__9034__auto__);
+try{var values__17396__auto___30806 = (function (){var x__9711__auto__ = new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$handler,handler], null);
+return cljs.core._conj((function (){var x__9711__auto____$1 = wheel.route.core.path__GT_bidi.cljs$core$IFn$_invoke$arity$3(path,routes,fallback);
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto____$1);
+})(),x__9711__auto__);
 })();
-var result__15907__auto___28479 = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,values__15906__auto___28478);
-if(cljs.core.truth_(result__15907__auto___28479)){
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$handler,cljs.core.cst$sym$handler], null),cljs.core.list(cljs.core.cst$sym$path_DASH__GT_bidi,cljs.core.cst$sym$path,cljs.core.cst$sym$routes,cljs.core.cst$sym$fallback)),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core._EQ_,values__15906__auto___28478),cljs.core.cst$kw$message,null], null));
+var result__17397__auto___30807 = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,values__17396__auto___30806);
+if(cljs.core.truth_(result__17397__auto___30807)){
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$handler,cljs.core.cst$sym$handler], null),cljs.core.list(cljs.core.cst$sym$path_DASH__GT_bidi,cljs.core.cst$sym$path,cljs.core.cst$sym$routes,cljs.core.cst$sym$fallback)),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core._EQ_,values__17396__auto___30806),cljs.core.cst$kw$message,null], null));
 } else {
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$handler,cljs.core.cst$sym$handler], null),cljs.core.list(cljs.core.cst$sym$path_DASH__GT_bidi,cljs.core.cst$sym$path,cljs.core.cst$sym$routes,cljs.core.cst$sym$fallback)),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9034__auto__ = cljs.core.cons(cljs.core.cst$sym$_EQ_,values__15906__auto___28478);
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto__);
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$handler,cljs.core.cst$sym$handler], null),cljs.core.list(cljs.core.cst$sym$path_DASH__GT_bidi,cljs.core.cst$sym$path,cljs.core.cst$sym$routes,cljs.core.cst$sym$fallback)),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9711__auto__ = cljs.core.cons(cljs.core.cst$sym$_EQ_,values__17396__auto___30806);
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto__);
 })(),cljs.core.cst$sym$not),cljs.core.cst$kw$message,null], null));
 }
 
-}catch (e28476){var t__15944__auto___28480 = e28476;
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$handler,cljs.core.cst$sym$handler], null),cljs.core.list(cljs.core.cst$sym$path_DASH__GT_bidi,cljs.core.cst$sym$path,cljs.core.cst$sym$routes,cljs.core.cst$sym$fallback)),cljs.core.cst$kw$actual,t__15944__auto___28480,cljs.core.cst$kw$message,null], null));
+}catch (e30804){var t__17441__auto___30808 = e30804;
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$handler,cljs.core.cst$sym$handler], null),cljs.core.list(cljs.core.cst$sym$path_DASH__GT_bidi,cljs.core.cst$sym$path,cljs.core.cst$sym$routes,cljs.core.cst$sym$fallback)),cljs.core.cst$kw$actual,t__17441__auto___30808,cljs.core.cst$kw$message,null], null));
 }
-try{var values__15906__auto__ = (function (){var x__9034__auto__ = new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$handler,fallback], null);
-return cljs.core._conj((function (){var x__9034__auto____$1 = wheel.route.core.path__GT_bidi.cljs$core$IFn$_invoke$arity$3([cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.random_uuid())].join(''),routes,fallback);
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto____$1);
-})(),x__9034__auto__);
+try{var values__17396__auto__ = (function (){var x__9711__auto__ = new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$handler,fallback], null);
+return cljs.core._conj((function (){var x__9711__auto____$1 = wheel.route.core.path__GT_bidi.cljs$core$IFn$_invoke$arity$3([cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.random_uuid())].join(''),routes,fallback);
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto____$1);
+})(),x__9711__auto__);
 })();
-var result__15907__auto__ = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,values__15906__auto__);
-if(cljs.core.truth_(result__15907__auto__)){
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$handler,cljs.core.cst$sym$fallback], null),cljs.core.list(cljs.core.cst$sym$path_DASH__GT_bidi,cljs.core.list(cljs.core.cst$sym$str,cljs.core.list(cljs.core.cst$sym$random_DASH_uuid)),cljs.core.cst$sym$routes,cljs.core.cst$sym$fallback)),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core._EQ_,values__15906__auto__),cljs.core.cst$kw$message,null], null));
+var result__17397__auto__ = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,values__17396__auto__);
+if(cljs.core.truth_(result__17397__auto__)){
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$handler,cljs.core.cst$sym$fallback], null),cljs.core.list(cljs.core.cst$sym$path_DASH__GT_bidi,cljs.core.list(cljs.core.cst$sym$str,cljs.core.list(cljs.core.cst$sym$random_DASH_uuid)),cljs.core.cst$sym$routes,cljs.core.cst$sym$fallback)),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core._EQ_,values__17396__auto__),cljs.core.cst$kw$message,null], null));
 } else {
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$handler,cljs.core.cst$sym$fallback], null),cljs.core.list(cljs.core.cst$sym$path_DASH__GT_bidi,cljs.core.list(cljs.core.cst$sym$str,cljs.core.list(cljs.core.cst$sym$random_DASH_uuid)),cljs.core.cst$sym$routes,cljs.core.cst$sym$fallback)),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9034__auto__ = cljs.core.cons(cljs.core.cst$sym$_EQ_,values__15906__auto__);
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto__);
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$handler,cljs.core.cst$sym$fallback], null),cljs.core.list(cljs.core.cst$sym$path_DASH__GT_bidi,cljs.core.list(cljs.core.cst$sym$str,cljs.core.list(cljs.core.cst$sym$random_DASH_uuid)),cljs.core.cst$sym$routes,cljs.core.cst$sym$fallback)),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9711__auto__ = cljs.core.cons(cljs.core.cst$sym$_EQ_,values__17396__auto__);
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto__);
 })(),cljs.core.cst$sym$not),cljs.core.cst$kw$message,null], null));
 }
 
-return result__15907__auto__;
-}catch (e28477){var t__15944__auto__ = e28477;
-return cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$handler,cljs.core.cst$sym$fallback], null),cljs.core.list(cljs.core.cst$sym$path_DASH__GT_bidi,cljs.core.list(cljs.core.cst$sym$str,cljs.core.list(cljs.core.cst$sym$random_DASH_uuid)),cljs.core.cst$sym$routes,cljs.core.cst$sym$fallback)),cljs.core.cst$kw$actual,t__15944__auto__,cljs.core.cst$kw$message,null], null));
+return result__17397__auto__;
+}catch (e30805){var t__17441__auto__ = e30805;
+return cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$handler,cljs.core.cst$sym$fallback], null),cljs.core.list(cljs.core.cst$sym$path_DASH__GT_bidi,cljs.core.list(cljs.core.cst$sym$str,cljs.core.list(cljs.core.cst$sym$random_DASH_uuid)),cljs.core.cst$sym$routes,cljs.core.cst$sym$fallback)),cljs.core.cst$kw$actual,t__17441__auto__,cljs.core.cst$kw$message,null], null));
 }});
 
-wheel.route.core._QMARK__QMARK_path__GT_bidi.cljs$lang$var = new cljs.core.Var(function(){return wheel.route.core._QMARK__QMARK_path__GT_bidi;},cljs.core.cst$sym$wheel$route$core_SLASH__QMARK__QMARK_path_DASH__GT_bidi,cljs.core.PersistentHashMap.fromArrays([cljs.core.cst$kw$ns,cljs.core.cst$kw$name,cljs.core.cst$kw$file,cljs.core.cst$kw$end_DASH_column,cljs.core.cst$kw$column,cljs.core.cst$kw$line,cljs.core.cst$kw$end_DASH_line,cljs.core.cst$kw$arglists,cljs.core.cst$kw$doc,cljs.core.cst$kw$test],[cljs.core.cst$sym$wheel$route$core,cljs.core.cst$sym$_QMARK__QMARK_path_DASH__GT_bidi,"/Users/davidmeister/.boot/cache/tmp/Users/davidmeister/ant-foxing/14he/p0eeom/index.html.out/wheel/route/core.cljs",22,1,99,99,cljs.core.List.EMPTY,null,(cljs.core.truth_(wheel.route.core._QMARK__QMARK_path__GT_bidi)?wheel.route.core._QMARK__QMARK_path__GT_bidi.cljs$lang$test:null)]));
+wheel.route.core._QMARK__QMARK_path__GT_bidi.cljs$lang$var = new cljs.core.Var(function(){return wheel.route.core._QMARK__QMARK_path__GT_bidi;},cljs.core.cst$sym$wheel$route$core_SLASH__QMARK__QMARK_path_DASH__GT_bidi,cljs.core.PersistentHashMap.fromArrays([cljs.core.cst$kw$ns,cljs.core.cst$kw$name,cljs.core.cst$kw$file,cljs.core.cst$kw$end_DASH_column,cljs.core.cst$kw$column,cljs.core.cst$kw$line,cljs.core.cst$kw$end_DASH_line,cljs.core.cst$kw$arglists,cljs.core.cst$kw$doc,cljs.core.cst$kw$test],[cljs.core.cst$sym$wheel$route$core,cljs.core.cst$sym$_QMARK__QMARK_path_DASH__GT_bidi,"/home/ubuntu/.boot/cache/tmp/home/ubuntu/ant-foxing/evd/-9aykq3/index.html.out/wheel/route/core.cljs",22,1,99,99,cljs.core.List.EMPTY,null,(cljs.core.truth_(wheel.route.core._QMARK__QMARK_path__GT_bidi)?wheel.route.core._QMARK__QMARK_path__GT_bidi.cljs$lang$test:null)]));
 wheel.route.core._QMARK__QMARK_bidi__GT_path = (function wheel$route$core$_QMARK__QMARK_bidi__GT_path(){
 return cljs.test.test_var(wheel.route.core._QMARK__QMARK_bidi__GT_path.cljs$lang$var);
 });
 wheel.route.core._QMARK__QMARK_bidi__GT_path.cljs$lang$test = (function (){
-try{var values__15906__auto___28483 = cljs.core._conj((function (){var x__9034__auto__ = wheel.route.core.bidi__GT_path.cljs$core$IFn$_invoke$arity$3(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["/foo",cljs.core.cst$kw$foo], null),cljs.core.cst$kw$foo,cljs.core.PersistentArrayMap.EMPTY);
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto__);
+try{var values__17396__auto___30811 = cljs.core._conj((function (){var x__9711__auto__ = wheel.route.core.bidi__GT_path.cljs$core$IFn$_invoke$arity$3(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["/foo",cljs.core.cst$kw$foo], null),cljs.core.cst$kw$foo,cljs.core.PersistentArrayMap.EMPTY);
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto__);
 })(),"/foo");
-var result__15907__auto___28484 = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,values__15906__auto___28483);
-if(cljs.core.truth_(result__15907__auto___28484)){
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,"/foo",cljs.core.list(cljs.core.cst$sym$bidi_DASH__GT_path,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["/foo",cljs.core.cst$kw$foo], null),cljs.core.cst$kw$foo,cljs.core.PersistentArrayMap.EMPTY)),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core._EQ_,values__15906__auto___28483),cljs.core.cst$kw$message,null], null));
+var result__17397__auto___30812 = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,values__17396__auto___30811);
+if(cljs.core.truth_(result__17397__auto___30812)){
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,"/foo",cljs.core.list(cljs.core.cst$sym$bidi_DASH__GT_path,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["/foo",cljs.core.cst$kw$foo], null),cljs.core.cst$kw$foo,cljs.core.PersistentArrayMap.EMPTY)),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core._EQ_,values__17396__auto___30811),cljs.core.cst$kw$message,null], null));
 } else {
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,"/foo",cljs.core.list(cljs.core.cst$sym$bidi_DASH__GT_path,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["/foo",cljs.core.cst$kw$foo], null),cljs.core.cst$kw$foo,cljs.core.PersistentArrayMap.EMPTY)),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9034__auto__ = cljs.core.cons(cljs.core.cst$sym$_EQ_,values__15906__auto___28483);
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto__);
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,"/foo",cljs.core.list(cljs.core.cst$sym$bidi_DASH__GT_path,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["/foo",cljs.core.cst$kw$foo], null),cljs.core.cst$kw$foo,cljs.core.PersistentArrayMap.EMPTY)),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9711__auto__ = cljs.core.cons(cljs.core.cst$sym$_EQ_,values__17396__auto___30811);
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto__);
 })(),cljs.core.cst$sym$not),cljs.core.cst$kw$message,null], null));
 }
 
-}catch (e28481){var t__15944__auto___28485 = e28481;
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,"/foo",cljs.core.list(cljs.core.cst$sym$bidi_DASH__GT_path,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["/foo",cljs.core.cst$kw$foo], null),cljs.core.cst$kw$foo,cljs.core.PersistentArrayMap.EMPTY)),cljs.core.cst$kw$actual,t__15944__auto___28485,cljs.core.cst$kw$message,null], null));
+}catch (e30809){var t__17441__auto___30813 = e30809;
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,"/foo",cljs.core.list(cljs.core.cst$sym$bidi_DASH__GT_path,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["/foo",cljs.core.cst$kw$foo], null),cljs.core.cst$kw$foo,cljs.core.PersistentArrayMap.EMPTY)),cljs.core.cst$kw$actual,t__17441__auto___30813,cljs.core.cst$kw$message,null], null));
 }
-try{var values__15906__auto__ = cljs.core._conj((function (){var x__9034__auto__ = wheel.route.core.bidi__GT_path.cljs$core$IFn$_invoke$arity$3(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["/foo/",new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["",cljs.core.cst$kw$bar], null),cljs.core.cst$kw$foo], null)], null)], null),cljs.core.cst$kw$foo,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$bar,(123)], null));
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto__);
+try{var values__17396__auto__ = cljs.core._conj((function (){var x__9711__auto__ = wheel.route.core.bidi__GT_path.cljs$core$IFn$_invoke$arity$3(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["/foo/",new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["",cljs.core.cst$kw$bar], null),cljs.core.cst$kw$foo], null)], null)], null),cljs.core.cst$kw$foo,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$bar,(123)], null));
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto__);
 })(),"/foo/123");
-var result__15907__auto__ = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,values__15906__auto__);
-if(cljs.core.truth_(result__15907__auto__)){
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,"/foo/123",cljs.core.list(cljs.core.cst$sym$bidi_DASH__GT_path,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["/foo/",new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["",cljs.core.cst$kw$bar], null),cljs.core.cst$kw$foo], null)], null)], null),cljs.core.cst$kw$foo,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$bar,(123)], null))),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core._EQ_,values__15906__auto__),cljs.core.cst$kw$message,null], null));
+var result__17397__auto__ = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,values__17396__auto__);
+if(cljs.core.truth_(result__17397__auto__)){
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,"/foo/123",cljs.core.list(cljs.core.cst$sym$bidi_DASH__GT_path,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["/foo/",new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["",cljs.core.cst$kw$bar], null),cljs.core.cst$kw$foo], null)], null)], null),cljs.core.cst$kw$foo,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$bar,(123)], null))),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core._EQ_,values__17396__auto__),cljs.core.cst$kw$message,null], null));
 } else {
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,"/foo/123",cljs.core.list(cljs.core.cst$sym$bidi_DASH__GT_path,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["/foo/",new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["",cljs.core.cst$kw$bar], null),cljs.core.cst$kw$foo], null)], null)], null),cljs.core.cst$kw$foo,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$bar,(123)], null))),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9034__auto__ = cljs.core.cons(cljs.core.cst$sym$_EQ_,values__15906__auto__);
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto__);
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,"/foo/123",cljs.core.list(cljs.core.cst$sym$bidi_DASH__GT_path,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["/foo/",new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["",cljs.core.cst$kw$bar], null),cljs.core.cst$kw$foo], null)], null)], null),cljs.core.cst$kw$foo,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$bar,(123)], null))),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9711__auto__ = cljs.core.cons(cljs.core.cst$sym$_EQ_,values__17396__auto__);
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto__);
 })(),cljs.core.cst$sym$not),cljs.core.cst$kw$message,null], null));
 }
 
-return result__15907__auto__;
-}catch (e28482){var t__15944__auto__ = e28482;
-return cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,"/foo/123",cljs.core.list(cljs.core.cst$sym$bidi_DASH__GT_path,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["/foo/",new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["",cljs.core.cst$kw$bar], null),cljs.core.cst$kw$foo], null)], null)], null),cljs.core.cst$kw$foo,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$bar,(123)], null))),cljs.core.cst$kw$actual,t__15944__auto__,cljs.core.cst$kw$message,null], null));
+return result__17397__auto__;
+}catch (e30810){var t__17441__auto__ = e30810;
+return cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,"/foo/123",cljs.core.list(cljs.core.cst$sym$bidi_DASH__GT_path,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["/foo/",new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["",cljs.core.cst$kw$bar], null),cljs.core.cst$kw$foo], null)], null)], null),cljs.core.cst$kw$foo,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$bar,(123)], null))),cljs.core.cst$kw$actual,t__17441__auto__,cljs.core.cst$kw$message,null], null));
 }});
 
-wheel.route.core._QMARK__QMARK_bidi__GT_path.cljs$lang$var = new cljs.core.Var(function(){return wheel.route.core._QMARK__QMARK_bidi__GT_path;},cljs.core.cst$sym$wheel$route$core_SLASH__QMARK__QMARK_bidi_DASH__GT_path,cljs.core.PersistentHashMap.fromArrays([cljs.core.cst$kw$ns,cljs.core.cst$kw$name,cljs.core.cst$kw$file,cljs.core.cst$kw$end_DASH_column,cljs.core.cst$kw$column,cljs.core.cst$kw$line,cljs.core.cst$kw$end_DASH_line,cljs.core.cst$kw$arglists,cljs.core.cst$kw$doc,cljs.core.cst$kw$test],[cljs.core.cst$sym$wheel$route$core,cljs.core.cst$sym$_QMARK__QMARK_bidi_DASH__GT_path,"/Users/davidmeister/.boot/cache/tmp/Users/davidmeister/ant-foxing/14he/p0eeom/index.html.out/wheel/route/core.cljs",22,1,110,110,cljs.core.List.EMPTY,null,(cljs.core.truth_(wheel.route.core._QMARK__QMARK_bidi__GT_path)?wheel.route.core._QMARK__QMARK_bidi__GT_path.cljs$lang$test:null)]));
+wheel.route.core._QMARK__QMARK_bidi__GT_path.cljs$lang$var = new cljs.core.Var(function(){return wheel.route.core._QMARK__QMARK_bidi__GT_path;},cljs.core.cst$sym$wheel$route$core_SLASH__QMARK__QMARK_bidi_DASH__GT_path,cljs.core.PersistentHashMap.fromArrays([cljs.core.cst$kw$ns,cljs.core.cst$kw$name,cljs.core.cst$kw$file,cljs.core.cst$kw$end_DASH_column,cljs.core.cst$kw$column,cljs.core.cst$kw$line,cljs.core.cst$kw$end_DASH_line,cljs.core.cst$kw$arglists,cljs.core.cst$kw$doc,cljs.core.cst$kw$test],[cljs.core.cst$sym$wheel$route$core,cljs.core.cst$sym$_QMARK__QMARK_bidi_DASH__GT_path,"/home/ubuntu/.boot/cache/tmp/home/ubuntu/ant-foxing/evd/-9aykq3/index.html.out/wheel/route/core.cljs",22,1,110,110,cljs.core.List.EMPTY,null,(cljs.core.truth_(wheel.route.core._QMARK__QMARK_bidi__GT_path)?wheel.route.core._QMARK__QMARK_bidi__GT_path.cljs$lang$test:null)]));
 wheel.route.core._QMARK__QMARK_navigate_BANG_ = (function wheel$route$core$_QMARK__QMARK_navigate_BANG_(){
 return cljs.test.test_var(wheel.route.core._QMARK__QMARK_navigate_BANG_.cljs$lang$var);
 });
 wheel.route.core._QMARK__QMARK_navigate_BANG_.cljs$lang$test = (function (){
-var history_28490 = wheel.route.core.history_cell();
-var path_28491 = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.random_uuid())].join('');
-var handler_28492 = cljs.core.cst$kw$foo;
-var routes_28493 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [path_28491,handler_28492], null);
-wheel.route.core.navigate_BANG_.cljs$core$IFn$_invoke$arity$3(history_28490,routes_28493,handler_28492);
+var history_30818 = wheel.route.core.history_cell();
+var path_30819 = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.random_uuid())].join('');
+var handler_30820 = cljs.core.cst$kw$foo;
+var routes_30821 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [path_30819,handler_30820], null);
+wheel.route.core.navigate_BANG_.cljs$core$IFn$_invoke$arity$3(history_30818,routes_30821,handler_30820);
 
-try{var values__15906__auto___28494 = (function (){var x__9034__auto__ = path_28491;
-return cljs.core._conj((function (){var x__9034__auto____$1 = wheel.route.core.current_hash();
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto____$1);
-})(),x__9034__auto__);
+try{var values__17396__auto___30822 = (function (){var x__9711__auto__ = path_30819;
+return cljs.core._conj((function (){var x__9711__auto____$1 = wheel.route.core.current_hash();
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto____$1);
+})(),x__9711__auto__);
 })();
-var result__15907__auto___28495 = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,values__15906__auto___28494);
-if(cljs.core.truth_(result__15907__auto___28495)){
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.cst$sym$path,cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core._EQ_,values__15906__auto___28494),cljs.core.cst$kw$message,null], null));
+var result__17397__auto___30823 = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,values__17396__auto___30822);
+if(cljs.core.truth_(result__17397__auto___30823)){
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.cst$sym$path,cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core._EQ_,values__17396__auto___30822),cljs.core.cst$kw$message,null], null));
 } else {
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.cst$sym$path,cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9034__auto__ = cljs.core.cons(cljs.core.cst$sym$_EQ_,values__15906__auto___28494);
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto__);
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.cst$sym$path,cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9711__auto__ = cljs.core.cons(cljs.core.cst$sym$_EQ_,values__17396__auto___30822);
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto__);
 })(),cljs.core.cst$sym$not),cljs.core.cst$kw$message,null], null));
 }
 
-}catch (e28486){var t__15944__auto___28496 = e28486;
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.cst$sym$path,cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,t__15944__auto___28496,cljs.core.cst$kw$message,null], null));
+}catch (e30814){var t__17441__auto___30824 = e30814;
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.cst$sym$path,cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,t__17441__auto___30824,cljs.core.cst$kw$message,null], null));
 }
 var history = wheel.route.core.history_cell();
 var path = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.random_uuid())].join('');
@@ -467,113 +467,113 @@ var handler = cljs.core.cst$kw$foo;
 var routes = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["",cljs.core.PersistentArrayMap.createAsIfByAssoc([path,cljs.core.PersistentArrayMap.createAsIfByAssoc([new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["/",param_key], null),handler])])], null);
 wheel.route.core.navigate_BANG_.cljs$core$IFn$_invoke$arity$4(history,routes,handler,cljs.core.PersistentArrayMap.createAsIfByAssoc([param_key,param_value]));
 
-try{var values__15906__auto___28497 = (function (){var x__9034__auto__ = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(path),cljs.core.str.cljs$core$IFn$_invoke$arity$1("/"),cljs.core.str.cljs$core$IFn$_invoke$arity$1(param_value)].join('');
-return cljs.core._conj((function (){var x__9034__auto____$1 = wheel.route.core.current_hash();
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto____$1);
-})(),x__9034__auto__);
+try{var values__17396__auto___30825 = (function (){var x__9711__auto__ = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(path),cljs.core.str.cljs$core$IFn$_invoke$arity$1("/"),cljs.core.str.cljs$core$IFn$_invoke$arity$1(param_value)].join('');
+return cljs.core._conj((function (){var x__9711__auto____$1 = wheel.route.core.current_hash();
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto____$1);
+})(),x__9711__auto__);
 })();
-var result__15907__auto___28498 = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,values__15906__auto___28497);
-if(cljs.core.truth_(result__15907__auto___28498)){
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.cst$sym$path,"/",cljs.core.cst$sym$param_DASH_value),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core._EQ_,values__15906__auto___28497),cljs.core.cst$kw$message,null], null));
+var result__17397__auto___30826 = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,values__17396__auto___30825);
+if(cljs.core.truth_(result__17397__auto___30826)){
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.cst$sym$path,"/",cljs.core.cst$sym$param_DASH_value),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core._EQ_,values__17396__auto___30825),cljs.core.cst$kw$message,null], null));
 } else {
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.cst$sym$path,"/",cljs.core.cst$sym$param_DASH_value),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9034__auto__ = cljs.core.cons(cljs.core.cst$sym$_EQ_,values__15906__auto___28497);
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto__);
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.cst$sym$path,"/",cljs.core.cst$sym$param_DASH_value),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9711__auto__ = cljs.core.cons(cljs.core.cst$sym$_EQ_,values__17396__auto___30825);
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto__);
 })(),cljs.core.cst$sym$not),cljs.core.cst$kw$message,null], null));
 }
 
-}catch (e28487){var t__15944__auto___28499 = e28487;
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.cst$sym$path,"/",cljs.core.cst$sym$param_DASH_value),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,t__15944__auto___28499,cljs.core.cst$kw$message,null], null));
+}catch (e30815){var t__17441__auto___30827 = e30815;
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.cst$sym$path,"/",cljs.core.cst$sym$param_DASH_value),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,t__17441__auto___30827,cljs.core.cst$kw$message,null], null));
 }
 var path_SINGLEQUOTE_ = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.random_uuid())].join('');
 var handler_SINGLEQUOTE_ = cljs.core.cst$kw$baz;
 var routes_SINGLEQUOTE_ = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["",cljs.core.PersistentArrayMap.createAsIfByAssoc([path,cljs.core.PersistentArrayMap.createAsIfByAssoc([new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["/",param_key], null),handler]),path_SINGLEQUOTE_,cljs.core.PersistentArrayMap.createAsIfByAssoc([new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["/",param_key], null),handler_SINGLEQUOTE_])])], null);
 wheel.route.core.handler_BANG_(history,routes_SINGLEQUOTE_,handler_SINGLEQUOTE_);
 
-try{var values__15906__auto___28500 = (function (){var x__9034__auto__ = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(path_SINGLEQUOTE_),cljs.core.str.cljs$core$IFn$_invoke$arity$1("/"),cljs.core.str.cljs$core$IFn$_invoke$arity$1(param_value)].join('');
-return cljs.core._conj((function (){var x__9034__auto____$1 = wheel.route.core.current_hash();
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto____$1);
-})(),x__9034__auto__);
+try{var values__17396__auto___30828 = (function (){var x__9711__auto__ = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(path_SINGLEQUOTE_),cljs.core.str.cljs$core$IFn$_invoke$arity$1("/"),cljs.core.str.cljs$core$IFn$_invoke$arity$1(param_value)].join('');
+return cljs.core._conj((function (){var x__9711__auto____$1 = wheel.route.core.current_hash();
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto____$1);
+})(),x__9711__auto__);
 })();
-var result__15907__auto___28501 = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,values__15906__auto___28500);
-if(cljs.core.truth_(result__15907__auto___28501)){
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.cst$sym$path_SINGLEQUOTE_,"/",cljs.core.cst$sym$param_DASH_value),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core._EQ_,values__15906__auto___28500),cljs.core.cst$kw$message,null], null));
+var result__17397__auto___30829 = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,values__17396__auto___30828);
+if(cljs.core.truth_(result__17397__auto___30829)){
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.cst$sym$path_SINGLEQUOTE_,"/",cljs.core.cst$sym$param_DASH_value),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core._EQ_,values__17396__auto___30828),cljs.core.cst$kw$message,null], null));
 } else {
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.cst$sym$path_SINGLEQUOTE_,"/",cljs.core.cst$sym$param_DASH_value),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9034__auto__ = cljs.core.cons(cljs.core.cst$sym$_EQ_,values__15906__auto___28500);
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto__);
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.cst$sym$path_SINGLEQUOTE_,"/",cljs.core.cst$sym$param_DASH_value),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9711__auto__ = cljs.core.cons(cljs.core.cst$sym$_EQ_,values__17396__auto___30828);
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto__);
 })(),cljs.core.cst$sym$not),cljs.core.cst$kw$message,null], null));
 }
 
-}catch (e28488){var t__15944__auto___28502 = e28488;
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.cst$sym$path_SINGLEQUOTE_,"/",cljs.core.cst$sym$param_DASH_value),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,t__15944__auto___28502,cljs.core.cst$kw$message,null], null));
+}catch (e30816){var t__17441__auto___30830 = e30816;
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.cst$sym$path_SINGLEQUOTE_,"/",cljs.core.cst$sym$param_DASH_value),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,t__17441__auto___30830,cljs.core.cst$kw$message,null], null));
 }
 var param_value_SINGLEQUOTE_ = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.random_uuid())].join('');
 wheel.route.core.params_BANG_(history,routes_SINGLEQUOTE_,cljs.core.PersistentArrayMap.createAsIfByAssoc([param_key,param_value_SINGLEQUOTE_]));
 
-try{var values__15906__auto__ = (function (){var x__9034__auto__ = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(path_SINGLEQUOTE_),cljs.core.str.cljs$core$IFn$_invoke$arity$1("/"),cljs.core.str.cljs$core$IFn$_invoke$arity$1(param_value_SINGLEQUOTE_)].join('');
-return cljs.core._conj((function (){var x__9034__auto____$1 = wheel.route.core.current_hash();
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto____$1);
-})(),x__9034__auto__);
+try{var values__17396__auto__ = (function (){var x__9711__auto__ = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(path_SINGLEQUOTE_),cljs.core.str.cljs$core$IFn$_invoke$arity$1("/"),cljs.core.str.cljs$core$IFn$_invoke$arity$1(param_value_SINGLEQUOTE_)].join('');
+return cljs.core._conj((function (){var x__9711__auto____$1 = wheel.route.core.current_hash();
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto____$1);
+})(),x__9711__auto__);
 })();
-var result__15907__auto__ = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,values__15906__auto__);
-if(cljs.core.truth_(result__15907__auto__)){
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.cst$sym$path_SINGLEQUOTE_,"/",cljs.core.cst$sym$param_DASH_value_SINGLEQUOTE_),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core._EQ_,values__15906__auto__),cljs.core.cst$kw$message,null], null));
+var result__17397__auto__ = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,values__17396__auto__);
+if(cljs.core.truth_(result__17397__auto__)){
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.cst$sym$path_SINGLEQUOTE_,"/",cljs.core.cst$sym$param_DASH_value_SINGLEQUOTE_),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core._EQ_,values__17396__auto__),cljs.core.cst$kw$message,null], null));
 } else {
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.cst$sym$path_SINGLEQUOTE_,"/",cljs.core.cst$sym$param_DASH_value_SINGLEQUOTE_),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9034__auto__ = cljs.core.cons(cljs.core.cst$sym$_EQ_,values__15906__auto__);
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto__);
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.cst$sym$path_SINGLEQUOTE_,"/",cljs.core.cst$sym$param_DASH_value_SINGLEQUOTE_),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9711__auto__ = cljs.core.cons(cljs.core.cst$sym$_EQ_,values__17396__auto__);
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto__);
 })(),cljs.core.cst$sym$not),cljs.core.cst$kw$message,null], null));
 }
 
-return result__15907__auto__;
-}catch (e28489){var t__15944__auto__ = e28489;
-return cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.cst$sym$path_SINGLEQUOTE_,"/",cljs.core.cst$sym$param_DASH_value_SINGLEQUOTE_),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,t__15944__auto__,cljs.core.cst$kw$message,null], null));
+return result__17397__auto__;
+}catch (e30817){var t__17441__auto__ = e30817;
+return cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.cst$sym$path_SINGLEQUOTE_,"/",cljs.core.cst$sym$param_DASH_value_SINGLEQUOTE_),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,t__17441__auto__,cljs.core.cst$kw$message,null], null));
 }});
 
-wheel.route.core._QMARK__QMARK_navigate_BANG_.cljs$lang$var = new cljs.core.Var(function(){return wheel.route.core._QMARK__QMARK_navigate_BANG_;},cljs.core.cst$sym$wheel$route$core_SLASH__QMARK__QMARK_navigate_BANG_,cljs.core.PersistentHashMap.fromArrays([cljs.core.cst$kw$ns,cljs.core.cst$kw$name,cljs.core.cst$kw$file,cljs.core.cst$kw$end_DASH_column,cljs.core.cst$kw$column,cljs.core.cst$kw$line,cljs.core.cst$kw$end_DASH_line,cljs.core.cst$kw$arglists,cljs.core.cst$kw$doc,cljs.core.cst$kw$test],[cljs.core.cst$sym$wheel$route$core,cljs.core.cst$sym$_QMARK__QMARK_navigate_BANG_,"/Users/davidmeister/.boot/cache/tmp/Users/davidmeister/ant-foxing/14he/p0eeom/index.html.out/wheel/route/core.cljs",21,1,116,116,cljs.core.List.EMPTY,null,(cljs.core.truth_(wheel.route.core._QMARK__QMARK_navigate_BANG_)?wheel.route.core._QMARK__QMARK_navigate_BANG_.cljs$lang$test:null)]));
+wheel.route.core._QMARK__QMARK_navigate_BANG_.cljs$lang$var = new cljs.core.Var(function(){return wheel.route.core._QMARK__QMARK_navigate_BANG_;},cljs.core.cst$sym$wheel$route$core_SLASH__QMARK__QMARK_navigate_BANG_,cljs.core.PersistentHashMap.fromArrays([cljs.core.cst$kw$ns,cljs.core.cst$kw$name,cljs.core.cst$kw$file,cljs.core.cst$kw$end_DASH_column,cljs.core.cst$kw$column,cljs.core.cst$kw$line,cljs.core.cst$kw$end_DASH_line,cljs.core.cst$kw$arglists,cljs.core.cst$kw$doc,cljs.core.cst$kw$test],[cljs.core.cst$sym$wheel$route$core,cljs.core.cst$sym$_QMARK__QMARK_navigate_BANG_,"/home/ubuntu/.boot/cache/tmp/home/ubuntu/ant-foxing/evd/-9aykq3/index.html.out/wheel/route/core.cljs",21,1,116,116,cljs.core.List.EMPTY,null,(cljs.core.truth_(wheel.route.core._QMARK__QMARK_navigate_BANG_)?wheel.route.core._QMARK__QMARK_navigate_BANG_.cljs$lang$test:null)]));
 wheel.route.core._QMARK__QMARK_handler_BANG_ = (function wheel$route$core$_QMARK__QMARK_handler_BANG_(){
 return cljs.test.test_var(wheel.route.core._QMARK__QMARK_handler_BANG_.cljs$lang$var);
 });
 wheel.route.core._QMARK__QMARK_handler_BANG_.cljs$lang$test = (function (){
 var history = wheel.route.core.history_cell();
-var path = (function (){var fexpr__28504 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (history){
-return (function (G__28503){
-return [cljs.core.str.cljs$core$IFn$_invoke$arity$1((G__28503.cljs$core$IFn$_invoke$arity$0 ? G__28503.cljs$core$IFn$_invoke$arity$0() : G__28503.call(null)))].join('');
+var path = (function (){var fexpr__30832 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (history){
+return (function (G__30831){
+return [cljs.core.str.cljs$core$IFn$_invoke$arity$1((G__30831.cljs$core$IFn$_invoke$arity$0 ? G__30831.cljs$core$IFn$_invoke$arity$0() : G__30831.call(null)))].join('');
 });})(history))
 );
-return (fexpr__28504.cljs$core$IFn$_invoke$arity$1 ? fexpr__28504.cljs$core$IFn$_invoke$arity$1(cljs.core.random_uuid) : fexpr__28504.call(null,cljs.core.random_uuid));
+return (fexpr__30832.cljs$core$IFn$_invoke$arity$1 ? fexpr__30832.cljs$core$IFn$_invoke$arity$1(cljs.core.random_uuid) : fexpr__30832.call(null,cljs.core.random_uuid));
 })();
-var handler = (function (){var fexpr__28505 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (history,path){
+var handler = (function (){var fexpr__30833 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (history,path){
 return (function (){
 return cljs.core.cst$kw$foo;
 });})(history,path))
 );
-return (fexpr__28505.cljs$core$IFn$_invoke$arity$0 ? fexpr__28505.cljs$core$IFn$_invoke$arity$0() : fexpr__28505.call(null));
+return (fexpr__30833.cljs$core$IFn$_invoke$arity$0 ? fexpr__30833.cljs$core$IFn$_invoke$arity$0() : fexpr__30833.call(null));
 })();
-var routes = (function (){var fexpr__28508 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (history,path,handler){
-return (function (G__28507,G__28506){
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__28506,G__28507], null);
+var routes = (function (){var fexpr__30836 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (history,path,handler){
+return (function (G__30835,G__30834){
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__30834,G__30835], null);
 });})(history,path,handler))
 );
-return (fexpr__28508.cljs$core$IFn$_invoke$arity$2 ? fexpr__28508.cljs$core$IFn$_invoke$arity$2(handler,path) : fexpr__28508.call(null,handler,path));
+return (fexpr__30836.cljs$core$IFn$_invoke$arity$2 ? fexpr__30836.cljs$core$IFn$_invoke$arity$2(handler,path) : fexpr__30836.call(null,handler,path));
 })();
 wheel.route.core.handler_BANG_(history,routes,handler);
 
-try{var values__15906__auto__ = (function (){var x__9034__auto__ = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.deref(path))].join('');
-return cljs.core._conj((function (){var x__9034__auto____$1 = wheel.route.core.current_hash();
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto____$1);
-})(),x__9034__auto__);
+try{var values__17396__auto__ = (function (){var x__9711__auto__ = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.deref(path))].join('');
+return cljs.core._conj((function (){var x__9711__auto____$1 = wheel.route.core.current_hash();
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto____$1);
+})(),x__9711__auto__);
 })();
-var result__15907__auto__ = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,values__15906__auto__);
-if(cljs.core.truth_(result__15907__auto__)){
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$path)),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core._EQ_,values__15906__auto__),cljs.core.cst$kw$message,null], null));
+var result__17397__auto__ = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,values__17396__auto__);
+if(cljs.core.truth_(result__17397__auto__)){
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$pass,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$path)),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core.cons(cljs.core._EQ_,values__17396__auto__),cljs.core.cst$kw$message,null], null));
 } else {
-cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$path)),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9034__auto__ = cljs.core.cons(cljs.core.cst$sym$_EQ_,values__15906__auto__);
-return cljs.core._conj(cljs.core.List.EMPTY,x__9034__auto__);
+cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$fail,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$path)),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,cljs.core._conj((function (){var x__9711__auto__ = cljs.core.cons(cljs.core.cst$sym$_EQ_,values__17396__auto__);
+return cljs.core._conj(cljs.core.List.EMPTY,x__9711__auto__);
 })(),cljs.core.cst$sym$not),cljs.core.cst$kw$message,null], null));
 }
 
-return result__15907__auto__;
-}catch (e28509){var t__15944__auto__ = e28509;
-return cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$path)),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,t__15944__auto__,cljs.core.cst$kw$message,null], null));
+return result__17397__auto__;
+}catch (e30837){var t__17441__auto__ = e30837;
+return cljs.test.do_report(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$type,cljs.core.cst$kw$error,cljs.core.cst$kw$expected,cljs.core.list(cljs.core.cst$sym$_EQ_,cljs.core.list(cljs.core.cst$sym$str,cljs.core.list(cljs.core.cst$sym$clojure$core_SLASH_deref,cljs.core.cst$sym$path)),cljs.core.list(cljs.core.cst$sym$current_DASH_hash)),cljs.core.cst$kw$actual,t__17441__auto__,cljs.core.cst$kw$message,null], null));
 }});
 
-wheel.route.core._QMARK__QMARK_handler_BANG_.cljs$lang$var = new cljs.core.Var(function(){return wheel.route.core._QMARK__QMARK_handler_BANG_;},cljs.core.cst$sym$wheel$route$core_SLASH__QMARK__QMARK_handler_BANG_,cljs.core.PersistentHashMap.fromArrays([cljs.core.cst$kw$ns,cljs.core.cst$kw$name,cljs.core.cst$kw$file,cljs.core.cst$kw$end_DASH_column,cljs.core.cst$kw$column,cljs.core.cst$kw$line,cljs.core.cst$kw$end_DASH_line,cljs.core.cst$kw$arglists,cljs.core.cst$kw$doc,cljs.core.cst$kw$test],[cljs.core.cst$sym$wheel$route$core,cljs.core.cst$sym$_QMARK__QMARK_handler_BANG_,"/Users/davidmeister/.boot/cache/tmp/Users/davidmeister/ant-foxing/14he/p0eeom/index.html.out/wheel/route/core.cljs",20,1,150,150,cljs.core.List.EMPTY,null,(cljs.core.truth_(wheel.route.core._QMARK__QMARK_handler_BANG_)?wheel.route.core._QMARK__QMARK_handler_BANG_.cljs$lang$test:null)]));
+wheel.route.core._QMARK__QMARK_handler_BANG_.cljs$lang$var = new cljs.core.Var(function(){return wheel.route.core._QMARK__QMARK_handler_BANG_;},cljs.core.cst$sym$wheel$route$core_SLASH__QMARK__QMARK_handler_BANG_,cljs.core.PersistentHashMap.fromArrays([cljs.core.cst$kw$ns,cljs.core.cst$kw$name,cljs.core.cst$kw$file,cljs.core.cst$kw$end_DASH_column,cljs.core.cst$kw$column,cljs.core.cst$kw$line,cljs.core.cst$kw$end_DASH_line,cljs.core.cst$kw$arglists,cljs.core.cst$kw$doc,cljs.core.cst$kw$test],[cljs.core.cst$sym$wheel$route$core,cljs.core.cst$sym$_QMARK__QMARK_handler_BANG_,"/home/ubuntu/.boot/cache/tmp/home/ubuntu/ant-foxing/evd/-9aykq3/index.html.out/wheel/route/core.cljs",20,1,150,150,cljs.core.List.EMPTY,null,(cljs.core.truth_(wheel.route.core._QMARK__QMARK_handler_BANG_)?wheel.route.core._QMARK__QMARK_handler_BANG_.cljs$lang$test:null)]));

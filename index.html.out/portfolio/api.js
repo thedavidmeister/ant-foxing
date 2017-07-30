@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.9.655 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.9.854 {:static-fns true, :optimize-constants true}
 goog.provide('portfolio.api');
 goog.require('cljs.core');
 goog.require('cljs.core.constants');
@@ -8,10 +8,10 @@ goog.require('coinmarketcap.ticker.api');
 goog.require('wheel.math.number');
 goog.require('currency.api');
 portfolio.api.db__GT_config = (function portfolio$api$db__GT_config(db,k){
-return cljs.core.first((function (){var G__29815 = new cljs.core.PersistentVector(null, 8, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$find,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$sym$_QMARK_v], null),cljs.core.cst$kw$where,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$sym$_QMARK_e,cljs.core.cst$kw$config_SLASH_key,cljs.core.cst$sym$_QMARK_k], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$sym$_QMARK_e,cljs.core.cst$kw$config_SLASH_value,cljs.core.cst$sym$_QMARK_v], null),cljs.core.cst$kw$in,cljs.core.cst$sym$$,cljs.core.cst$sym$_QMARK_k], null);
-var G__29816 = db;
-var G__29817 = k;
-return (datascript.core.q.cljs$core$IFn$_invoke$arity$3 ? datascript.core.q.cljs$core$IFn$_invoke$arity$3(G__29815,G__29816,G__29817) : datascript.core.q.call(null,G__29815,G__29816,G__29817));
+return cljs.core.first((function (){var G__30889 = new cljs.core.PersistentVector(null, 8, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$find,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$sym$_QMARK_v], null),cljs.core.cst$kw$where,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$sym$_QMARK_e,cljs.core.cst$kw$config_SLASH_key,cljs.core.cst$sym$_QMARK_k], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$sym$_QMARK_e,cljs.core.cst$kw$config_SLASH_value,cljs.core.cst$sym$_QMARK_v], null),cljs.core.cst$kw$in,cljs.core.cst$sym$$,cljs.core.cst$sym$_QMARK_k], null);
+var G__30890 = db;
+var G__30891 = k;
+return (datascript.core.q.cljs$core$IFn$_invoke$arity$3 ? datascript.core.q.cljs$core$IFn$_invoke$arity$3(G__30889,G__30890,G__30891) : datascript.core.q.call(null,G__30889,G__30890,G__30891));
 })());
 });
 portfolio.api.set_config_BANG_ = (function portfolio$api$set_config_BANG_(conn,k,v){
@@ -50,8 +50,8 @@ throw (new Error("Assert failed: (string? s)"));
 
 var candidates = cljs.core.set(cljs.core.map.cljs$core$IFn$_invoke$arity$2(clojure.string.lower_case,clojure.string.split.cljs$core$IFn$_invoke$arity$2(s,/\s+/)));
 var ticker_ids = cljs.core.set(cljs.core.map.cljs$core$IFn$_invoke$arity$2(((function (candidates){
-return (function (p1__29818_SHARP_){
-return cljs.core.get.cljs$core$IFn$_invoke$arity$2(p1__29818_SHARP_,"id");
+return (function (p1__30892_SHARP_){
+return cljs.core.get.cljs$core$IFn$_invoke$arity$2(p1__30892_SHARP_,"id");
 });})(candidates))
 ,ticker));
 return clojure.set.intersection.cljs$core$IFn$_invoke$arity$2(candidates,ticker_ids);
@@ -98,8 +98,8 @@ var ids = currency.api.db__GT_currency_ids(db);
 return clojure.string.join.cljs$core$IFn$_invoke$arity$2(" ",ids);
 });
 portfolio.api.upsert_currency_BANG_ = (function portfolio$api$upsert_currency_BANG_(var_args){
-var G__29820 = arguments.length;
-switch (G__29820) {
+var G__30894 = arguments.length;
+switch (G__30894) {
 case 3:
 return portfolio.api.upsert_currency_BANG_.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 

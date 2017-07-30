@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.9.655 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.9.854 {:static-fns true, :optimize-constants true}
 goog.provide('portfolio.save.api');
 goog.require('cljs.core');
 goog.require('cljs.core.constants');
@@ -13,7 +13,7 @@ throw (new Error("Assert failed: (d/db? db)"));
 return cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([db], 0));
 });
 portfolio.save.api.load_db_BANG_ = (function portfolio$save$api$load_db_BANG_(conn,str){
-var loaded_db = cljs.reader.read_string(str);
+var loaded_db = cljs.reader.read_string.cljs$core$IFn$_invoke$arity$1(str);
 if(cljs.core.truth_((datascript.core.db_QMARK_.cljs$core$IFn$_invoke$arity$1 ? datascript.core.db_QMARK_.cljs$core$IFn$_invoke$arity$1(loaded_db) : datascript.core.db_QMARK_.call(null,loaded_db)))){
 } else {
 throw (new Error("Assert failed: (d/db? loaded-db)"));

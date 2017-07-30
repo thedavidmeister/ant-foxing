@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.9.655 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.9.854 {:static-fns true, :optimize-constants true}
 goog.provide('datascript.javelin');
 goog.require('cljs.core');
 goog.require('cljs.core.constants');
@@ -30,8 +30,8 @@ return _PERCENT_;
  * Builds a fresh conn cell wrapping an empty db
  */
 datascript.javelin.conn_cell = (function datascript$javelin$conn_cell(var_args){
-var G__25451 = arguments.length;
-switch (G__25451) {
+var G__26387 = arguments.length;
+switch (G__26387) {
 case 0:
 return datascript.javelin.conn_cell.cljs$core$IFn$_invoke$arity$0();
 
@@ -102,8 +102,8 @@ throw (new Error("Assert failed: (j/cell? %)"));
 return _PERCENT_;
 });
 datascript.javelin.conn_from_datoms = (function datascript$javelin$conn_from_datoms(var_args){
-var G__25454 = arguments.length;
-switch (G__25454) {
+var G__26390 = arguments.length;
+switch (G__26390) {
 case 1:
 return datascript.javelin.conn_from_datoms.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -123,9 +123,9 @@ return datascript.javelin.conn_from_datoms.cljs$core$IFn$_invoke$arity$2(datoms,
 });
 
 datascript.javelin.conn_from_datoms.cljs$core$IFn$_invoke$arity$2 = (function (datoms,schema){
-return datascript.javelin.conn_cell_with(datascript.javelin.conn_cell.cljs$core$IFn$_invoke$arity$1(schema),(function (){var or__8099__auto__ = datoms;
-if(cljs.core.truth_(or__8099__auto__)){
-return or__8099__auto__;
+return datascript.javelin.conn_cell_with(datascript.javelin.conn_cell.cljs$core$IFn$_invoke$arity$1(schema),(function (){var or__8762__auto__ = datoms;
+if(cljs.core.truth_(or__8762__auto__)){
+return or__8762__auto__;
 } else {
 return cljs.core.PersistentVector.EMPTY;
 }

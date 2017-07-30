@@ -47,8 +47,8 @@ return (hoplon.core.div.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.div.cljs$cor
  * @param {...*} var_args
  */
 portfolio.hoplon.currency_form_input = (function() { 
-var portfolio$hoplon$currency_form_input__delegate = function (args__15441__auto__){
-var vec__31469 = hoplon.core.parse_args(args__15441__auto__);
+var portfolio$hoplon$currency_form_input__delegate = function (args__21512__auto__){
+var vec__31469 = hoplon.core.parse_args(args__21512__auto__);
 var map__31472 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__31469,(0),null);
 var map__31472__$1 = ((((!((map__31472 == null)))?((((map__31472.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__31472.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__31472):map__31472);
 var attributes = map__31472__$1;
@@ -87,17 +87,17 @@ return (el_fn__$1.cljs$core$IFn$_invoke$arity$5 ? el_fn__$1.cljs$core$IFn$_invok
 return (hoplon.core.td.cljs$core$IFn$_invoke$arity$2 ? hoplon.core.td.cljs$core$IFn$_invoke$arity$2(G__31478,G__31479) : hoplon.core.td.call(null,G__31478,G__31479));
 };
 var portfolio$hoplon$currency_form_input = function (var_args){
-var args__15441__auto__ = null;
+var args__21512__auto__ = null;
 if (arguments.length > 0) {
 var G__31485__i = 0, G__31485__a = new Array(arguments.length -  0);
 while (G__31485__i < G__31485__a.length) {G__31485__a[G__31485__i] = arguments[G__31485__i + 0]; ++G__31485__i;}
-  args__15441__auto__ = new cljs.core.IndexedSeq(G__31485__a,0,null);
+  args__21512__auto__ = new cljs.core.IndexedSeq(G__31485__a,0,null);
 } 
-return portfolio$hoplon$currency_form_input__delegate.call(this,args__15441__auto__);};
+return portfolio$hoplon$currency_form_input__delegate.call(this,args__21512__auto__);};
 portfolio$hoplon$currency_form_input.cljs$lang$maxFixedArity = 0;
 portfolio$hoplon$currency_form_input.cljs$lang$applyTo = (function (arglist__31486){
-var args__15441__auto__ = cljs.core.seq(arglist__31486);
-return portfolio$hoplon$currency_form_input__delegate(args__15441__auto__);
+var args__21512__auto__ = cljs.core.seq(arglist__31486);
+return portfolio$hoplon$currency_form_input__delegate(args__21512__auto__);
 });
 portfolio$hoplon$currency_form_input.cljs$core$IFn$_invoke$arity$variadic = portfolio$hoplon$currency_form_input__delegate;
 return portfolio$hoplon$currency_form_input;
@@ -177,7 +177,7 @@ return (G__31500.cljs$core$IFn$_invoke$arity$2 ? G__31500.cljs$core$IFn$_invoke$
 return (fexpr__31506.cljs$core$IFn$_invoke$arity$3 ? fexpr__31506.cljs$core$IFn$_invoke$arity$3(cljs.core.sort_by,tier.data.parse_tier,currencies) : fexpr__31506.call(null,cljs.core.sort_by,tier.data.parse_tier,currencies));
 })();
 var structure = new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Currency",new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$k,cljs.core.cst$kw$currency_SLASH_id,cljs.core.cst$kw$readonly,true,cljs.core.cst$kw$type,"text"], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Current hodlings",new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$k,cljs.core.cst$kw$currency_SLASH_hodling,cljs.core.cst$kw$type,"number"], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Tier (lower = more funds)",new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$k,cljs.core.cst$kw$currency_SLASH_tier,cljs.core.cst$kw$type,"number",cljs.core.cst$kw$min,(1),cljs.core.cst$kw$step,(1)], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Website",new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$k,cljs.core.cst$kw$currency_SLASH_website,cljs.core.cst$kw$type,"text"], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Notes",new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$k,cljs.core.cst$kw$currency_SLASH_notes,cljs.core.cst$kw$el_DASH_fn,spectre.hoplon.form_textarea], null)], null)], null);
-return spectre.hoplon.panel.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([(function (){var G__31510 = (function (){var con__15495__auto__ = (new cljs.core.Delay(((function (sorted_by_tier,structure){
+return spectre.hoplon.panel.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([(function (){var G__31510 = (function (){var con__21566__auto__ = (new cljs.core.Delay(((function (sorted_by_tier,structure){
 return (function (){
 return spectre.hoplon.table.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([(function (){var G__31511 = (function (){var iter__9639__auto__ = ((function (sorted_by_tier,structure){
 return (function portfolio$hoplon$currencies_form_$_iter__31512(s__31513){
@@ -232,13 +232,13 @@ return iter__9639__auto__(structure);
 })();
 return (hoplon.core.tr.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.tr.cljs$core$IFn$_invoke$arity$1(G__31511) : hoplon.core.tr.call(null,G__31511));
 })(),hoplon.core.loop_tpl_STAR_(sorted_by_tier,((function (sorted_by_tier,structure){
-return (function (item__15485__auto__){
+return (function (item__21556__auto__){
 var vec__31522 = javelin.core.cell_map(cljs.core.identity,(function (){var fexpr__31525 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (sorted_by_tier,structure){
 return (function (currency__$1){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [currency__$1], null);
 });})(sorted_by_tier,structure))
 );
-return (fexpr__31525.cljs$core$IFn$_invoke$arity$1 ? fexpr__31525.cljs$core$IFn$_invoke$arity$1(item__15485__auto__) : fexpr__31525.call(null,item__15485__auto__));
+return (fexpr__31525.cljs$core$IFn$_invoke$arity$1 ? fexpr__31525.cljs$core$IFn$_invoke$arity$1(item__21556__auto__) : fexpr__31525.call(null,item__21556__auto__));
 })());
 var currency__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__31522,(0),null);
 return portfolio.hoplon.currency_form_row(conn,currency__$1,structure);
@@ -246,30 +246,30 @@ return portfolio.hoplon.currency_form_row(conn,currency__$1,structure);
 )], 0));
 });})(sorted_by_tier,structure))
 ,null));
-var alt__15496__auto__ = (new cljs.core.Delay(((function (con__15495__auto__,sorted_by_tier,structure){
+var alt__21567__auto__ = (new cljs.core.Delay(((function (con__21566__auto__,sorted_by_tier,structure){
 return (function (){
 return null;
-});})(con__15495__auto__,sorted_by_tier,structure))
+});})(con__21566__auto__,sorted_by_tier,structure))
 ,null));
-var tpl__15497__auto__ = ((function (con__15495__auto__,alt__15496__auto__,sorted_by_tier,structure){
-return (function (p__15498__auto__){
-return cljs.core.deref((function (){var or__8762__auto__ = (cljs.core.truth_(p__15498__auto__)?con__15495__auto__:alt__15496__auto__);
+var tpl__21568__auto__ = ((function (con__21566__auto__,alt__21567__auto__,sorted_by_tier,structure){
+return (function (p__21569__auto__){
+return cljs.core.deref((function (){var or__8762__auto__ = (cljs.core.truth_(p__21569__auto__)?con__21566__auto__:alt__21567__auto__);
 if(cljs.core.truth_(or__8762__auto__)){
 return or__8762__auto__;
 } else {
 return cljs.core.atom();
 }
 })());
-});})(con__15495__auto__,alt__15496__auto__,sorted_by_tier,structure))
+});})(con__21566__auto__,alt__21567__auto__,sorted_by_tier,structure))
 ;
-var G__31527 = (function (){var fexpr__31530 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (con__15495__auto__,alt__15496__auto__,tpl__15497__auto__,sorted_by_tier,structure){
+var G__31527 = (function (){var fexpr__31530 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(((function (con__21566__auto__,alt__21567__auto__,tpl__21568__auto__,sorted_by_tier,structure){
 return (function (G__31528,G__31529){
 return (G__31528.cljs$core$IFn$_invoke$arity$1 ? G__31528.cljs$core$IFn$_invoke$arity$1(G__31529) : G__31528.call(null,G__31529));
-});})(con__15495__auto__,alt__15496__auto__,tpl__15497__auto__,sorted_by_tier,structure))
+});})(con__21566__auto__,alt__21567__auto__,tpl__21568__auto__,sorted_by_tier,structure))
 );
 return (fexpr__31530.cljs$core$IFn$_invoke$arity$2 ? fexpr__31530.cljs$core$IFn$_invoke$arity$2(cljs.core.seq,sorted_by_tier) : fexpr__31530.call(null,cljs.core.seq,sorted_by_tier));
 })();
-var fexpr__31526 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(tpl__15497__auto__);
+var fexpr__31526 = javelin.core.formula.cljs$core$IFn$_invoke$arity$1(tpl__21568__auto__);
 return (fexpr__31526.cljs$core$IFn$_invoke$arity$1 ? fexpr__31526.cljs$core$IFn$_invoke$arity$1(G__31527) : fexpr__31526.call(null,G__31527));
 })();
 return (hoplon.core.form.cljs$core$IFn$_invoke$arity$1 ? hoplon.core.form.cljs$core$IFn$_invoke$arity$1(G__31510) : hoplon.core.form.call(null,G__31510));
